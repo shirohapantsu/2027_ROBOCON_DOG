@@ -1,0 +1,56 @@
+# CMake build directories and generated files
+build/
+build-*/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+CTestCustom.cmake
+Testing/
+install_manifest.txt
+compile_commands.json
+build.ninja
+rules.ninja
+.ninja_deps
+.ninja_log
+.cmake/
+
+# Compiler output (bundled SDK shared libraries remain versioned)
+*.o
+*.obj
+*.pch
+*.gch
+*.exe
+*.pdb
+*.gcda
+*.gcno
+*.gcov
+
+# Python examples and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Local editor settings and code indexes
+.vscode/
+.idea/
+.cache/
+.codegraph/
+*.swp
+*.swo
+*~
+
+# Runtime logs and crash dumps
+*.log
+MUJOCO_LOG.TXT
+core
+core.[0-9]*
+
+# Operating system metadata
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini

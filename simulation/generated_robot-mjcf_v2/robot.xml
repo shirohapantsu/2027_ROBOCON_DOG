@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="generated_robot">
+  <compiler angle="radian" eulerseq="xyz" autolimits="true"/>
+  <option timestep="0.001" integrator="implicitfast" iterations="100" tolerance="1e-10"/>
+  <default>
+    <default class="go_m8010_6">
+      <!-- SDK breakaway torque is rotor-side: 0.025 * 6.33 = 0.15825 N m at the hip. -->
+      <joint frictionloss="0.15825" solreffriction="0.002 1"/>
+      <!-- ctrl and actuator force are rotor-side N m; the supplied peak output torque cap is +/-23.7 N m. -->
+      <motor gear="6.33" ctrllimited="true" ctrlrange="-3.744075829383886 3.744075829383886" forcelimited="true" forcerange="-3.744075829383886 3.744075829383886"/>
+    </default>
+  </default>
+  <custom>
+    <numeric name="motor_gear_ratio" data="6.33"/>
+    <numeric name="motor_breakaway_rotor_range" data="0.02 0.03"/>
+    <numeric name="motor_breakaway_rotor_nominal" data="0.025"/>
+    <numeric name="motor_output_torque_limit" data="23.7"/>
+    <!-- The following metadata do not impose XML-native speed/current/thermal dynamics. -->
+    <numeric name="motor_output_speed_limit_at_24v" data="30"/>
+    <numeric name="motor_nominal_voltage" data="24"/>
+    <numeric name="motor_voltage_range" data="12 30"/>
+    <numeric name="motor_max_phase_current" data="40"/>
+    <numeric name="motor_torque_constant_output" data="0.63895"/>
+    <numeric name="motor_unit_mass" data="0.53"/>
+    <numeric name="motor_external_dimensions" data="0.0965 0.0925 0.0423"/>
+    <numeric name="motor_encoder_bits" data="15"/>
+    <numeric name="motor_max_communication_frequency" data="6000"/>
+    <!-- Approximate rotor-side curve; C++ adapter enforces the dynamic drive envelope. -->
+    <numeric name="motor_curve_rotor_torque" data="0 0.2 0.4 0.6 0.8 1 1.5 2 2.5 3 3.5 3.98"/>
+    <numeric name="motor_curve_rotor_rpm" data="1813.41142158906 1700 1660 1620 1580 1550 1440 1340 1240 1130 1030 930"/>
+    <text name="motor_performance_source" data="motor-performance.json; docs/motor_performance.png; inferred nominal 24 V"/>
+    <text name="motor_model" data="GO-M8010-6; ideal gearbox; rotor-side ctrl; see docs/motor_model.md"/>
+  </custom>
+  <asset>
+    <mesh name="part_001_solid_001" file="meshes/part_001_solid_001.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="part_003_solid_003" file="meshes/part_003_solid_003.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="part_004_solid_004" file="meshes/part_004_solid_004.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="part_002_solid_002" file="meshes/part_002_solid_002.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="part_005_solid_005" file="meshes/part_005_solid_005.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="part_006_solid_006" file="meshes/part_006_solid_006.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="part_013_solid_013" file="meshes/part_013_solid_013.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="part_012_solid_012" file="meshes/part_012_solid_012.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="part_014_solid_014" file="meshes/part_014_solid_014.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="part_015_solid_015" file="meshes/part_015_solid_015.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="part_021_solid_021" file="meshes/part_021_solid_021.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="part_018_solid_018" file="meshes/part_018_solid_018.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="part_017_solid_017" file="meshes/part_017_solid_017.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="part_020_solid_020" file="meshes/part_020_solid_020.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="part_019_solid_019" file="meshes/part_019_solid_019.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="part_009_solid_009" file="meshes/part_009_solid_009.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="part_016_solid_016" file="meshes/part_016_solid_016.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="part_010_solid_010" file="meshes/part_010_solid_010.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="part_007_solid_007" file="meshes/part_007_solid_007.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="part_008_solid_008" file="meshes/part_008_solid_008.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="part_011_solid_011" file="meshes/part_011_solid_011.stl" scale="0.001 0.001 0.001"/>
+  </asset>
+  <worldbody>
+    <body name="base_link" pos="0 0 0">
+      <inertial pos="0 0 0" mass="7.716" quat="1 0 0 0" diaginertia="0.050376098 0.13930081 0.16962314"/>
+      <geom name="base_link_mesh_1" type="mesh" mesh="part_001_solid_001" pos="0 0.11507698 -0.16332698" euler="0 0 0" group="1"/>
+      <body name="RR_thigh_rear" pos="-0.23525 -0.12755 0" euler="1.5707963 0 0">
+        <joint name="RR_thigh_rear_joint" class="go_m8010_6" type="hinge" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" limited="true" actuatorfrcrange="-23.7 23.7" actuatorfrclimited="true"/>
+        <inertial pos="-0.059961272 -0.030998322 0.010000003" mass="0.119" quat="0.97167771 0 0 0.23631004" diaginertia="1.2553298e-05 0.00025394121 0.00025856118"/>
+        <geom name="RR_thigh_rear_mesh_1" type="mesh" mesh="part_003_solid_003" pos="0.23525 -0.16332698 -0.24262698" euler="-1.5707963 0 0" group="1"/>
+        <body name="RR_calf_rear" pos="-0.11992254 -0.061996643 0.02">
+          <joint name="RR_calf_rear_joint" type="hinge" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" limited="true"/>
+          <inertial pos="0.099437799 -0.20215295 -0.0099999969" mass="0.125" quat="0.97399122 0 0 0.22658577" diaginertia="0.00070119282 4.2404509e-05 0.00070497131"/>
+          <site name="closure_001_b_site" type="sphere" pos="0.11476013 -0.23330262 0.0189" quat="0.70710678 -0.70710678 -0 0" size="0.003" rgba="0.2 0.8 1 0" group="3"/>
+          <geom name="RR_calf_rear_mesh_1" type="mesh" mesh="part_004_solid_004" pos="0.35517254 -0.10133034 -0.26262698" euler="-1.5707963 0 0" group="1"/>
+          <geom name="RR_calf_rear_mesh_2" type="mesh" mesh="part_002_solid_002" pos="0.35517254 -0.10133034 -0.26262698" euler="-1.5707963 0 0" group="1"/>
+        </body>
+      </body>
+      <body name="RR_thigh_front" pos="-0.23525 -0.14755 0" euler="1.5707963 0 0">
+        <joint name="RR_thigh_front_joint" class="go_m8010_6" type="hinge" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" limited="true" actuatorfrcrange="-23.7 23.7" actuatorfrclimited="true"/>
+        <inertial pos="0.058841137 -0.033075221 0.023399997" mass="0.119" quat="0.96739872 0 0 -0.25325819" diaginertia="1.2553298e-05 0.00025394121 0.00025856118"/>
+        <geom name="RR_thigh_front_mesh_1" type="mesh" mesh="part_005_solid_005" pos="0.23525 -0.16332698 -0.26262698" euler="-1.5707963 0 0" group="1"/>
+        <body name="RR_calf_front" pos="0.11768228 -0.066150444 0.0234">
+          <joint name="RR_calf_front_joint" type="hinge" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" limited="true"/>
+          <inertial pos="-0.061422348 -0.11457441 -3.0517582e-09" mass="0.048" quat="0.96988185 0 0 -0.24357584" diaginertia="0.00035495588 2.1830437e-06 0.00035649092"/>
+          <site name="closure_001_a_site" type="sphere" pos="-0.12284469 -0.22914882 -0.0045" quat="0.70710678 -0.70710678 -0 0" size="0.003" rgba="0.2 0.8 1 0" group="3"/>
+          <geom name="RR_calf_front_mesh_1" type="mesh" mesh="part_006_solid_006" pos="0.11756772 -0.097176536 -0.28602698" euler="-1.5707963 0 0" group="1"/>
+        </body>
+      </body>
+      <body name="FR_thigh_front" pos="0.23525 -0.12015 0" euler="1.5707963 0 0">
+        <joint name="FR_thigh_front_joint" class="go_m8010_6" type="hinge" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" limited="true" actuatorfrcrange="-23.7 23.7" actuatorfrclimited="true"/>
+        <inertial pos="-0.031929727 -0.059470519 0.050799997" mass="0.119" quat="0.96980532 0 0 -0.24388038" diaginertia="0.00025394122 1.2553294e-05 0.00025856118"/>
+        <geom name="FR_thigh_front_mesh_1" type="mesh" mesh="part_013_solid_013" pos="-0.23525 -0.16332698 -0.23522698" euler="-1.5707963 0 0" group="1"/>
+        <body name="FR_calf_front" pos="-0.063859455 -0.11894104 0.0508">
+          <joint name="FR_calf_front_joint" type="hinge" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" limited="true"/>
+          <inertial pos="0.079626178 -0.10276029 -3.051758e-09" mass="0.048" quat="0.94616691 0 0 0.32367912" diaginertia="0.00035495586 2.1830447e-06 0.00035649091"/>
+          <site name="closure_004_a_site" type="sphere" pos="0.15925233 -0.20552055 0" quat="0.70710678 -0.70710678 -0 0" size="0.003" rgba="0.2 0.8 1 0" group="3"/>
+          <geom name="FR_calf_front_mesh_1" type="mesh" mesh="part_016_solid_016" pos="-0.17139054 -0.044385945 -0.28602698" euler="-1.5707963 0 0" group="1"/>
+        </body>
+      </body>
+      <body name="FR_thigh_rear" pos="0.23525 -0.12755 0" euler="1.5707963 0 0">
+        <joint name="FR_thigh_rear_joint" class="go_m8010_6" type="hinge" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" limited="true" actuatorfrcrange="-23.7 23.7" actuatorfrclimited="true"/>
+        <inertial pos="0.059035924 -0.032726289 0.010000003" mass="0.119" quat="0.96814416 0 0 -0.25039344" diaginertia="1.2553296e-05 0.00025394122 0.00025856118"/>
+        <geom name="FR_thigh_rear_mesh_1" type="mesh" mesh="part_012_solid_012" pos="-0.23525 -0.16332698 -0.24262698" euler="-1.5707963 0 0" group="1"/>
+        <body name="FR_calf_rear" pos="0.11807184 -0.06545258 0">
+          <joint name="FR_calf_rear_joint" type="hinge" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" limited="true"/>
+          <inertial pos="-0.019650956 -0.22442712 0.010000003" mass="0.125" quat="0.99904667 0 0 -0.04365501" diaginertia="0.00070119287 4.2404511e-05 0.00070497136"/>
+          <site name="closure_004_b_site" type="sphere" pos="-0.022678969 -0.259009 0.0434" quat="0.70710678 -0.70710678 -0 0" size="0.003" rgba="0.2 0.8 1 0" group="3"/>
+          <geom name="FR_calf_rear_mesh_1" type="mesh" mesh="part_014_solid_014" pos="-0.35332184 -0.0978744 -0.24262698" euler="-1.5707963 0 0" group="1"/>
+          <geom name="FR_calf_rear_mesh_2" type="mesh" mesh="part_015_solid_015" pos="-0.35332184 -0.0978744 -0.24262698" euler="-1.5707963 0 0" group="1"/>
+        </body>
+      </body>
+      <body name="FL_thigh_rear" pos="0.23525 0.12015 0" euler="-1.5707963 0 0">
+        <joint name="FL_thigh_rear_joint" class="go_m8010_6" type="hinge" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" limited="true" actuatorfrcrange="-23.7 23.7" actuatorfrclimited="true"/>
+        <inertial pos="0.052107339 0.04290775 0.017400003" mass="0.119" quat="0.94126527 0 0 0.33766803" diaginertia="1.2553294e-05 0.00025394121 0.00025856117"/>
+        <geom name="FL_thigh_rear_mesh_1" type="mesh" mesh="part_021_solid_021" pos="-0.23525 0.16332698 -0.0050730194" euler="1.5707963 0 0" group="1"/>
+        <body name="FL_calf_rear" pos="0.10421468 0.085815499 0.0274">
+          <joint name="FL_calf_rear_joint" type="hinge" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" limited="true"/>
+          <inertial pos="-0.027201606 0.22363757 -0.0099999969" mass="0.125" quat="0.99816929 0 0 0.060482043" diaginertia="0.00070119281 4.2404499e-05 0.00070497129"/>
+          <site name="closure_003_a_site" type="sphere" pos="-0.031393091 0.2580978 0.0189" quat="0.70710678 0.70710678 -0 -0" size="0.003" rgba="0.2 0.8 1 0" group="3"/>
+          <geom name="FL_calf_rear_mesh_1" type="mesh" mesh="part_018_solid_018" pos="-0.33946468 0.077511482 -0.032473019" euler="1.5707963 0 0" group="1"/>
+          <geom name="FL_calf_rear_mesh_2" type="mesh" mesh="part_017_solid_017" pos="-0.33946468 0.077511482 -0.032473019" euler="1.5707963 0 0" group="1"/>
+        </body>
+      </body>
+      <body name="FL_thigh_front" pos="0.23525 0.12755 0" euler="-1.5707963 0 0">
+        <joint name="FL_thigh_front_joint" class="go_m8010_6" type="hinge" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" limited="true" actuatorfrcrange="-23.7 23.7" actuatorfrclimited="true"/>
+        <inertial pos="-0.030244147 0.060345191 0.043399997" mass="0.119" quat="0.97313996 0 0 0.23021428" diaginertia="0.00025394123 1.2553293e-05 0.00025856119"/>
+        <geom name="FL_thigh_front_mesh_1" type="mesh" mesh="part_020_solid_020" pos="-0.23525 0.16332698 -0.012473019" euler="1.5707963 0 0" group="1"/>
+        <body name="FL_calf_front" pos="-0.060488295 0.12069037 0.0434">
+          <joint name="FL_calf_front_joint" type="hinge" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" limited="true"/>
+          <inertial pos="0.066654944 0.11161146 -3.0517576e-09" mass="0.048" quat="0.96398903 0 0 -0.26594201" diaginertia="0.00035495588 2.1830429e-06 0.00035649092"/>
+          <site name="closure_003_b_site" type="sphere" pos="0.13330989 0.22322292 -0.0045" quat="0.70710678 0.70710678 -0 -0" size="0.003" rgba="0.2 0.8 1 0" group="3"/>
+          <geom name="FL_calf_front_mesh_1" type="mesh" mesh="part_019_solid_019" pos="-0.17476171 0.042636607 -0.055873019" euler="1.5707963 0 0" group="1"/>
+        </body>
+      </body>
+      <body name="RL_thigh_front" pos="-0.23525 0.12015 0" euler="-1.5707963 0 0">
+        <joint name="RL_thigh_front_joint" class="go_m8010_6" type="hinge" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" limited="true" actuatorfrcrange="-23.7 23.7" actuatorfrclimited="true"/>
+        <inertial pos="0.052641843 0.042250284 0.050799997" mass="0.119" quat="0.94336609 0 0 0.33175357" diaginertia="1.2553296e-05 0.00025394122 0.00025856118"/>
+        <geom name="RL_thigh_front_mesh_1" type="mesh" mesh="part_009_solid_009" pos="0.23525 0.16332698 -0.0050730194" euler="1.5707963 0 0" group="1"/>
+        <body name="RL_calf_front" pos="0.10528368 0.084500567 0.0508">
+          <joint name="RL_calf_front_joint" type="hinge" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" limited="true"/>
+          <inertial pos="-0.061237946 0.11467307 -3.0517578e-09" mass="0.048" quat="0.97007746 0 0 0.24279563" diaginertia="0.00035495591 2.1830428e-06 0.00035649095"/>
+          <site name="closure_005_a_site" type="sphere" pos="-0.12247589 0.22934615 0" quat="0.70710678 0.70710678 -0 -0" size="0.003" rgba="0.2 0.8 1 0" group="3"/>
+          <geom name="RL_calf_front_mesh_1" type="mesh" mesh="part_010_solid_010" pos="0.12996632 0.078826414 -0.055873019" euler="1.5707963 0 0" group="1"/>
+        </body>
+      </body>
+      <body name="RL_thigh_rear" pos="-0.23525 0.12755 0" euler="-1.5707963 0 0">
+        <joint name="RL_thigh_rear_joint" class="go_m8010_6" type="hinge" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" limited="true" actuatorfrcrange="-23.7 23.7" actuatorfrclimited="true"/>
+        <inertial pos="-0.056941868 0.036247394 0.010000003" mass="0.119" quat="0.96009979 0 0 -0.27965762" diaginertia="1.2553296e-05 0.00025394121 0.00025856117"/>
+        <geom name="RL_thigh_rear_mesh_1" type="mesh" mesh="part_007_solid_007" pos="0.23525 0.16332698 -0.012473019" euler="1.5707963 0 0" group="1"/>
+        <body name="RL_calf_rear" pos="-0.11388373 0.072494794 0.02">
+          <joint name="RL_calf_rear_joint" type="hinge" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" limited="true"/>
+          <inertial pos="0.083781645 0.20912754 -0.0099999969" mass="0.125" quat="0.98190545 0 0 -0.18937184" diaginertia="0.00070119276 4.2404509e-05 0.00070497126"/>
+          <site name="closure_005_b_site" type="sphere" pos="0.096691524 0.24135192 0.0234" quat="0.70710678 0.70710678 -0 -0" size="0.003" rgba="0.2 0.8 1 0" group="3"/>
+          <geom name="RL_calf_rear_mesh_1" type="mesh" mesh="part_008_solid_008" pos="0.34913373 0.090832187 -0.032473019" euler="1.5707963 0 0" group="1"/>
+          <geom name="RL_calf_rear_mesh_2" type="mesh" mesh="part_011_solid_011" pos="0.34913373 0.090832187 -0.032473019" euler="1.5707963 0 0" group="1"/>
+        </body>
+      </body>
+      <freejoint name="stackforce_free_root_0"/>
+    </body>
+  </worldbody>
+  <equality>
+    <connect name="closure_001" solref="0.004 1" solimp="0.99 0.999 0.0001 0.5 2" site1="closure_001_a_site" site2="closure_001_b_site"/>
+    <connect name="closure_003" solref="0.004 1" solimp="0.99 0.999 0.0001 0.5 2" site1="closure_003_a_site" site2="closure_003_b_site"/>
+    <connect name="closure_004" solref="0.004 1" solimp="0.99 0.999 0.0001 0.5 2" site1="closure_004_a_site" site2="closure_004_b_site"/>
+    <connect name="closure_005" solref="0.004 1" solimp="0.99 0.999 0.0001 0.5 2" site1="closure_005_a_site" site2="closure_005_b_site"/>
+  </equality>
+  <!-- Order is the motor control index, independent of the qpos/dof joint order. -->
+  <actuator>
+    <motor name="RR_thigh_rear_motor" class="go_m8010_6" joint="RR_thigh_rear_joint"/>
+    <motor name="RR_thigh_front_motor" class="go_m8010_6" joint="RR_thigh_front_joint"/>
+    <motor name="FR_thigh_front_motor" class="go_m8010_6" joint="FR_thigh_front_joint"/>
+    <motor name="FR_thigh_rear_motor" class="go_m8010_6" joint="FR_thigh_rear_joint"/>
+    <motor name="FL_thigh_rear_motor" class="go_m8010_6" joint="FL_thigh_rear_joint"/>
+    <motor name="FL_thigh_front_motor" class="go_m8010_6" joint="FL_thigh_front_joint"/>
+    <motor name="RL_thigh_front_motor" class="go_m8010_6" joint="RL_thigh_front_joint"/>
+    <motor name="RL_thigh_rear_motor" class="go_m8010_6" joint="RL_thigh_rear_joint"/>
+  </actuator>
+  <sensor>
+    <jointpos name="RR_thigh_rear_position" joint="RR_thigh_rear_joint"/>
+    <jointvel name="RR_thigh_rear_velocity" joint="RR_thigh_rear_joint"/>
+    <actuatorfrc name="RR_thigh_rear_rotor_torque" actuator="RR_thigh_rear_motor"/>
+    <jointpos name="RR_thigh_front_position" joint="RR_thigh_front_joint"/>
+    <jointvel name="RR_thigh_front_velocity" joint="RR_thigh_front_joint"/>
+    <actuatorfrc name="RR_thigh_front_rotor_torque" actuator="RR_thigh_front_motor"/>
+    <jointpos name="FR_thigh_front_position" joint="FR_thigh_front_joint"/>
+    <jointvel name="FR_thigh_front_velocity" joint="FR_thigh_front_joint"/>
+    <actuatorfrc name="FR_thigh_front_rotor_torque" actuator="FR_thigh_front_motor"/>
+    <jointpos name="FR_thigh_rear_position" joint="FR_thigh_rear_joint"/>
+    <jointvel name="FR_thigh_rear_velocity" joint="FR_thigh_rear_joint"/>
+    <actuatorfrc name="FR_thigh_rear_rotor_torque" actuator="FR_thigh_rear_motor"/>
+    <jointpos name="FL_thigh_rear_position" joint="FL_thigh_rear_joint"/>
+    <jointvel name="FL_thigh_rear_velocity" joint="FL_thigh_rear_joint"/>
+    <actuatorfrc name="FL_thigh_rear_rotor_torque" actuator="FL_thigh_rear_motor"/>
+    <jointpos name="FL_thigh_front_position" joint="FL_thigh_front_joint"/>
+    <jointvel name="FL_thigh_front_velocity" joint="FL_thigh_front_joint"/>
+    <actuatorfrc name="FL_thigh_front_rotor_torque" actuator="FL_thigh_front_motor"/>
+    <jointpos name="RL_thigh_front_position" joint="RL_thigh_front_joint"/>
+    <jointvel name="RL_thigh_front_velocity" joint="RL_thigh_front_joint"/>
+    <actuatorfrc name="RL_thigh_front_rotor_torque" actuator="RL_thigh_front_motor"/>
+    <jointpos name="RL_thigh_rear_position" joint="RL_thigh_rear_joint"/>
+    <jointvel name="RL_thigh_rear_velocity" joint="RL_thigh_rear_joint"/>
+    <actuatorfrc name="RL_thigh_rear_rotor_torque" actuator="RL_thigh_rear_motor"/>
+  </sensor>
+  <keyframe>
+    <key name="home" qpos="0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"/>
+  </keyframe>
+</mujoco>

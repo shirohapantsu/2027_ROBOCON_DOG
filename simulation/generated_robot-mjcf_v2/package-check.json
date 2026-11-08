@@ -1,0 +1,69 @@
+{
+  "schema": "stackforce.mjcf-package-check.v1",
+  "status": "motor_model_validated",
+  "execution": "local_cpp17_mujoco_3.3.7",
+  "checks": [
+    "archive_paths_and_size",
+    "xml_and_resources",
+    "joint_actuator_references",
+    "finite_values",
+    "eight_hip_actuators_and_eight_passive_calves",
+    "rotor_output_torque_and_gain_conversion",
+    "24_motor_feedback_channels",
+    "bidirectional_isolated_breakaway_friction",
+    "native_and_hybrid_torque_saturation",
+    "hybrid_pd_and_invalid_command_rejection",
+    "home_closure_distance",
+    "one_second_free_body_finite_state_no_warnings",
+    "supplementary_peak_output_torque_23_7_nm",
+    "phase_current_estimate_below_40_a",
+    "bidirectional_speed_target_clamp_and_overspeed_drive_guard",
+    "overspeed_braking_retained",
+    "confirmed_motor_mass_not_double_counted",
+    "digitized_torque_speed_knots_and_interpolation",
+    "monotone_bidirectional_motoring_envelope",
+    "xml_and_cpp_curve_parameter_agreement",
+    "unitree_sdk_command_feedback_simulation_example",
+    "eigen_batch_output_rotor_conversion",
+    "eigen_distinct_motor_pd_and_vector_feedback"
+  ],
+  "physics_validation": {
+    "status": "motor_checks_passed_training_validation_pending",
+    "owner": "simready",
+    "execution": "client",
+    "stage": "before_training",
+    "integration_status": "pending_simready_integration",
+    "local_motor_validation": {
+      "engine": "MuJoCo 3.3.7",
+      "language": "C++17",
+      "command": "ctest --test-dir /tmp/dog-motor-build --output-on-failure",
+      "home_max_closure_distance_m": 1.06522e-08,
+      "home_mesh_contacts": 0,
+      "free_body_smoke_test_seconds": 1,
+      "scope": "Motor unit checks, peak torque cap, inferred phase current, approximate digitized motoring envelope and numerical evolution; no measured current, regenerative curve, continuous-duty, ground, gait, thermal or hardware validation.",
+      "output_peak_torque_nm": 23.7,
+      "output_speed_guard_rad_s_at_24v": 30,
+      "total_robot_mass_kg": 9.36,
+      "curve_source_url": "https://oss-global-cdn.unitree.com/static/c01d234dd77f472397ce52642c63954d_1213x670.png",
+      "sdk_example": {
+        "source": "../../tools/sdk_sim_example.cpp",
+        "test": "sdk_sim_example",
+        "sdk_library": "libUnitreeMotorSDK_Linux64.so",
+        "sdk_calls": [
+          "queryMotorMode",
+          "queryGearRatio"
+        ],
+        "sdk_types": [
+          "MotorCmd",
+          "MotorData"
+        ],
+        "backend": "example-local SimMotorBus; no serial port or packet emulation",
+        "duration_simulation_seconds": 2,
+        "gravity": "zero in example process only",
+        "result": "passed; finite state and no MuJoCo warnings",
+        "hardware_and_arm64": "not tested"
+      },
+      "numerical_backend": "Eigen3 fixed-size vectors and matrix; distinct per-motor gains, state mapping and batch feedback checked"
+    }
+  }
+}

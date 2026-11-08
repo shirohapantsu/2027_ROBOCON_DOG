@@ -1,0 +1,1008 @@
+{
+  "schema": "dog.leg-kinematics-parameters.v1",
+  "source_model": "../simulation/generated_robot-mjcf_v2/robot.xml",
+  "source_model_sha256": "62e210cadcf0f1d40d5f822b5b9d7c6710142cd9d4eb3c17cadd15629692a090",
+  "units": {
+    "length": "m",
+    "angle": "rad",
+    "mass": "kg",
+    "inertia": "kg*m^2"
+  },
+  "base_frame": {
+    "origin": "base_link origin",
+    "axis_convention": {
+      "x": "toward FR/FL hip locations, inferred from names",
+      "y": "toward FL/RL hip locations",
+      "z": "up at identity base pose"
+    },
+    "up": "Z",
+    "forward_hardware_calibration": "unconfirmed; manifest forward is unknown"
+  },
+  "leg_frame": {
+    "origin_base": "[hip_x, foot_center_y, 0]",
+    "R_base_from_leg": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        -1,
+        0
+      ]
+    ],
+    "coordinates": [
+      "u: +base X",
+      "v: -base Z (down)",
+      "w: +base Y"
+    ],
+    "closed_point_planar_coordinates": "[base_x - hip_x, -base_z]"
+  },
+  "nominal_planar_lengths": {
+    "upper": 0.135,
+    "lower_to_closure": 0.26,
+    "projected_hip_separation": 0
+  },
+  "foot_mesh_geometry": {
+    "ideal_shape": "26-sided polygonal approximation of a cylinder",
+    "radius": 0.031,
+    "axial_width": 0.05,
+    "note": "center inferred from compiled mesh geom_pos and raw STL circular vertices; ideal bottom proxy is not a fixed material point"
+  },
+  "motor": {
+    "gear_ratio": 6.33,
+    "command_side": "rotor",
+    "peak_output_torque_nm": 23.7,
+    "output_speed_limit_rad_s_at_24v": 30,
+    "output_coulomb_friction_nm": 0.15825
+  },
+  "joint_limits": [
+    -1.57,
+    1.57
+  ],
+  "model_state": {
+    "nq": 23,
+    "nv": 22,
+    "nu": 8,
+    "free_root_qpos_order": [
+      "x",
+      "y",
+      "z",
+      "qw",
+      "qx",
+      "qy",
+      "qz"
+    ],
+    "actuator_order": [
+      "RR_thigh_rear_motor",
+      "RR_thigh_front_motor",
+      "FR_thigh_front_motor",
+      "FR_thigh_rear_motor",
+      "FL_thigh_rear_motor",
+      "FL_thigh_front_motor",
+      "RL_thigh_front_motor",
+      "RL_thigh_rear_motor"
+    ]
+  },
+  "legs": [
+    {
+      "name": "RR",
+      "direction_sign": -1,
+      "closure_equality": "closure_001",
+      "branches": [
+        {
+          "name": "front",
+          "hip_body": "RR_thigh_front",
+          "calf_body": "RR_calf_front",
+          "hip_base": [
+            -0.23525,
+            -0.14755,
+            0.0
+          ],
+          "hip_rest_euler_x": 1.5707963,
+          "upper_offset_local": [
+            0.11768228,
+            -0.066150444,
+            0.0234
+          ],
+          "closure_offset_local": [
+            -0.12284469,
+            -0.22914882,
+            -0.0045
+          ],
+          "upper_projected_length": 0.13500000099035384,
+          "lower_projected_length": 0.2599999991703625,
+          "alpha": 0.5120935216770447,
+          "beta": 2.062898403568539,
+          "delta_home": 1.5508048818914943,
+          "active_joint": "RR_thigh_front_joint",
+          "active_joint_id": 3,
+          "active_qpos_index": 9,
+          "active_qvel_index": 8,
+          "actuator_index": 1,
+          "passive_joint": "RR_calf_front_joint",
+          "passive_joint_id": 4,
+          "passive_qpos_index": 10,
+          "passive_qvel_index": 9,
+          "closure_site": "closure_001_a_site",
+          "home_closure_base": [
+            -0.24041241,
+            -0.1664500079125132,
+            -0.2952992634935763
+          ]
+        },
+        {
+          "name": "rear",
+          "hip_body": "RR_thigh_rear",
+          "calf_body": "RR_calf_rear",
+          "hip_base": [
+            -0.23525,
+            -0.12755,
+            0.0
+          ],
+          "hip_rest_euler_x": 1.5707963,
+          "upper_offset_local": [
+            -0.11992254,
+            -0.061996643,
+            0.02
+          ],
+          "closure_offset_local": [
+            0.11476013,
+            -0.23330262,
+            0.0189
+          ],
+          "upper_projected_length": 0.13499999756785572,
+          "lower_projected_length": 0.2599999998778486,
+          "alpha": 2.664459502603133,
+          "beta": 1.1136546206737534,
+          "delta_home": -1.5508048819293794,
+          "active_joint": "RR_thigh_rear_joint",
+          "active_joint_id": 1,
+          "active_qpos_index": 7,
+          "active_qvel_index": 6,
+          "actuator_index": 0,
+          "passive_joint": "RR_calf_rear_joint",
+          "passive_joint_id": 2,
+          "passive_qpos_index": 8,
+          "passive_qvel_index": 7,
+          "closure_site": "closure_001_b_site",
+          "home_closure_base": [
+            -0.24041240999999997,
+            -0.16645000791251316,
+            -0.2952992619576784
+          ]
+        }
+      ],
+      "foot": {
+        "geom": "RR_calf_rear_mesh_2",
+        "center_local_rear_calf": [
+          0.11476012645150199,
+          -0.2333026281904773,
+          -0.009999999893605449
+        ],
+        "home_center_base": [
+          -0.240412413548498,
+          -0.13755000801890793,
+          -0.2952992709225282
+        ],
+        "ideal_home_ground_contact_base": [
+          -0.240412413548498,
+          -0.13755000801890793,
+          -0.3262992709225282
+        ],
+        "center_plane_y": -0.13755000010639454,
+        "closure_plane_y": -0.16645,
+        "source_mesh": "../simulation/generated_robot-mjcf_v2/meshes/part_002_solid_002.stl",
+        "source_mesh_sha256": "47c919716f05d0e9d5b1830682999ce7225368bdb064dd85536797144725f945"
+      },
+      "fk_assembly_sign": -1,
+      "home_planar_jacobian_rows_u_v_cols_front_rear": [
+        [
+          0.1489758419525513,
+          0.1463234215689458
+        ],
+        [
+          -0.07328030430748803,
+          0.07844271405096681
+        ]
+      ]
+    },
+    {
+      "name": "FR",
+      "direction_sign": -1,
+      "closure_equality": "closure_004",
+      "branches": [
+        {
+          "name": "front",
+          "hip_body": "FR_thigh_front",
+          "calf_body": "FR_calf_front",
+          "hip_base": [
+            0.23525,
+            -0.12015,
+            0.0
+          ],
+          "hip_rest_euler_x": 1.5707963,
+          "upper_offset_local": [
+            -0.063859455,
+            -0.11894104,
+            0.0508
+          ],
+          "closure_offset_local": [
+            0.15925233,
+            -0.20552055,
+            0.0
+          ],
+          "upper_projected_length": 0.13500000366362447,
+          "lower_projected_length": 0.2600000020821758,
+          "alpha": 2.0635264255895267,
+          "beta": 0.9115655925722763,
+          "delta_home": -1.1519608330172504,
+          "active_joint": "FR_thigh_front_joint",
+          "active_joint_id": 5,
+          "active_qpos_index": 11,
+          "active_qvel_index": 10,
+          "actuator_index": 2,
+          "passive_joint": "FR_calf_front_joint",
+          "passive_joint_id": 6,
+          "passive_qpos_index": 12,
+          "passive_qvel_index": 11,
+          "closure_site": "closure_004_a_site",
+          "home_closure_base": [
+            0.330642875,
+            -0.1709500086939147,
+            -0.32446158863881913
+          ]
+        },
+        {
+          "name": "rear",
+          "hip_body": "FR_thigh_rear",
+          "calf_body": "FR_calf_rear",
+          "hip_base": [
+            0.23525,
+            -0.12755,
+            0.0
+          ],
+          "hip_rest_euler_x": 1.5707963,
+          "upper_offset_local": [
+            0.11807184,
+            -0.06545258,
+            0.0
+          ],
+          "closure_offset_local": [
+            -0.022678969,
+            -0.259009,
+            0.0434
+          ],
+          "upper_projected_length": 0.1349999986283037,
+          "lower_projected_length": 0.25999999560750564,
+          "alpha": 0.5061732789225795,
+          "beta": 1.6581341236368743,
+          "delta_home": 1.1519608447142948,
+          "active_joint": "FR_thigh_rear_joint",
+          "active_joint_id": 7,
+          "active_qpos_index": 13,
+          "active_qvel_index": 12,
+          "actuator_index": 3,
+          "passive_joint": "FR_calf_rear_joint",
+          "passive_joint_id": 8,
+          "passive_qpos_index": 14,
+          "passive_qvel_index": 13,
+          "closure_site": "closure_004_b_site",
+          "home_closure_base": [
+            0.330642871,
+            -0.17095000869391444,
+            -0.32446157883710136
+          ]
+        }
+      ],
+      "foot": {
+        "geom": "FR_calf_rear_mesh_2",
+        "center_local_rear_calf": [
+          -0.022678963283829456,
+          -0.25900901534058873,
+          0.009999999324992959
+        ],
+        "home_center_base": [
+          0.33064287671617054,
+          -0.13755000801890782,
+          -0.32446159507263966
+        ],
+        "ideal_home_ground_contact_base": [
+          0.33064287671617054,
+          -0.13755000801890782,
+          -0.35546159507263964
+        ],
+        "center_plane_y": -0.13754999932499296,
+        "closure_plane_y": -0.17095,
+        "source_mesh": "../simulation/generated_robot-mjcf_v2/meshes/part_015_solid_015.stl",
+        "source_mesh_sha256": "be62fd030cbcb4ad12aa352cc2779a9e628286faaded9349b59226bbe0c1eb01"
+      },
+      "fk_assembly_sign": 1,
+      "home_planar_jacobian_rows_u_v_cols_front_rear": [
+        [
+          0.18091092938897088,
+          0.1435506549577178
+        ],
+        [
+          0.015840659434126447,
+          -0.11123353005352804
+        ]
+      ]
+    },
+    {
+      "name": "FL",
+      "direction_sign": 1,
+      "closure_equality": "closure_003",
+      "branches": [
+        {
+          "name": "front",
+          "hip_body": "FL_thigh_front",
+          "calf_body": "FL_calf_front",
+          "hip_base": [
+            0.23525,
+            0.12755,
+            0.0
+          ],
+          "hip_rest_euler_x": -1.5707963,
+          "upper_offset_local": [
+            -0.060488295,
+            0.12069037,
+            0.0434
+          ],
+          "closure_offset_local": [
+            0.13330989,
+            0.22322292,
+            -0.0045
+          ],
+          "upper_projected_length": 0.13499999719534783,
+          "lower_projected_length": 0.25999999766372783,
+          "alpha": 2.0353920950337936,
+          "beta": 1.0324343558853835,
+          "delta_home": -1.0029577391484101,
+          "active_joint": "FL_thigh_front_joint",
+          "active_joint_id": 11,
+          "active_qpos_index": 17,
+          "active_qvel_index": 16,
+          "actuator_index": 5,
+          "passive_joint": "FL_calf_front_joint",
+          "passive_joint_id": 12,
+          "passive_qpos_index": 18,
+          "passive_qvel_index": 17,
+          "closure_site": "closure_003_b_site",
+          "home_closure_base": [
+            0.308071595,
+            0.166450009215121,
+            -0.34391328895767836
+          ]
+        },
+        {
+          "name": "rear",
+          "hip_body": "FL_thigh_rear",
+          "calf_body": "FL_calf_rear",
+          "hip_base": [
+            0.23525,
+            0.12015,
+            0.0
+          ],
+          "hip_rest_euler_x": -1.5707963,
+          "upper_offset_local": [
+            0.10421468,
+            0.085815499,
+            0.0274
+          ],
+          "closure_offset_local": [
+            -0.031393091,
+            0.2580978,
+            0.0189
+          ],
+          "upper_projected_length": 0.1349999977634126,
+          "lower_projected_length": 0.2600000010141813,
+          "alpha": 0.6888766136367636,
+          "beta": 1.6918343058869736,
+          "delta_home": 1.00295769225021,
+          "active_joint": "FL_thigh_rear_joint",
+          "active_joint_id": 9,
+          "active_qpos_index": 15,
+          "active_qvel_index": 14,
+          "actuator_index": 4,
+          "passive_joint": "FL_calf_rear_joint",
+          "passive_joint_id": 10,
+          "passive_qpos_index": 16,
+          "passive_qvel_index": 15,
+          "closure_site": "closure_003_a_site",
+          "home_closure_base": [
+            0.308071589,
+            0.1664500092151212,
+            -0.3439132977593961
+          ]
+        }
+      ],
+      "foot": {
+        "geom": "FL_calf_rear_mesh_2",
+        "center_local_rear_calf": [
+          -0.03139308712130695,
+          0.25809779808627686,
+          -0.010000001377854145
+        ],
+        "home_center_base": [
+          0.308071592878693,
+          0.13755000783726704,
+          -0.34391329662004555
+        ],
+        "ideal_home_ground_contact_base": [
+          0.308071592878693,
+          0.13755000783726704,
+          -0.3749132966200456
+        ],
+        "center_plane_y": 0.13754999862214587,
+        "closure_plane_y": 0.16645000000000001,
+        "source_mesh": "../simulation/generated_robot-mjcf_v2/meshes/part_017_solid_017.stl",
+        "source_mesh_sha256": "483700b5f91431d688a21b5400e3153066ff5d49219727e4366ee21e9ebe150a"
+      },
+      "fk_assembly_sign": 1,
+      "home_planar_jacobian_rows_u_v_cols_front_rear": [
+        [
+          -0.18441604239766884,
+          -0.15949724077838917
+        ],
+        [
+          -0.022430991666143117,
+          0.0952525825908494
+        ]
+      ]
+    },
+    {
+      "name": "RL",
+      "direction_sign": 1,
+      "closure_equality": "closure_005",
+      "branches": [
+        {
+          "name": "front",
+          "hip_body": "RL_thigh_front",
+          "calf_body": "RL_calf_front",
+          "hip_base": [
+            -0.23525,
+            0.12015,
+            0.0
+          ],
+          "hip_rest_euler_x": -1.5707963,
+          "upper_offset_local": [
+            0.10528368,
+            0.084500567,
+            0.0508
+          ],
+          "closure_offset_local": [
+            -0.12247589,
+            0.22934615,
+            0.0
+          ],
+          "upper_projected_length": 0.13499999665801438,
+          "lower_projected_length": 0.260000000290605,
+          "alpha": 0.6763236367475334,
+          "beta": 2.061289659861022,
+          "delta_home": 1.3849660231134888,
+          "active_joint": "RL_thigh_front_joint",
+          "active_joint_id": 13,
+          "active_qpos_index": 19,
+          "active_qvel_index": 18,
+          "actuator_index": 6,
+          "passive_joint": "RL_calf_front_joint",
+          "passive_joint_id": 14,
+          "passive_qpos_index": 20,
+          "passive_qvel_index": 19,
+          "closure_site": "closure_005_a_site",
+          "home_closure_base": [
+            -0.25244221,
+            0.1709500084094903,
+            -0.31384671563881916
+          ]
+        },
+        {
+          "name": "rear",
+          "hip_body": "RL_thigh_rear",
+          "calf_body": "RL_calf_rear",
+          "hip_base": [
+            -0.23525,
+            0.12755,
+            0.0
+          ],
+          "hip_rest_euler_x": -1.5707963,
+          "upper_offset_local": [
+            -0.11388373,
+            0.072494794,
+            0.02
+          ],
+          "closure_offset_local": [
+            0.096691524,
+            0.24135192,
+            0.0234
+          ],
+          "upper_projected_length": 0.13499999672524196,
+          "lower_projected_length": 0.2600000001944788,
+          "alpha": 2.5747176422671982,
+          "beta": 1.18975159030304,
+          "delta_home": -1.3849660519641582,
+          "active_joint": "RL_thigh_rear_joint",
+          "active_joint_id": 15,
+          "active_qpos_index": 21,
+          "active_qvel_index": 20,
+          "actuator_index": 7,
+          "passive_joint": "RL_calf_rear_joint",
+          "passive_joint_id": 16,
+          "passive_qpos_index": 22,
+          "passive_qvel_index": 21,
+          "closure_site": "closure_005_b_site",
+          "home_closure_base": [
+            -0.252442206,
+            0.1709500084094902,
+            -0.31384671283710136
+          ]
+        }
+      ],
+      "foot": {
+        "geom": "RL_calf_rear_mesh_2",
+        "center_local_rear_calf": [
+          0.09669152117191682,
+          0.24135192099804292,
+          -0.010000000572223156
+        ],
+        "home_center_base": [
+          -0.25244220882808316,
+          0.13755000783726706,
+          -0.31384671473009385
+        ],
+        "ideal_home_ground_contact_base": [
+          -0.25244220882808316,
+          0.13755000783726706,
+          -0.3448467147300939
+        ],
+        "center_plane_y": 0.13754999942777685,
+        "closure_plane_y": 0.17095,
+        "source_mesh": "../simulation/generated_robot-mjcf_v2/meshes/part_011_solid_011.stl",
+        "source_mesh_sha256": "8ce79c0f49a2a05b0fc73a7f8e4515afa5a2054a47d93f07072e30e99bd0accc"
+      },
+      "fk_assembly_sign": -1,
+      "home_planar_jacobian_rows_u_v_cols_front_rear": [
+        [
+          -0.16092589074235866,
+          -0.1529208206920364
+        ],
+        [
+          0.06447087566958719,
+          -0.0816630826974317
+        ]
+      ]
+    }
+  ],
+  "inertials": [
+    {
+      "body": "base_link",
+      "mass": 7.716,
+      "com_local": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertial_quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "principal_diagonal_inertia": [
+        0.050376098,
+        0.13930081,
+        0.16962314
+      ],
+      "source": "CAD estimate; not measured"
+    },
+    {
+      "body": "RR_thigh_rear",
+      "mass": 0.119,
+      "com_local": [
+        -0.059961272,
+        -0.030998322,
+        0.010000003
+      ],
+      "inertial_quaternion_wxyz": [
+        0.9716777065429428,
+        0.0,
+        0.0,
+        0.23631003915925072
+      ],
+      "principal_diagonal_inertia": [
+        1.2553298e-05,
+        0.00025394121,
+        0.00025856118
+      ],
+      "source": "CAD estimate; not measured"
+    },
+    {
+      "body": "RR_calf_rear",
+      "mass": 0.125,
+      "com_local": [
+        0.099437799,
+        -0.20215295,
+        -0.0099999969
+      ],
+      "inertial_quaternion_wxyz": [
+        0.9739912161996902,
+        0.0,
+        0.0,
+        0.22658576911590975
+      ],
+      "principal_diagonal_inertia": [
+        0.00070119282,
+        4.2404509e-05,
+        0.00070497131
+      ],
+      "source": "CAD estimate; not measured"
+    },
+    {
+      "body": "RR_thigh_front",
+      "mass": 0.119,
+      "com_local": [
+        0.058841137,
+        -0.033075221,
+        0.023399997
+      ],
+      "inertial_quaternion_wxyz": [
+        0.9673987227765725,
+        0.0,
+        0.0,
+        -0.25325819072688716
+      ],
+      "principal_diagonal_inertia": [
+        1.2553298e-05,
+        0.00025394121,
+        0.00025856118
+      ],
+      "source": "CAD estimate; not measured"
+    },
+    {
+      "body": "RR_calf_front",
+      "mass": 0.048,
+      "com_local": [
+        -0.061422348,
+        -0.11457441,
+        -3.0517582e-09
+      ],
+      "inertial_quaternion_wxyz": [
+        0.9698818534958771,
+        0.0,
+        0.0,
+        -0.2435758408779535
+      ],
+      "principal_diagonal_inertia": [
+        0.00035495588,
+        2.1830437e-06,
+        0.00035649092
+      ],
+      "source": "CAD estimate; not measured"
+    },
+    {
+      "body": "FR_thigh_front",
+      "mass": 0.119,
+      "com_local": [
+        -0.031929727,
+        -0.059470519,
+        0.050799997
+      ],
+      "inertial_quaternion_wxyz": [
+        0.9698053207519644,
+        0.0,
+        0.0,
+        -0.24388038018909916
+      ],
+      "principal_diagonal_inertia": [
+        0.00025394122,
+        1.2553294e-05,
+        0.00025856118
+      ],
+      "source": "CAD estimate; not measured"
+    },
+    {
+      "body": "FR_calf_front",
+      "mass": 0.048,
+      "com_local": [
+        0.079626178,
+        -0.10276029,
+        -3.051758e-09
+      ],
+      "inertial_quaternion_wxyz": [
+        0.946166912695193,
+        0.0,
+        0.0,
+        0.3236791209220125
+      ],
+      "principal_diagonal_inertia": [
+        0.00035495586,
+        2.1830447e-06,
+        0.00035649091
+      ],
+      "source": "CAD estimate; not measured"
+    },
+    {
+      "body": "FR_thigh_rear",
+      "mass": 0.119,
+      "com_local": [
+        0.059035924,
+        -0.032726289,
+        0.010000003
+      ],
+      "inertial_quaternion_wxyz": [
+        0.9681441651615933,
+        0.0,
+        0.0,
+        -0.2503934413349552
+      ],
+      "principal_diagonal_inertia": [
+        1.2553296e-05,
+        0.00025394122,
+        0.00025856118
+      ],
+      "source": "CAD estimate; not measured"
+    },
+    {
+      "body": "FR_calf_rear",
+      "mass": 0.125,
+      "com_local": [
+        -0.019650956,
+        -0.22442712,
+        0.010000003
+      ],
+      "inertial_quaternion_wxyz": [
+        0.9990466656360697,
+        0.0,
+        0.0,
+        -0.043655009809310794
+      ],
+      "principal_diagonal_inertia": [
+        0.00070119287,
+        4.2404511e-05,
+        0.00070497136
+      ],
+      "source": "CAD estimate; not measured"
+    },
+    {
+      "body": "FL_thigh_rear",
+      "mass": 0.119,
+      "com_local": [
+        0.052107339,
+        0.04290775,
+        0.017400003
+      ],
+      "inertial_quaternion_wxyz": [
+        0.9412652667092172,
+        0.0,
+        0.0,
+        0.3376680288194697
+      ],
+      "principal_diagonal_inertia": [
+        1.2553294e-05,
+        0.00025394121,
+        0.00025856117
+      ],
+      "source": "CAD estimate; not measured"
+    },
+    {
+      "body": "FL_calf_rear",
+      "mass": 0.125,
+      "com_local": [
+        -0.027201606,
+        0.22363757,
+        -0.0099999969
+      ],
+      "inertial_quaternion_wxyz": [
+        0.9981692854959817,
+        0.0,
+        0.0,
+        0.060482042727088146
+      ],
+      "principal_diagonal_inertia": [
+        0.00070119281,
+        4.2404499e-05,
+        0.00070497129
+      ],
+      "source": "CAD estimate; not measured"
+    },
+    {
+      "body": "FL_thigh_front",
+      "mass": 0.119,
+      "com_local": [
+        -0.030244147,
+        0.060345191,
+        0.043399997
+      ],
+      "inertial_quaternion_wxyz": [
+        0.9731399617201612,
+        0.0,
+        0.0,
+        0.23021428040693598
+      ],
+      "principal_diagonal_inertia": [
+        0.00025394123,
+        1.2553293e-05,
+        0.00025856119
+      ],
+      "source": "CAD estimate; not measured"
+    },
+    {
+      "body": "FL_calf_front",
+      "mass": 0.048,
+      "com_local": [
+        0.066654944,
+        0.11161146,
+        -3.0517576e-09
+      ],
+      "inertial_quaternion_wxyz": [
+        0.9639890287260013,
+        0.0,
+        0.0,
+        -0.2659420096485336
+      ],
+      "principal_diagonal_inertia": [
+        0.00035495588,
+        2.1830429e-06,
+        0.00035649092
+      ],
+      "source": "CAD estimate; not measured"
+    },
+    {
+      "body": "RL_thigh_front",
+      "mass": 0.119,
+      "com_local": [
+        0.052641843,
+        0.042250284,
+        0.050799997
+      ],
+      "inertial_quaternion_wxyz": [
+        0.9433660848258101,
+        0.0,
+        0.0,
+        0.33175356818039253
+      ],
+      "principal_diagonal_inertia": [
+        1.2553296e-05,
+        0.00025394122,
+        0.00025856118
+      ],
+      "source": "CAD estimate; not measured"
+    },
+    {
+      "body": "RL_calf_front",
+      "mass": 0.048,
+      "com_local": [
+        -0.061237946,
+        0.11467307,
+        -3.0517578e-09
+      ],
+      "inertial_quaternion_wxyz": [
+        0.9700774617717745,
+        0.0,
+        0.0,
+        0.2427956304434482
+      ],
+      "principal_diagonal_inertia": [
+        0.00035495591,
+        2.1830428e-06,
+        0.00035649095
+      ],
+      "source": "CAD estimate; not measured"
+    },
+    {
+      "body": "RL_thigh_rear",
+      "mass": 0.119,
+      "com_local": [
+        -0.056941868,
+        0.036247394,
+        0.010000003
+      ],
+      "inertial_quaternion_wxyz": [
+        0.9600997942330279,
+        0.0,
+        0.0,
+        -0.27965762123299526
+      ],
+      "principal_diagonal_inertia": [
+        1.2553296e-05,
+        0.00025394121,
+        0.00025856117
+      ],
+      "source": "CAD estimate; not measured"
+    },
+    {
+      "body": "RL_calf_rear",
+      "mass": 0.125,
+      "com_local": [
+        0.083781645,
+        0.20912754,
+        -0.0099999969
+      ],
+      "inertial_quaternion_wxyz": [
+        0.9819054467966867,
+        0.0,
+        0.0,
+        -0.18937183938220395
+      ],
+      "principal_diagonal_inertia": [
+        0.00070119276,
+        4.2404509e-05,
+        0.00070497126
+      ],
+      "source": "CAD estimate; not measured"
+    }
+  ],
+  "example_level_stance": {
+    "base_position_world": [
+      0,
+      0,
+      0.351
+    ],
+    "base_quaternion_wxyz": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "planar_closure_target": [
+      0,
+      0.32
+    ],
+    "ideal_foot_ground_world_z": 0,
+    "poses": [
+      {
+        "leg": "RR",
+        "active_front_rear": [
+          -0.1486642142073349,
+          0.1836245856646155
+        ],
+        "passive_front_rear": [
+          0.2183704067175951,
+          -0.2183704204076664
+        ]
+      },
+      {
+        "leg": "FR",
+        "active_front_rear": [
+          -0.4173085191239716,
+          -0.15458448837259764
+        ],
+        "passive_front_rear": [
+          0.18047368246692352,
+          -0.18047358637001865
+        ]
+      },
+      {
+        "leg": "FL",
+        "active_front_rear": [
+          0.4454428043561558,
+          -0.028118885999656507
+        ],
+        "passive_front_rear": [
+          -0.32947670128113393,
+          0.32947678012165
+        ]
+      },
+      {
+        "leg": "RL",
+        "active_front_rear": [
+          -0.01556590160508653,
+          -0.09388272443161583
+        ],
+        "passive_front_rear": [
+          -0.05253156329841845,
+          0.052531592584595055
+        ]
+      }
+    ],
+    "validation": "closure sites and foot centers checked with MuJoCo; not a standing controller or stability test",
+    "mesh_contacts_without_ground": 0
+  }
+}

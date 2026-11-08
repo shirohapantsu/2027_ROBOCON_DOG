@@ -1,0 +1,1477 @@
+{
+  "schema": "stackforce.robot-semantics.v1",
+  "integration_status": "pending_simready_integration",
+  "model_id": "generated_robot",
+  "entry": "robot.xml",
+  "files": [
+    {
+      "path": "meshes/part_001_solid_001.stl",
+      "sha256": "45e2a7911cd23ea4e4b1279390b6eddee388165285d2b19c85e2ee94b2351fbb"
+    },
+    {
+      "path": "meshes/part_003_solid_003.stl",
+      "sha256": "90859e2765e8eda7a67702feb87cfbdbb6a857be6e9edd25f0203e5820df46e5"
+    },
+    {
+      "path": "meshes/part_004_solid_004.stl",
+      "sha256": "287b329814917e7d77e98f4d057960415060ee7e3980b15b55f8687f9912af5a"
+    },
+    {
+      "path": "meshes/part_002_solid_002.stl",
+      "sha256": "47c919716f05d0e9d5b1830682999ce7225368bdb064dd85536797144725f945"
+    },
+    {
+      "path": "meshes/part_005_solid_005.stl",
+      "sha256": "f0a0e1a8586199d582d3e9e1fbe56f4dd8e373086cd1f2cb4a1b39d3f269f95b"
+    },
+    {
+      "path": "meshes/part_006_solid_006.stl",
+      "sha256": "7082ac82482cff3f67cde315215e526f78fefedcb3b72fec5af95449b91453f4"
+    },
+    {
+      "path": "meshes/part_013_solid_013.stl",
+      "sha256": "14d9da8b1177c502261ad9431b042a0b9814f1fd67375591cc466cc000ee34c8"
+    },
+    {
+      "path": "meshes/part_012_solid_012.stl",
+      "sha256": "a7a02c559ad4b02c67cbd1f383ee38f5a9e55c9ee0fc322fca408314a5133e9e"
+    },
+    {
+      "path": "meshes/part_014_solid_014.stl",
+      "sha256": "e55f90efe3c1a4141129b0053da1b3a8116c2f1d54c4a9bb21f8ceb14334581e"
+    },
+    {
+      "path": "meshes/part_015_solid_015.stl",
+      "sha256": "be62fd030cbcb4ad12aa352cc2779a9e628286faaded9349b59226bbe0c1eb01"
+    },
+    {
+      "path": "meshes/part_021_solid_021.stl",
+      "sha256": "72b0b9db2d05c8f8cb6725a64290b3ef4f60173e7bc67c1a72534177cd566cd9"
+    },
+    {
+      "path": "meshes/part_018_solid_018.stl",
+      "sha256": "e8d938b90abe360d17487b7184151107293b0499c469e665dcd1970db78a57f0"
+    },
+    {
+      "path": "meshes/part_017_solid_017.stl",
+      "sha256": "483700b5f91431d688a21b5400e3153066ff5d49219727e4366ee21e9ebe150a"
+    },
+    {
+      "path": "meshes/part_020_solid_020.stl",
+      "sha256": "27dfb4ef06258e9b304bb7943d871aaf5a2a5ea56317fc8f6c567eaa5bc7a85b"
+    },
+    {
+      "path": "meshes/part_019_solid_019.stl",
+      "sha256": "c240ea59baf29492a05d6465363ac58e72b600046426566e535c1ad34d456a8c"
+    },
+    {
+      "path": "meshes/part_009_solid_009.stl",
+      "sha256": "79ecd28be4f46266142355b0c779727bf043d52de381ade670659c0819a05093"
+    },
+    {
+      "path": "meshes/part_016_solid_016.stl",
+      "sha256": "66d1e982214701b928cf5de8c3b8c20d742e8db3e543d639d5dae113716a512d"
+    },
+    {
+      "path": "meshes/part_010_solid_010.stl",
+      "sha256": "65ba8056e49fe80effadcbc00e75ae0311e21011ad7fecf3c26397a86d9af30f"
+    },
+    {
+      "path": "meshes/part_007_solid_007.stl",
+      "sha256": "7a420c84a33ae0e3f961c1960b265434696e06b85c02aad2880e1d28dbd96e59"
+    },
+    {
+      "path": "meshes/part_008_solid_008.stl",
+      "sha256": "2ccdb83ed00affa71b66b0ae89187be8f292ec0bdb4faba7d9663fb38a9f5bb8"
+    },
+    {
+      "path": "meshes/part_011_solid_011.stl",
+      "sha256": "8ce79c0f49a2a05b0fc73a7f8e4515afa5a2054a47d93f07072e30e99bd0accc"
+    },
+    {
+      "path": "robot.xml",
+      "sha256": "62e210cadcf0f1d40d5f822b5b9d7c6710142cd9d4eb3c17cadd15629692a090"
+    },
+    {
+      "path": "motor_control.hpp",
+      "sha256": "47422a531c764bbc71e9ee839b749fc3d1f215e71f7b86345ee7a4faefef7660"
+    },
+    {
+      "path": "motor-performance.json",
+      "sha256": "a735c423c4f890ff465e3b8f55e61d0abb4517cf4a1bbd9b37ca6abd8c7e0fd8"
+    }
+  ],
+  "topology": "closed_chain",
+  "motion_type": "quadruped_parallel_leg",
+  "base": "free",
+  "bodies": [
+    {
+      "id": "link_001",
+      "name": "base_link",
+      "mass": {
+        "value": 7.716,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "CAD 质量 7.716 kg；用户确认已包含八台约 0.53 kg 电机（共约 4.24 kg），不再重复添加；不是实测惯量。"
+      }
+    },
+    {
+      "id": "link_002",
+      "name": "RR_thigh_rear",
+      "mass": {
+        "value": 0.1189999999999942,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_003",
+      "name": "RR_calf_rear",
+      "mass": {
+        "value": 0.125,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_004",
+      "name": "RR_thigh_front",
+      "mass": {
+        "value": 0.11900000000000406,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_005",
+      "name": "RR_calf_front",
+      "mass": {
+        "value": 0.04799999999999922,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_006",
+      "name": "FR_thigh_front",
+      "mass": {
+        "value": 0.11899999999999707,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_008",
+      "name": "FR_thigh_rear",
+      "mass": {
+        "value": 0.11900000000000209,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_009",
+      "name": "FR_calf_rear",
+      "mass": {
+        "value": 0.12499999999999999,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_010",
+      "name": "FL_thigh_rear",
+      "mass": {
+        "value": 0.11899999999999974,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_011",
+      "name": "FL_calf_rear",
+      "mass": {
+        "value": 0.12499999999999999,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_012",
+      "name": "FL_thigh_front",
+      "mass": {
+        "value": 0.11900000000000152,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_013",
+      "name": "FL_calf_front",
+      "mass": {
+        "value": 0.04799999999999669,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_014",
+      "name": "RL_thigh_front",
+      "mass": {
+        "value": 0.1189999999999996,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_015",
+      "name": "FR_calf_front",
+      "mass": {
+        "value": 0.04799999999999434,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_016",
+      "name": "RL_calf_front",
+      "mass": {
+        "value": 0.04800000000000089,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_017",
+      "name": "RL_thigh_rear",
+      "mass": {
+        "value": 0.11899999999999886,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_018",
+      "name": "RL_calf_rear",
+      "mass": {
+        "value": 0.125,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    }
+  ],
+  "joints": [
+    {
+      "id": "link_002_joint",
+      "name": "RR_thigh_rear_joint",
+      "role": "actuated",
+      "mode": "torque",
+      "initial_position": {
+        "value": 0,
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": "MJCF home 相对关节位置；不是实机编码器零位。"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": [
+          -23.7,
+          23.7
+        ],
+        "unit": "N*m",
+        "source": "user_supplementary_motor_specification",
+        "note": "输出轴最大力矩上限；不是连续额定力矩，不代表全速度范围可输出。"
+      },
+      "feedback": "position_velocity_rotor_torque",
+      "speed_limits": {
+        "value": [
+          -30,
+          30
+        ],
+        "unit": "rad/s",
+        "side": "output",
+        "voltage": 24,
+        "source": "user_supplementary_motor_specification",
+        "enforcement": "C++ desired-speed clamp and same-direction overspeed drive guard; not an XML hard velocity constraint"
+      }
+    },
+    {
+      "id": "link_003_joint",
+      "name": "RR_calf_rear_joint",
+      "role": "passive",
+      "mode": "passive",
+      "initial_position": {
+        "value": 0,
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": "MJCF home 相对关节位置；不是实机编码器零位。"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "被动关节无执行器；不限制闭链传递力矩。"
+      },
+      "feedback": "not_instrumented"
+    },
+    {
+      "id": "link_004_joint",
+      "name": "RR_thigh_front_joint",
+      "role": "actuated",
+      "mode": "torque",
+      "initial_position": {
+        "value": 0,
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": "MJCF home 相对关节位置；不是实机编码器零位。"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": [
+          -23.7,
+          23.7
+        ],
+        "unit": "N*m",
+        "source": "user_supplementary_motor_specification",
+        "note": "输出轴最大力矩上限；不是连续额定力矩，不代表全速度范围可输出。"
+      },
+      "feedback": "position_velocity_rotor_torque",
+      "speed_limits": {
+        "value": [
+          -30,
+          30
+        ],
+        "unit": "rad/s",
+        "side": "output",
+        "voltage": 24,
+        "source": "user_supplementary_motor_specification",
+        "enforcement": "C++ desired-speed clamp and same-direction overspeed drive guard; not an XML hard velocity constraint"
+      }
+    },
+    {
+      "id": "link_005_joint",
+      "name": "RR_calf_front_joint",
+      "role": "passive",
+      "mode": "passive",
+      "initial_position": {
+        "value": 0,
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": "MJCF home 相对关节位置；不是实机编码器零位。"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "被动关节无执行器；不限制闭链传递力矩。"
+      },
+      "feedback": "not_instrumented"
+    },
+    {
+      "id": "link_006_joint",
+      "name": "FR_thigh_front_joint",
+      "role": "actuated",
+      "mode": "torque",
+      "initial_position": {
+        "value": 0,
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": "MJCF home 相对关节位置；不是实机编码器零位。"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": [
+          -23.7,
+          23.7
+        ],
+        "unit": "N*m",
+        "source": "user_supplementary_motor_specification",
+        "note": "输出轴最大力矩上限；不是连续额定力矩，不代表全速度范围可输出。"
+      },
+      "feedback": "position_velocity_rotor_torque",
+      "speed_limits": {
+        "value": [
+          -30,
+          30
+        ],
+        "unit": "rad/s",
+        "side": "output",
+        "voltage": 24,
+        "source": "user_supplementary_motor_specification",
+        "enforcement": "C++ desired-speed clamp and same-direction overspeed drive guard; not an XML hard velocity constraint"
+      }
+    },
+    {
+      "id": "link_008_joint",
+      "name": "FR_thigh_rear_joint",
+      "role": "actuated",
+      "mode": "torque",
+      "initial_position": {
+        "value": 0,
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": "MJCF home 相对关节位置；不是实机编码器零位。"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": [
+          -23.7,
+          23.7
+        ],
+        "unit": "N*m",
+        "source": "user_supplementary_motor_specification",
+        "note": "输出轴最大力矩上限；不是连续额定力矩，不代表全速度范围可输出。"
+      },
+      "feedback": "position_velocity_rotor_torque",
+      "speed_limits": {
+        "value": [
+          -30,
+          30
+        ],
+        "unit": "rad/s",
+        "side": "output",
+        "voltage": 24,
+        "source": "user_supplementary_motor_specification",
+        "enforcement": "C++ desired-speed clamp and same-direction overspeed drive guard; not an XML hard velocity constraint"
+      }
+    },
+    {
+      "id": "link_009_joint",
+      "name": "FR_calf_rear_joint",
+      "role": "passive",
+      "mode": "passive",
+      "initial_position": {
+        "value": 0,
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": "MJCF home 相对关节位置；不是实机编码器零位。"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "被动关节无执行器；不限制闭链传递力矩。"
+      },
+      "feedback": "not_instrumented"
+    },
+    {
+      "id": "link_010_joint",
+      "name": "FL_thigh_rear_joint",
+      "role": "actuated",
+      "mode": "torque",
+      "initial_position": {
+        "value": 0,
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": "MJCF home 相对关节位置；不是实机编码器零位。"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": [
+          -23.7,
+          23.7
+        ],
+        "unit": "N*m",
+        "source": "user_supplementary_motor_specification",
+        "note": "输出轴最大力矩上限；不是连续额定力矩，不代表全速度范围可输出。"
+      },
+      "feedback": "position_velocity_rotor_torque",
+      "speed_limits": {
+        "value": [
+          -30,
+          30
+        ],
+        "unit": "rad/s",
+        "side": "output",
+        "voltage": 24,
+        "source": "user_supplementary_motor_specification",
+        "enforcement": "C++ desired-speed clamp and same-direction overspeed drive guard; not an XML hard velocity constraint"
+      }
+    },
+    {
+      "id": "link_011_joint",
+      "name": "FL_calf_rear_joint",
+      "role": "passive",
+      "mode": "passive",
+      "initial_position": {
+        "value": 0,
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": "MJCF home 相对关节位置；不是实机编码器零位。"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "被动关节无执行器；不限制闭链传递力矩。"
+      },
+      "feedback": "not_instrumented"
+    },
+    {
+      "id": "link_012_joint",
+      "name": "FL_thigh_front_joint",
+      "role": "actuated",
+      "mode": "torque",
+      "initial_position": {
+        "value": 0,
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": "MJCF home 相对关节位置；不是实机编码器零位。"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": [
+          -23.7,
+          23.7
+        ],
+        "unit": "N*m",
+        "source": "user_supplementary_motor_specification",
+        "note": "输出轴最大力矩上限；不是连续额定力矩，不代表全速度范围可输出。"
+      },
+      "feedback": "position_velocity_rotor_torque",
+      "speed_limits": {
+        "value": [
+          -30,
+          30
+        ],
+        "unit": "rad/s",
+        "side": "output",
+        "voltage": 24,
+        "source": "user_supplementary_motor_specification",
+        "enforcement": "C++ desired-speed clamp and same-direction overspeed drive guard; not an XML hard velocity constraint"
+      }
+    },
+    {
+      "id": "link_013_joint",
+      "name": "FL_calf_front_joint",
+      "role": "passive",
+      "mode": "passive",
+      "initial_position": {
+        "value": 0,
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": "MJCF home 相对关节位置；不是实机编码器零位。"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "被动关节无执行器；不限制闭链传递力矩。"
+      },
+      "feedback": "not_instrumented"
+    },
+    {
+      "id": "link_014_joint",
+      "name": "RL_thigh_front_joint",
+      "role": "actuated",
+      "mode": "torque",
+      "initial_position": {
+        "value": 0,
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": "MJCF home 相对关节位置；不是实机编码器零位。"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": [
+          -23.7,
+          23.7
+        ],
+        "unit": "N*m",
+        "source": "user_supplementary_motor_specification",
+        "note": "输出轴最大力矩上限；不是连续额定力矩，不代表全速度范围可输出。"
+      },
+      "feedback": "position_velocity_rotor_torque",
+      "speed_limits": {
+        "value": [
+          -30,
+          30
+        ],
+        "unit": "rad/s",
+        "side": "output",
+        "voltage": 24,
+        "source": "user_supplementary_motor_specification",
+        "enforcement": "C++ desired-speed clamp and same-direction overspeed drive guard; not an XML hard velocity constraint"
+      }
+    },
+    {
+      "id": "link_007_joint",
+      "name": "FR_calf_front_joint",
+      "role": "passive",
+      "mode": "passive",
+      "initial_position": {
+        "value": 0,
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": "MJCF home 相对关节位置；不是实机编码器零位。"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "被动关节无执行器；不限制闭链传递力矩。"
+      },
+      "feedback": "not_instrumented"
+    },
+    {
+      "id": "link_015_joint",
+      "name": "RL_calf_front_joint",
+      "role": "passive",
+      "mode": "passive",
+      "initial_position": {
+        "value": 0,
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": "MJCF home 相对关节位置；不是实机编码器零位。"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "被动关节无执行器；不限制闭链传递力矩。"
+      },
+      "feedback": "not_instrumented"
+    },
+    {
+      "id": "link_016_joint",
+      "name": "RL_thigh_rear_joint",
+      "role": "actuated",
+      "mode": "torque",
+      "initial_position": {
+        "value": 0,
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": "MJCF home 相对关节位置；不是实机编码器零位。"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": [
+          -23.7,
+          23.7
+        ],
+        "unit": "N*m",
+        "source": "user_supplementary_motor_specification",
+        "note": "输出轴最大力矩上限；不是连续额定力矩，不代表全速度范围可输出。"
+      },
+      "feedback": "position_velocity_rotor_torque",
+      "speed_limits": {
+        "value": [
+          -30,
+          30
+        ],
+        "unit": "rad/s",
+        "side": "output",
+        "voltage": 24,
+        "source": "user_supplementary_motor_specification",
+        "enforcement": "C++ desired-speed clamp and same-direction overspeed drive guard; not an XML hard velocity constraint"
+      }
+    },
+    {
+      "id": "link_017_joint",
+      "name": "RL_calf_rear_joint",
+      "role": "passive",
+      "mode": "passive",
+      "initial_position": {
+        "value": 0,
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": "MJCF home 相对关节位置；不是实机编码器零位。"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "被动关节无执行器；不限制闭链传递力矩。"
+      },
+      "feedback": "not_instrumented"
+    }
+  ],
+  "drive_groups": [
+    {
+      "id": "RR_hip_drive",
+      "name": "RR 髋部双电机",
+      "joint_ids": [
+        "link_004_joint",
+        "link_002_joint"
+      ],
+      "actuators": [
+        "RR_thigh_front_motor",
+        "RR_thigh_rear_motor"
+      ],
+      "mode": "torque",
+      "source": "user_confirmed_hip_layout"
+    },
+    {
+      "id": "FR_hip_drive",
+      "name": "FR 髋部双电机",
+      "joint_ids": [
+        "link_006_joint",
+        "link_008_joint"
+      ],
+      "actuators": [
+        "FR_thigh_front_motor",
+        "FR_thigh_rear_motor"
+      ],
+      "mode": "torque",
+      "source": "user_confirmed_hip_layout"
+    },
+    {
+      "id": "FL_hip_drive",
+      "name": "FL 髋部双电机",
+      "joint_ids": [
+        "link_012_joint",
+        "link_010_joint"
+      ],
+      "actuators": [
+        "FL_thigh_front_motor",
+        "FL_thigh_rear_motor"
+      ],
+      "mode": "torque",
+      "source": "user_confirmed_hip_layout"
+    },
+    {
+      "id": "RL_hip_drive",
+      "name": "RL 髋部双电机",
+      "joint_ids": [
+        "link_014_joint",
+        "link_016_joint"
+      ],
+      "actuators": [
+        "RL_thigh_front_motor",
+        "RL_thigh_rear_motor"
+      ],
+      "mode": "torque",
+      "source": "user_confirmed_hip_layout"
+    }
+  ],
+  "roles": [],
+  "sensors": [
+    {
+      "name": "RR_thigh_rear_position",
+      "type": "jointpos",
+      "target": "RR_thigh_rear_joint",
+      "unit": "rad",
+      "side": "output"
+    },
+    {
+      "name": "RR_thigh_rear_velocity",
+      "type": "jointvel",
+      "target": "RR_thigh_rear_joint",
+      "unit": "rad/s",
+      "side": "output"
+    },
+    {
+      "name": "RR_thigh_rear_rotor_torque",
+      "type": "actuatorfrc",
+      "target": "RR_thigh_rear_motor",
+      "unit": "N*m",
+      "side": "rotor"
+    },
+    {
+      "name": "RR_thigh_front_position",
+      "type": "jointpos",
+      "target": "RR_thigh_front_joint",
+      "unit": "rad",
+      "side": "output"
+    },
+    {
+      "name": "RR_thigh_front_velocity",
+      "type": "jointvel",
+      "target": "RR_thigh_front_joint",
+      "unit": "rad/s",
+      "side": "output"
+    },
+    {
+      "name": "RR_thigh_front_rotor_torque",
+      "type": "actuatorfrc",
+      "target": "RR_thigh_front_motor",
+      "unit": "N*m",
+      "side": "rotor"
+    },
+    {
+      "name": "FR_thigh_front_position",
+      "type": "jointpos",
+      "target": "FR_thigh_front_joint",
+      "unit": "rad",
+      "side": "output"
+    },
+    {
+      "name": "FR_thigh_front_velocity",
+      "type": "jointvel",
+      "target": "FR_thigh_front_joint",
+      "unit": "rad/s",
+      "side": "output"
+    },
+    {
+      "name": "FR_thigh_front_rotor_torque",
+      "type": "actuatorfrc",
+      "target": "FR_thigh_front_motor",
+      "unit": "N*m",
+      "side": "rotor"
+    },
+    {
+      "name": "FR_thigh_rear_position",
+      "type": "jointpos",
+      "target": "FR_thigh_rear_joint",
+      "unit": "rad",
+      "side": "output"
+    },
+    {
+      "name": "FR_thigh_rear_velocity",
+      "type": "jointvel",
+      "target": "FR_thigh_rear_joint",
+      "unit": "rad/s",
+      "side": "output"
+    },
+    {
+      "name": "FR_thigh_rear_rotor_torque",
+      "type": "actuatorfrc",
+      "target": "FR_thigh_rear_motor",
+      "unit": "N*m",
+      "side": "rotor"
+    },
+    {
+      "name": "FL_thigh_rear_position",
+      "type": "jointpos",
+      "target": "FL_thigh_rear_joint",
+      "unit": "rad",
+      "side": "output"
+    },
+    {
+      "name": "FL_thigh_rear_velocity",
+      "type": "jointvel",
+      "target": "FL_thigh_rear_joint",
+      "unit": "rad/s",
+      "side": "output"
+    },
+    {
+      "name": "FL_thigh_rear_rotor_torque",
+      "type": "actuatorfrc",
+      "target": "FL_thigh_rear_motor",
+      "unit": "N*m",
+      "side": "rotor"
+    },
+    {
+      "name": "FL_thigh_front_position",
+      "type": "jointpos",
+      "target": "FL_thigh_front_joint",
+      "unit": "rad",
+      "side": "output"
+    },
+    {
+      "name": "FL_thigh_front_velocity",
+      "type": "jointvel",
+      "target": "FL_thigh_front_joint",
+      "unit": "rad/s",
+      "side": "output"
+    },
+    {
+      "name": "FL_thigh_front_rotor_torque",
+      "type": "actuatorfrc",
+      "target": "FL_thigh_front_motor",
+      "unit": "N*m",
+      "side": "rotor"
+    },
+    {
+      "name": "RL_thigh_front_position",
+      "type": "jointpos",
+      "target": "RL_thigh_front_joint",
+      "unit": "rad",
+      "side": "output"
+    },
+    {
+      "name": "RL_thigh_front_velocity",
+      "type": "jointvel",
+      "target": "RL_thigh_front_joint",
+      "unit": "rad/s",
+      "side": "output"
+    },
+    {
+      "name": "RL_thigh_front_rotor_torque",
+      "type": "actuatorfrc",
+      "target": "RL_thigh_front_motor",
+      "unit": "N*m",
+      "side": "rotor"
+    },
+    {
+      "name": "RL_thigh_rear_position",
+      "type": "jointpos",
+      "target": "RL_thigh_rear_joint",
+      "unit": "rad",
+      "side": "output"
+    },
+    {
+      "name": "RL_thigh_rear_velocity",
+      "type": "jointvel",
+      "target": "RL_thigh_rear_joint",
+      "unit": "rad/s",
+      "side": "output"
+    },
+    {
+      "name": "RL_thigh_rear_rotor_torque",
+      "type": "actuatorfrc",
+      "target": "RL_thigh_rear_motor",
+      "unit": "N*m",
+      "side": "rotor"
+    }
+  ],
+  "frames": {
+    "up": "Z",
+    "forward": "unknown",
+    "wheel_axis": "unknown",
+    "handedness": "right"
+  },
+  "constraints": [
+    {
+      "id": "closure_001",
+      "name": "closure_001",
+      "type": "connect",
+      "passive_joint_ids": [
+        "link_005_joint",
+        "link_003_joint"
+      ]
+    },
+    {
+      "id": "closure_003",
+      "name": "closure_003",
+      "type": "connect",
+      "passive_joint_ids": [
+        "link_013_joint",
+        "link_011_joint"
+      ]
+    },
+    {
+      "id": "closure_004",
+      "name": "closure_004",
+      "type": "connect",
+      "passive_joint_ids": [
+        "link_007_joint",
+        "link_009_joint"
+      ]
+    },
+    {
+      "id": "closure_005",
+      "name": "closure_005",
+      "type": "connect",
+      "passive_joint_ids": [
+        "link_015_joint",
+        "link_017_joint"
+      ]
+    }
+  ],
+  "initial_pose": {
+    "source": "cad_estimated",
+    "keyframe": "home",
+    "closure_error": {
+      "value": 1.06522e-08,
+      "unit": "m",
+      "source": "mujoco_3.3.7",
+      "note": "home 下四组 connect site 间距离的最大值；不是 solver residual。"
+    }
+  },
+  "pending": [
+    "SimReady 尚未接入此 manifest；执行器、摩擦和传感器由 robot.xml 生效，速度保护需显式调用 C++ 适配器。",
+    "MuJoCo 3.3.7 已完成电机与基本数值验证；尚未验证站立、步态、接地接触或实机。",
+    "连续额定力矩、曲线原始数据与电压工况、再生制动曲线、转子惯量、电阻电感、热模型、摩擦随温度速度变化和传动效率尚未确认。",
+    "0.63895 N*m/A 暂按输出侧常数使用；相电流为力矩折算值，不是实测或母线电流。",
+    "实机 RS-485 ID、安装方向和上电编码器零位仍需标定；不得将仿真索引直接用作电机 ID。"
+  ],
+  "motor_configuration": {
+    "model": "GO-M8010-6",
+    "count": 8,
+    "mounting": "hip",
+    "gear_ratio": 6.33,
+    "gearbox_assumption": "ideal, efficiency=1; no backlash or elastic transmission",
+    "control_side": "rotor",
+    "control_unit": "N*m",
+    "output_torque_limit": 23.7,
+    "output_torque_limit_source": "user_supplementary_motor_specification; maximum output torque, not continuous duty",
+    "breakaway_torque": {
+      "side": "rotor",
+      "range": [
+        0.02,
+        0.03
+      ],
+      "nominal": 0.025,
+      "unit": "N*m",
+      "source": "user_measurement_and_side_confirmation"
+    },
+    "joint_frictionloss": {
+      "side": "output",
+      "range": [
+        0.1266,
+        0.1899
+      ],
+      "nominal": 0.15825,
+      "unit": "N*m",
+      "source": "ideal_gear_ratio_conversion"
+    },
+    "physical_motor_ids": "not_assigned; simulation index is not RS-485 ID",
+    "hardware_direction_and_encoder_zero": "not_calibrated",
+    "documentation": "../../docs/motor_model.md",
+    "rotor_torque_limit": 3.744075829383886,
+    "output_speed_limit_at_24v": 30,
+    "rotor_speed_limit_at_24v": 189.9,
+    "speed_limit_implementation": "C++ adapter: clamp desired rotor speed, apply approximate motoring torque-speed envelope, retain peak-limited opposing torque; external loads/discrete stepping can overspeed",
+    "torque_speed_curve": {
+      "file": "motor-performance.json",
+      "image": "../../docs/motor_performance.png",
+      "source_url": "https://oss-global-cdn.unitree.com/static/c01d234dd77f472397ce52642c63954d_1213x670.png",
+      "axis_side": "rotor, inferred",
+      "voltage_assumption_v": 24,
+      "implementation": "C++ inverse linear interpolation of approximately digitized speed/load samples, mirrored for reverse motoring; no dynamic curve in bare XML",
+      "thermal_rating": "unknown; not claimed continuous duty",
+      "added_no_load_anchor": "30 rad/s output from user parameter table",
+      "braking": "peak/current cap only; regenerative curve unknown"
+    },
+    "phase_current": {
+      "maximum": 40,
+      "unit": "A",
+      "output_torque_constant": 0.63895,
+      "output_torque_constant_unit": "N*m/A",
+      "torque_constant_side": "assumed_output_from_user_specification; requires calibration",
+      "torque_constant_rotor_equivalent": 0.10093996840442339,
+      "max_torque_equivalent_current": 37.092104233508095,
+      "torque_ceiling_from_current": 25.558,
+      "feedback": "estimate_from_actuator_torque_only; no electrical current dynamics or DC bus current measurement",
+      "dc_input_current_curve": "see motor-performance.json; blue input-DC-current trace is distinct from phase current"
+    },
+    "electrical_supply": {
+      "operating_voltage_range": [
+        12,
+        30
+      ],
+      "nominal_voltage": 24,
+      "absolute_maximum_voltage": 60,
+      "overvoltage_protection_voltage": 45,
+      "unit": "V",
+      "demo_minimum_supply": {
+        "voltage": 24,
+        "current": 5,
+        "note": "demo-only supply capability; not eight-motor full-load sizing"
+      },
+      "simulation": "metadata only; voltage damage, protection and thermal states not simulated"
+    },
+    "mechanical_specification": {
+      "unit_mass_kg": 0.53,
+      "eight_motor_mass_kg": 4.24,
+      "external_dimensions_m": [
+        0.0965,
+        0.0925,
+        0.0423
+      ],
+      "mass_already_in_base_link": true,
+      "mass_inclusion_source": "user_confirmed",
+      "base_link_mass_kg": 7.716,
+      "total_robot_mass_kg": 9.36,
+      "motor_rotor_inertia": "unknown; no armature inferred from full motor housing dimensions",
+      "source": "user_supplementary_motor_specification"
+    },
+    "encoder": {
+      "bits": 15,
+      "location": "rotor",
+      "type": "single_turn_absolute_with_power_on_turn_count",
+      "rotor_resolution_rad": 0.00019174759848570515,
+      "output_resolution_rad": 3.029187969758375e-05,
+      "simulation": "continuous ideal feedback; encoder quantization not simulated"
+    },
+    "communication": {
+      "interface": "RS485",
+      "baud_rate_bit_s": 4000000,
+      "serial_format": "8N1",
+      "data_bits": 8,
+      "parity": null,
+      "stop_bits": 1,
+      "unicast_id_range": [
+        0,
+        14
+      ],
+      "max_motors_per_bus": 15,
+      "command_frame_bytes": 17,
+      "feedback_frame_bytes": 16,
+      "crc": "CRC16_CCITT",
+      "maximum_communication_frequency_hz": 6000,
+      "maximum_communication_frequency_note": "listed communication capability, not eight motors each at 6 kHz on one bus",
+      "minimum_eight_motor_round_trip_time_s": 0.00066,
+      "ideal_eight_motor_round_frequency_upper_bound_hz": 1515.1515151515152,
+      "recommended_cable": {
+        "awg_text": "≥18AWG, as written in the user table; conductor area not inferred from ambiguous gauge ordering",
+        "length_m_less_than": 1
+      },
+      "simulation": "metadata only; no serial port or packet timing emulation"
+    },
+    "environment": {
+      "ambient_temperature_range_celsius": [
+        -5,
+        40
+      ],
+      "simulation": "metadata only; ambient range is not winding temperature trip threshold"
+    },
+    "hardware_feedback_capabilities": [
+      "torque",
+      "angle",
+      "angular_velocity",
+      "temperature"
+    ],
+    "hardware_command_capabilities": [
+      "torque",
+      "angle",
+      "angular_velocity",
+      "stiffness",
+      "damping"
+    ],
+    "supplementary_parameter_source": "user-provided motor parameter screenshot, 2026-11-03",
+    "numerical_backend": {
+      "library": "Eigen3 >= 3.3",
+      "language": "C++17",
+      "command_and_feedback": "fixed-size 8x1 vectors",
+      "torque_speed_curve": "fixed-size 12x2 row-major matrix; column 0 rotor torque, column 1 rpm",
+      "indices": "fixed-size 8x1 integer vectors",
+      "header_comments": "Chinese"
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "schema": "dog.motor-performance.v1",
+  "source_url": "https://oss-global-cdn.unitree.com/static/c01d234dd77f472397ce52642c63954d_1213x670.png",
+  "local_source_image": "../../docs/motor_performance.png",
+  "source_type": "user_supplied_official_vendor_plot; approximate_raster_digitization",
+  "axis_interpretation": {
+    "torque": "rotor-side N*m, inferred",
+    "speed": "rotor-side rpm, inferred",
+    "blue": "InputDCCurrent(A), DC bus input current; not phase current",
+    "orange": "OutputPower(W)",
+    "red": "Efficiency(%), electrical-to-mechanical; not gearbox-only efficiency",
+    "basis": "rpm/6.33 matches the output speed specification, and P ~= Tn * rotor_rpm * 2*pi/60 matches the power trace"
+  },
+  "voltage": {
+    "nominal_assumption_v": 24,
+    "explicitly_labelled_on_plot": false,
+    "basis": "user specification is at 24 V; Pout/(Idc*efficiency) is approximately 24 V on the supplied trace"
+  },
+  "precision_note": "Approximate readout only, no raw vendor dataset; speeds rounded to about 10 rpm; current/efficiency to about 0.1, power to about 1 W. These are display rounding choices, not guaranteed error bounds.",
+  "samples": [
+    {
+      "rotor_torque_nm": 0.2,
+      "rotor_speed_rpm": 1700,
+      "dc_input_current_a": 2.4,
+      "output_power_w": 37,
+      "efficiency_percent": 65.4
+    },
+    {
+      "rotor_torque_nm": 0.4,
+      "rotor_speed_rpm": 1660,
+      "dc_input_current_a": 3.9,
+      "output_power_w": 72,
+      "efficiency_percent": 75.3
+    },
+    {
+      "rotor_torque_nm": 0.6,
+      "rotor_speed_rpm": 1620,
+      "dc_input_current_a": 5.6,
+      "output_power_w": 104,
+      "efficiency_percent": 78.9
+    },
+    {
+      "rotor_torque_nm": 0.8,
+      "rotor_speed_rpm": 1580,
+      "dc_input_current_a": 7.1,
+      "output_power_w": 135,
+      "efficiency_percent": 79.4
+    },
+    {
+      "rotor_torque_nm": 1,
+      "rotor_speed_rpm": 1550,
+      "dc_input_current_a": 8.7,
+      "output_power_w": 164,
+      "efficiency_percent": 78.9
+    },
+    {
+      "rotor_torque_nm": 1.5,
+      "rotor_speed_rpm": 1440,
+      "dc_input_current_a": 12.6,
+      "output_power_w": 228,
+      "efficiency_percent": 75.2
+    },
+    {
+      "rotor_torque_nm": 2,
+      "rotor_speed_rpm": 1340,
+      "dc_input_current_a": 16.5,
+      "output_power_w": 282,
+      "efficiency_percent": 70.5
+    },
+    {
+      "rotor_torque_nm": 2.5,
+      "rotor_speed_rpm": 1240,
+      "dc_input_current_a": 20.4,
+      "output_power_w": 327,
+      "efficiency_percent": 66.4
+    },
+    {
+      "rotor_torque_nm": 3,
+      "rotor_speed_rpm": 1130,
+      "dc_input_current_a": 24.3,
+      "output_power_w": 359,
+      "efficiency_percent": 61.8
+    },
+    {
+      "rotor_torque_nm": 3.5,
+      "rotor_speed_rpm": 1030,
+      "dc_input_current_a": 28.1,
+      "output_power_w": 380,
+      "efficiency_percent": 57.1
+    },
+    {
+      "rotor_torque_nm": 3.98,
+      "rotor_speed_rpm": 930,
+      "dc_input_current_a": 31.5,
+      "output_power_w": 395,
+      "efficiency_percent": 52.2
+    }
+  ],
+  "added_no_load_anchor": {
+    "rotor_torque_nm": 0,
+    "rotor_speed_rpm": 1813.4114215890556,
+    "source": "30 rad/s output speed from user parameter table; added modelling anchor, not digitized"
+  },
+  "model_use": "Inverse piecewise-linear interpolation of green speed/load trace as approximate nominal-24-V motoring envelope; capped at 23.7 N*m output and 40 A equivalent phase current. Nonnegative-speed curve mirrored for reverse drive; braking curve and continuous-duty limits are unknown.",
+  "other_traces_use": "Reference only; current, power and efficiency traces are not used to synthesize current/thermal states or multiply the gearbox transmission ratio.",
+  "local_source_image_sha256": "ccadaab6506f5b2823695df0605c4a47d596ee28d02570e0230ef2fa9488e744"
+}
