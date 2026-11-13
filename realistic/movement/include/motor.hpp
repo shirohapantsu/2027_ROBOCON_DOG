@@ -41,6 +41,8 @@ private:
     MotorCmd cmd_;
     std::shared_ptr<SerialPort> serial_;
     MotorData data_;
+    float offset_;  // 相对于零位的误差 offset = (编码器零位 - x轴)
+    bool direction_;   // 方向系数,1为正0为负
 
 public:
     // 禁止复制
@@ -48,8 +50,8 @@ public:
     Motor& operator=(const Motor&) = delete;
 
     // 同一总线上的电机实例共享同一个串口，调用方串行调度收发。
-    Motor(std::shared_ptr<SerialPort> serial, int id)
-        : serial_(std::move(serial)) {
+    Motor(std::shared_ptr<SerialPort> serial, int id, float offset, bool direction)
+        : serial_(std::move(serial)), offset_(offset), direction_(direction) {
         if (!serial_) {
             throw std::invalid_argument("串口不能为空");
         }
@@ -145,11 +147,18 @@ public:
 
         const float ratio = queryGearRatio(cmd_.motorType);
         const float ratioSquared = ratio * ratio;
-        cmd_.q = target.q * ratio;
-        cmd_.dq = target.dq * ratio;
+        if(direction_) {
+            cmd_.q = (target.q - offset_) * ratio;
+            cmd_.dq = target.dq * ratio;
+            cmd_.tau = target.tau / ratio;
+        }
+        else {
+            cmd_.q = (- target.q - offset_) * ratio;
+            cmd_.dq = - target.dq * ratio;
+            cmd_.tau = - target.tau / ratio;
+        }        
         cmd_.kp = target.kp / ratioSquared;
         cmd_.kd = target.kd / ratioSquared;
-        cmd_.tau = target.tau / ratio;
         return true;
     }
 
@@ -161,10 +170,11 @@ public:
         }
 
         const float ratio = queryGearRatio(cmd_.motorType);
+        const float s = direction_? 1.0f : -1.0f;
         return MotorState{
-            data_.q / ratio,
-            data_.dq / ratio,
-            data_.tau * ratio,
+            s * (data_.q / ratio + offset_),
+            s * data_.dq / ratio,
+            s * data_.tau * ratio,
             data_.temp,
             data_.merror,
             true

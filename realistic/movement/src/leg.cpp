@@ -13,10 +13,15 @@ FloatVector leg::ik(FloatVector &footPos) {
     float sqr_r = x*x + z*z;
     float sqrt_r = sqrt(sqr_r);
     float eta = atan2(z, x);  
-    float alpha = acos((L1*L1 + sqr_r - L2*L2) / 2.0f*L1*sqrt_r);
-    return FloatVector{eta + alpha, eta - alpha};
+    float alpha = acos((L1*L1 + sqr_r - L2*L2) / (2.0f*L1*sqrt_r));
+    return FloatVector{eta + alpha, eta - alpha};   // 第一项为在前的腿，第二项为在后的腿
+}
+
+FloatVector leg::step_support(float u) {
+    // 
 }
 
 
 }
+
 

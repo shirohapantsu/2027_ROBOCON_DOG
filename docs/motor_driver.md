@@ -2,12 +2,14 @@
 
 本文对应 [`realistic/movement/include/motor.hpp`](../realistic/movement/include/motor.hpp) 的当前实现，代码示例使用 C++17。
 
+坐标系、安装方向、零偏标定与上电圈数问题详见 [`motor_coordinates.md`](motor_coordinates.md)。
+
 `motor::Motor` 封装宇树 GO-M8010-6 电机 SDK。每个对象管理一台电机，负责该电机的命令缓存、收发、反馈检查和单位换算。八台电机共用串口时，创建八个 `Motor` 对象，并共享同一个 `SerialPort`。
 
 ## 1. 使用流程
 
 1. 配置各台实际电机的 ID，确保同一总线上没有重复 ID。
-2. 为每台电机构造 `Motor`，传入串口和该电机 ID；每个对象构造时会立即执行一次通信校验。
+2. 为每台电机构造 `Motor`，传入共享串口、该电机 ID、零偏和安装方向；每个对象构造时会立即执行一次通信校验。
 3. 用 `MotorCtrl` 设置各台电机的初始目标，调用 `editCmd()` 写入缓存。
 4. 依次调用各实例的 `enable()`，将各台电机切换到 FOC 模式，并发送各自缓存的目标。
 5. 在控制循环中，更新各实例的目标，再依次调用各实例的 `sendCmd()` 和 `getData()`。
@@ -17,30 +19,33 @@
 
 ## 2. 创建电机实例
 
-一台电机独占串口时，直接传入设备路径和 ID：
+先创建串口，再传入实际 ID、标定零偏和安装方向。下面零偏及方向仅为接口示例：
 
 ```cpp
-motor::Motor actuator("/dev/ttyUSB0", 0);
+auto serial = std::make_shared<SerialPort>("/dev/ttyUSB0");
+motor::Motor actuator(serial, 0, 0.2f, true);
 ```
 
 构造函数声明：
 
 ```cpp
-Motor(const std::string& serial, int id);
-Motor(std::shared_ptr<SerialPort> serial, int id);
+Motor(std::shared_ptr<SerialPort> serial, int id, float offset, bool direction);
 ```
 
 | 参数 | 含义 |
 |---|---|
-| `serial` | 串口设备路径，或已经创建的非空 `std::shared_ptr<SerialPort>` |
+| `serial` | 已经创建的非空 `std::shared_ptr<SerialPort>` |
 | `id` | 当前实例管理的实际电机 ID，必须在 `0～14` 内 |
+| `offset` | 从 $+x$ 到选定编码器零位对应连杆方向的有向角，按电机原生方向计正，输出轴侧 rad |
+| `direction` | 输出侧朝右传 `true`，朝左传 `false`；不传数值 `-1` |
 
 同一串口上的多台电机，应共享同一个串口对象：
 
 ```cpp
 auto serial = std::make_shared<SerialPort>("/dev/ttyUSB0");
-motor::Motor front(serial, 2);
-motor::Motor rear(serial, 7);
+// 示例值；每台电机应使用自己的标定结果和实际安装方向。
+motor::Motor front(serial, 2, 0.2f, true);
+motor::Motor rear(serial, 7, -0.1f, false);
 ```
 
 ID 可以不连续。构造参数 `id` 表示实际电机 ID，不表示容器下标，也不会修改电机自身的 ID。实例创建后，`editCmd()` 和 `getData()` 不再接收 ID。
@@ -53,7 +58,7 @@ ID 可以不连续。构造参数 `id` 表示实际电机 ID，不表示容器�
 - 首轮通信、CRC、反馈 ID 或电机故障检查未通过：抛出 `std::runtime_error`。
 - 串口打开、配置或底层通信异常：可能抛出 SDK 异常。
 
-路径构造函数使用 SDK 默认串口配置：4,000,000 波特率、8 数据位、无校验、1 停止位，接收长度为单台反馈的 16 字节，超时参数为 20,000 微秒。需要其他配置时，可在外部创建和配置 `SerialPort` 后通过共享指针传入。
+上述 `SerialPort` 创建方式使用 SDK 默认串口配置：4,000,000 波特率、8 数据位、无校验、1 停止位，接收长度为单台反馈的 16 字节，超时参数为 20,000 微秒。需要其他配置时，可在外部创建和配置 `SerialPort` 后通过共享指针传入。
 
 对象禁止复制和移动；需要动态存放多个实例时，可使用 `std::vector<std::unique_ptr<motor::Motor>>`。串口由共享指针管理，最后一个持有者释放时才关闭。不要为同一设备路径分别创建多个串口对象；保持共享串口由一个通信线程顺序使用，当前类没有为并发调用提供同步保护。
 
@@ -75,8 +80,8 @@ struct MotorCtrl {
 | 字段 | 含义 | 单位 |
 |---|---|---|
 | `mode` | 控制目标的组合方式 | `CtrlMode` |
-| `q` | 目标位置 | rad |
-| `dq` | 目标角速度 | rad/s |
+| `q` | 统一腿部方向下，相对 $+x$ 的连杆目标角度 | rad |
+| `dq` | 统一腿部方向下的目标角速度 | rad/s |
 | `kp` | 位置增益 | N·m/rad |
 | `kd` | 速度增益 | N·m·s/rad |
 | `tau` | 前馈力矩 | N·m |
@@ -153,8 +158,8 @@ struct MotorState {
 
 | 字段 | 含义 |
 |---|---|
-| `q` | 输出轴位置，rad |
-| `dq` | 输出轴角速度，rad/s |
+| `q` | 统一腿部方向下，相对 $+x$ 的连杆角度，rad，已换算安装方向与零偏 |
+| `dq` | 统一腿部方向下的输出轴角速度，rad/s |
 | `tau` | 根据减速比换算的输出轴力矩估计，N·m，未计传动损耗 |
 | `temp` | 电机温度，摄氏度 |
 | `error` | 电机报告的故障码，仅在 `valid == true` 时有意义 |
@@ -183,7 +188,7 @@ if (!state.valid) {
 
 ## 6. 八台电机完整示例
 
-下面用阻尼控制演示配置、使能、循环收发和退出。阻尼参数是接口示例值，周期中的 5 毫秒仅为附加休眠，不代表固定的 200 Hz 控制频率。
+下面用阻尼控制演示配置、使能、循环收发和退出。零偏和安装方向为占位配置，运行前应替换为逐台标定结果。阻尼参数是接口示例值，周期中的 5 毫秒仅为附加休眠，不代表固定的 200 Hz 控制频率。
 
 将代码保存为项目根目录下的 `motor_driver_example.cpp`：
 
@@ -254,10 +259,14 @@ bool run(MotorList& motors, const std::vector<int>& ids) {
 int main() {
     try {
         const std::vector<int> ids{0, 1, 2, 3, 4, 5, 6, 7};
+        // 占位值，按 ids 顺序填入各台电机的实际标定参数。
+        const std::vector<float> offsets(ids.size(), 0.0f);
+        const std::vector<bool> directions(ids.size(), true);
         auto serial = std::make_shared<SerialPort>("/dev/ttyUSB0");
         MotorList motors;
-        for (int id : ids) {
-            motors.push_back(std::make_unique<motor::Motor>(serial, id));
+        for (std::size_t i = 0; i < ids.size(); ++i) {
+            motors.push_back(std::make_unique<motor::Motor>(
+                serial, ids[i], offsets[i], directions[i]));
         }
 
         bool controlOkay = false;
@@ -307,28 +316,28 @@ Linux ARM64 使用同目录中的 ARM64 库，将链接选项替换为 `-lUnitre
 
 ## 7. 单位换算与使用边界
 
-封装对外统一使用输出轴侧单位。设 SDK 查询到的减速比为 $r$，命令发送前进行：
+封装对外统一使用腿部坐标与输出轴侧单位。设 SDK 查询到的减速比为 $N$，安装方向系数 $s$ 在 `direction == true` 时为 $+1$，否则为 $-1$；零偏 $o=\mathrm{offset}$ 使用电机原生方向下的输出轴 rad。命令发送前进行：
 
 $$
-q_m = r q_o,\qquad
-\dot q_m = r\dot q_o,\qquad
-\tau_m = \frac{\tau_o}{r}
+q_m = N(sq_o-o),\qquad
+\dot q_m = sN\dot q_o,\qquad
+\tau_m = \frac{s\tau_o}{N}
 $$
 
 $$
-K_{p,m} = \frac{K_{p,o}}{r^2},\qquad
-K_{d,m} = \frac{K_{d,o}}{r^2}
+K_{p,m} = \frac{K_{p,o}}{N^2},\qquad
+K_{d,m} = \frac{K_{d,o}}{N^2}
 $$
 
 反馈返回前进行：
 
 $$
-q_o = \frac{q_m}{r},\qquad
-\dot q_o = \frac{\dot q_m}{r},\qquad
-\tau_o \approx r\tau_m
+q_o = s\left(\frac{q_m}{N}+o\right),\qquad
+\dot q_o = \frac{s\dot q_m}{N},\qquad
+\tau_o \approx sN\tau_m
 $$
 
-调用方不要再次乘除减速比。当前换算没有包含安装方向、机构零点偏置和传动效率；例如位置零点不会在构造时自动设置为当前位置。这些机构相关处理需要在上层明确实现。
+调用方不要重复施加减速比、方向和零偏换算。当前封装已经处理传入的安装方向和零偏，但不计传动效率，也不会在构造时自动把当前位置设为零位。转子单圈读数的上电圈数识别仍需上层处理，详见 [`motor_coordinates.md`](motor_coordinates.md)。
 
 当前封装不检查 `NaN`、无穷大、负增益，也不提供软件位置、速度、力矩限幅；上层需要在生成目标时完成数值和范围检查。构造成功只表示首轮通信及故障检查通过，不表示机构已完成零点标定。
 
