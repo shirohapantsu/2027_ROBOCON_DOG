@@ -8,6 +8,66 @@
     "mass": "kg",
     "inertia": "kg*m^2"
   },
+  "robot_frame": {
+    "name": "B",
+    "origin": "same as model base_link origin",
+    "handedness": "right",
+    "axis_convention": {
+      "x": "robot right",
+      "y": "robot forward",
+      "z": "robot up"
+    },
+    "R_robot_from_model_base": [
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "position_conversion": "[x_B, y_B, z_B] = [-y_M, x_M, z_M]",
+    "leg_origin_robot": "[foot_center_x, hip_y, 0]",
+    "R_robot_from_leg": [
+      [
+        0,
+        0,
+        -1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ]
+    ],
+    "closed_point_planar_coordinates": "[robot_y - hip_y, -robot_z]",
+    "real_leg_vector_order": [
+      "y",
+      "z"
+    ]
+  },
+  "coordinate_storage": {
+    "base_frame": "M: original XML base_link frame; forward +X, left +Y, up +Z",
+    "base_suffixed_vectors": "All *_base fields remain in M, not B",
+    "plane_y_fields": "center_plane_y and closure_plane_y remain lateral coordinates in M; negate to get robot-frame X",
+    "leg_frame": "origin_base, R_base_from_leg and coordinates refer to M; u=+robot Y, v=-robot Z, w=-robot X",
+    "local_and_inertial_fields": "Original owning CAD body-local coordinates; not robot-frame coordinates",
+    "model_state": "free_root_qpos_order and raw MuJoCo poses retain model coordinates",
+    "planar_and_joint_fields": "Existing u/v kinematics, CAD joint angles, direction signs and Jacobians are unchanged"
+  },
   "base_frame": {
     "origin": "base_link origin",
     "axis_convention": {

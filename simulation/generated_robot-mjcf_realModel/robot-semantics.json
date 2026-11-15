@@ -1,0 +1,3194 @@
+{
+  "schema": "stackforce.robot-semantics.v1",
+  "integration_status": "pending_simready_integration",
+  "model_id": "generated_robot",
+  "entry": "robot.xml",
+  "files": [
+    {
+      "path": "meshes/part_601_solid_601.stl",
+      "sha256": "47335ae4e0e8af79e3c981882e9d843b2e5381d4167f0f7fd402ea6f1b47ab73"
+    },
+    {
+      "path": "meshes/part_602_solid_602.stl",
+      "sha256": "81395cf1eec915a11d58ce36307abd47ebe5392ff421b87051a0aa419012c175"
+    },
+    {
+      "path": "meshes/part_589_solid_589.stl",
+      "sha256": "038d4e8597c17f34d6f3e3fa6778adae1100ba37c6dd89ea3a18323312cca6ae"
+    },
+    {
+      "path": "meshes/part_600_solid_600.stl",
+      "sha256": "e1c2f3677b6739ef65291f621dc9da9752ec4849a13eee4d755486eee0e11538"
+    },
+    {
+      "path": "meshes/part_603_solid_603.stl",
+      "sha256": "d21b8e18ba1a433302600bd217f03fc513564e9bf1d7ced8dd2b308b981026fd"
+    },
+    {
+      "path": "meshes/part_588_solid_588.stl",
+      "sha256": "a28df8d8a10dbf6ee9d54299ba385e612efcd02fb63b32a7b627d3b7890a954d"
+    },
+    {
+      "path": "meshes/part_587_solid_587.stl",
+      "sha256": "0854b16cfa92b491782182b3be6ac061808d12631fba0e87085aa4055cf7ea3f"
+    },
+    {
+      "path": "meshes/part_594_solid_594.stl",
+      "sha256": "3cf7b8ad1224d4198a4d04e3b691020587099e0a7e845c0ef44316dd253c1905"
+    },
+    {
+      "path": "meshes/part_413_solid_413.stl",
+      "sha256": "69be5fa8923a263ec49371dc78d43c5b63a6b7869f6c4694fbefde9a241929e0"
+    },
+    {
+      "path": "meshes/part_591_solid_591.stl",
+      "sha256": "6541a55647958a3bf577c5f589fe91bfd6f461fae4fd1b31b81b6f6522715e24"
+    },
+    {
+      "path": "meshes/part_597_solid_597.stl",
+      "sha256": "e5ced20430ecff6ae5a69f2bd9ad8d39854f4af1e95a5a53da29b3b286de53a3"
+    },
+    {
+      "path": "meshes/part_578_solid_578.stl",
+      "sha256": "1af9cd1f461331327fd63708832f5b24ff880e9e46be33551352090f675ffa2c"
+    },
+    {
+      "path": "meshes/part_543_solid_543.stl",
+      "sha256": "c7a3d805a3fbd44c91ba8f5f15a0c3b269c0a6a71732bef90b13cb73e8b5e6cc"
+    },
+    {
+      "path": "meshes/part_120_solid_120.stl",
+      "sha256": "cf5b8d3ff62ef5b669d0545cb47663ff3248730800c23f827e93e6c6e75bdc77"
+    },
+    {
+      "path": "meshes/part_285_solid_285.stl",
+      "sha256": "0e1f54aacdc5701d503af44bf9fe7972e273753aaa29bb9439b425ecef651421"
+    },
+    {
+      "path": "meshes/part_281_solid_281.stl",
+      "sha256": "8dae75a4b6fabb60235ba24779812cee5ad6d610780a363ea0eb4f5523b163de"
+    },
+    {
+      "path": "meshes/part_574_solid_574.stl",
+      "sha256": "c740c7ff3f549005e5e0f56c61ef7cedb39c438b56a3a2636f39f660092b7b00"
+    },
+    {
+      "path": "meshes/part_577_solid_577.stl",
+      "sha256": "1785d800dbb7fe2a349a0792bfed783da1563ffb6cae7c2e2e5d9ff0090ed5ba"
+    },
+    {
+      "path": "meshes/part_576_solid_576.stl",
+      "sha256": "a5ad482aa320edb8dbe2ddd3b0c43450097aa96f59a01e92938d8dfae48d7324"
+    },
+    {
+      "path": "meshes/part_592_solid_592.stl",
+      "sha256": "432be201bdf12d5ad3c15cf8e0e7d97b4a25d687fc60cf0ff5f76797c39b55c8"
+    },
+    {
+      "path": "meshes/part_598_solid_598.stl",
+      "sha256": "aade571aeba219915f7e51c1f79c24e8f255030336c4544100714e59616b9839"
+    },
+    {
+      "path": "meshes/part_542_solid_542.stl",
+      "sha256": "dac17bfed758c3058a7ae67c1a242c56009d0005232f95a851aa7fec34d665ab"
+    },
+    {
+      "path": "meshes/part_575_solid_575.stl",
+      "sha256": "8b2f7582dd509b36dea26b4e8c49af55446618c83d9bf399e3642d76de3803d1"
+    },
+    {
+      "path": "meshes/part_412_solid_412.stl",
+      "sha256": "4c94998b3aa5c3158c6df2253006bfbe56c1d607e96fd16c0970a254cbe83ff0"
+    },
+    {
+      "path": "meshes/part_282_solid_282.stl",
+      "sha256": "478b630db3d0281a2fadbbba7d58943e75bb40557a9b805a2dbeec4b1ab7cfa6"
+    },
+    {
+      "path": "meshes/part_283_solid_283.stl",
+      "sha256": "19f931800fcc29f4db20f4cfa9fed8c1f310f2a444b252d1189b8c53bd05c7a8"
+    },
+    {
+      "path": "meshes/part_072_solid_072.stl",
+      "sha256": "b8569dffda29e14e1ffdd5445f6055dc960778146fdb197ef32bbca4e2b728e3"
+    },
+    {
+      "path": "meshes/part_126_solid_126.stl",
+      "sha256": "54198f509a24c79c4dc85cdffd1fa375e89782eda42754b8173e6aa511354631"
+    },
+    {
+      "path": "meshes/part_070_solid_070.stl",
+      "sha256": "53854ad4930874c6406aaaf3238d46b3cfc397a8c2373d68998c0540e06f18dd"
+    },
+    {
+      "path": "meshes/part_200_solid_200.stl",
+      "sha256": "e7df9188daf9c3104e2738b7f16418c1eaef0f6f440aac7672a9485bce445e4f"
+    },
+    {
+      "path": "meshes/part_202_solid_202.stl",
+      "sha256": "3783efad0528c39bcd0c4ee7f10c51b2586b37d2ceb69a6663f01e6f3c82283d"
+    },
+    {
+      "path": "meshes/part_250_solid_250.stl",
+      "sha256": "7b2f97814c6c0ec6c43f9e9731eada504287022265e5d8deec5340d4122417ec"
+    },
+    {
+      "path": "meshes/part_284_solid_284.stl",
+      "sha256": "56b180211655ef04119621e399b36f5fe6fd07f6a3b9f1445a2e7c4b9b4a255d"
+    },
+    {
+      "path": "meshes/part_599_solid_599.stl",
+      "sha256": "ecf860ecc743959383942db3e83794092518c22bb551085550468f707d7140d0"
+    },
+    {
+      "path": "meshes/part_119_solid_119.stl",
+      "sha256": "f102282eb7857e519273539c743472474f76bb320f93998a795306803ad45410"
+    },
+    {
+      "path": "meshes/part_256_solid_256.stl",
+      "sha256": "e7f8e11fb2a55407fd89a17cabbdd6401adf697798ed1d2bcc165915f8bc98fd"
+    },
+    {
+      "path": "meshes/part_252_solid_252.stl",
+      "sha256": "0fb1eead7e11f2e550f04b4ebe9b40595786139e4c0989f7eb4cd16ec1034e35"
+    },
+    {
+      "path": "meshes/part_249_solid_249.stl",
+      "sha256": "165630cf8022181c534333906dd3b63c3a2255be1551a6c21675c0b92790e438"
+    },
+    {
+      "path": "meshes/part_255_solid_255.stl",
+      "sha256": "8681a0888ceb9fca19784c67a9d1d71a59def35f9ada0fa6e5873015348f00fb"
+    },
+    {
+      "path": "meshes/part_258_solid_258.stl",
+      "sha256": "c02ad032a4575e818a0f95aaefa55434ddd9b18bd309c3247565a9578966327b"
+    },
+    {
+      "path": "meshes/part_131_solid_131.stl",
+      "sha256": "f4244cef073574ec3510a6b25190dbcfe4837748f39f22f498e931cd64056df7"
+    },
+    {
+      "path": "meshes/part_257_solid_257.stl",
+      "sha256": "b6431368bbfdf7653e76ea8212e5b61e1c8ff15ddef4ae3afb00c32dee229dad"
+    },
+    {
+      "path": "meshes/part_253_solid_253.stl",
+      "sha256": "7f7c573f28b897a4e63de2ddde2279b3c64ea8acb6da6c604f73a9d9b56e8db4"
+    },
+    {
+      "path": "meshes/part_251_solid_251.stl",
+      "sha256": "a14534e4f1c4d25557a28e5102d8c6bbc1ce94742204bc40dda05d3f6908c9d4"
+    },
+    {
+      "path": "meshes/part_595_solid_595.stl",
+      "sha256": "ee620ddcaf3fb3742ef989ec542692cfa0c953c85a2e8454beefed1febb88a3b"
+    },
+    {
+      "path": "meshes/part_590_solid_590.stl",
+      "sha256": "515b56ee195dc9ae6dbf1d531d06776637aa9c913d9e79f3e2d2cdb8a90eeb26"
+    },
+    {
+      "path": "meshes/part_593_solid_593.stl",
+      "sha256": "1f12372a897676059408fdda17bd72b451631241508d4d471f189ba47df1affe"
+    },
+    {
+      "path": "meshes/part_071_solid_071.stl",
+      "sha256": "94b9bef4861b62cb979970a6f5de4cbd14f33dd146550f69c435745f631ef2e4"
+    },
+    {
+      "path": "meshes/part_129_solid_129.stl",
+      "sha256": "a3b329fe7c89ad33247012cdaaf539ff186f5580f117c421851cfd0b3433c646"
+    },
+    {
+      "path": "meshes/part_001_solid_001.stl",
+      "sha256": "e0477a31aa9dbdfd21f0a0544f07add84abbe538ac514fa7b0a773d12b5e3eb1"
+    },
+    {
+      "path": "meshes/part_127_solid_127.stl",
+      "sha256": "2e5df6625f33225becec5aec0a7262dab0d70bf7d47994756395dc1702d2861a"
+    },
+    {
+      "path": "meshes/part_125_solid_125.stl",
+      "sha256": "568339546eafa8be5a616851daf4919674fd968ace30e61835547b7484d1186a"
+    },
+    {
+      "path": "meshes/part_128_solid_128.stl",
+      "sha256": "70c4090c54a8b3b5db5353fc8cf0e488fe18f5d06c6f7c18690d93aa34d3965b"
+    },
+    {
+      "path": "meshes/part_363_solid_363.stl",
+      "sha256": "82b601c96d65521ad9405692b3b3083ee66609f9fa96a7570a866f0d24f45e60"
+    },
+    {
+      "path": "meshes/part_417_solid_417.stl",
+      "sha256": "cec38a46ca7a96019caefe0adc52fa78cc73f9cba8c2314dfd15406dac9a87e3"
+    },
+    {
+      "path": "meshes/part_416_solid_416.stl",
+      "sha256": "935bade10a7e1e991e3b35bcd9d7f3fd2c98288dddf78677c1a4b39bfeea2ca9"
+    },
+    {
+      "path": "meshes/part_365_solid_365.stl",
+      "sha256": "6dc1f8b81e16b62b7696b30894509f3ed54ccdc9d03d4ec1a29bf32452c88b9b"
+    },
+    {
+      "path": "meshes/part_423_solid_423.stl",
+      "sha256": "d86fbc0fd190c29afa7ef0c7a121b3abc2fd660b2d30b3f9ba6e130074ad7198"
+    },
+    {
+      "path": "meshes/part_419_solid_419.stl",
+      "sha256": "18e8e955c11c270be83ae978cb561a585ca81f480a1dd85e97baa40509e1b8f4"
+    },
+    {
+      "path": "meshes/part_495_solid_495.stl",
+      "sha256": "6a8620856745ec42cba490de16963c3f1f24e8c5ab7e4bd410f845fc0af1e3c6"
+    },
+    {
+      "path": "meshes/part_545_solid_545.stl",
+      "sha256": "7da42fef7712cf475ea339ee7d21b9a53fb4c173c0123ea8e5fa120313459303"
+    },
+    {
+      "path": "meshes/part_493_solid_493.stl",
+      "sha256": "f149971c23354a11122089ded915477d4bf5f1b54c0343c8152c661dcfd5f37a"
+    },
+    {
+      "path": "meshes/part_549_solid_549.stl",
+      "sha256": "2b9e1dadcbfe8b2d37d116207a59159280733e47afa1683f7ab02b17fce6d9f6"
+    },
+    {
+      "path": "meshes/part_548_solid_548.stl",
+      "sha256": "d6a0a3c7f9a5d446d8155721df96300822c4471e93901a0c4c15f5a57fee5a9a"
+    },
+    {
+      "path": "meshes/part_547_solid_547.stl",
+      "sha256": "2ec219ad83f7d248288974ad2ebec8b22728518ff794ca3ed0ba2ac95ae017d5"
+    },
+    {
+      "path": "meshes/part_596_solid_596.stl",
+      "sha256": "685710c576567f6c4c7bb8c7dad6d6a20f02fca471114f256a9e73595d5466bb"
+    },
+    {
+      "path": "meshes/part_289_solid_289.stl",
+      "sha256": "2854a6e741c7f1f98410dfbe5e3bcb4f23e0bb18191422225018a2754ff7f370"
+    },
+    {
+      "path": "meshes/part_580_solid_580.stl",
+      "sha256": "fb647b0fa944f2ef8e2d67021aa11af54a5cd43aedfc06714d92b7a0374b2999"
+    },
+    {
+      "path": "meshes/part_586_solid_586.stl",
+      "sha256": "33091055849cb7c3e064e5576a44d48081f852ebbc57fda84ed43c35c3d1cfd6"
+    },
+    {
+      "path": "meshes/part_286_solid_286.stl",
+      "sha256": "5f80908ba3a8c072af7471d4098c89ab946b5a9c6d0dfe1ba83bab58b92be953"
+    },
+    {
+      "path": "meshes/part_288_solid_288.stl",
+      "sha256": "428afa7d8d006b09afb9ee0aa9662c01086445d562036379afb47b27a95625c5"
+    },
+    {
+      "path": "meshes/part_290_solid_290.stl",
+      "sha256": "5470fefd77f7f7dd2f39a2e49a9f91814ac5e033db0154d56e4732d8da071b86"
+    },
+    {
+      "path": "meshes/part_585_solid_585.stl",
+      "sha256": "9d22dcfcb4a08d3ac0fb627c3ffb7d6aec14c4df87047b1b2333d6930f9c0f9d"
+    },
+    {
+      "path": "meshes/part_584_solid_584.stl",
+      "sha256": "d2a2422f3c70613c0e330b0c0bca4efe7bb17fef9f2b1c7fbf291fe120ed3328"
+    },
+    {
+      "path": "meshes/part_546_solid_546.stl",
+      "sha256": "8e48f29c2beea229120ca898f323368330d866a993d598b0607584695baf343a"
+    },
+    {
+      "path": "meshes/part_422_solid_422.stl",
+      "sha256": "14ced7120833e9073e229f74df62e6bccdeb663ddea3f18b557c49b54d7a5076"
+    },
+    {
+      "path": "meshes/part_551_solid_551.stl",
+      "sha256": "fa07061207769e709f8fb7b68fd04ac9fd4ddabd60e0c4625561ae633577ce2c"
+    },
+    {
+      "path": "meshes/part_124_solid_124.stl",
+      "sha256": "f7844d7b9aba4c549a6c1d2189b54dd7964c0431b21ce2ace3ac1676e9acdb97"
+    },
+    {
+      "path": "meshes/part_123_solid_123.stl",
+      "sha256": "dfd584bc872e38e15b824b4f9dea93d43a6dbb4c8118dff1572b4d131a433f55"
+    },
+    {
+      "path": "meshes/part_287_solid_287.stl",
+      "sha256": "2be01bdcebeecfe36ffb3be50ca598ed5f9767115deb9483b519fbf0cdb6cbee"
+    },
+    {
+      "path": "meshes/part_293_solid_293.stl",
+      "sha256": "1f213328cfe0d53b9f87235ba232ed258f4f5db625f81f7fccd96c5c86f8f4ed"
+    },
+    {
+      "path": "meshes/part_581_solid_581.stl",
+      "sha256": "0788cc4fc70a1d07a9a9cc678940bda6f5023e25fdc5d57eb85c8049520b920b"
+    },
+    {
+      "path": "meshes/part_579_solid_579.stl",
+      "sha256": "bd1536e5fb47b644ef5dd59b5149b19ade6cecc9198be7e18201404db6828a22"
+    },
+    {
+      "path": "meshes/part_420_solid_420.stl",
+      "sha256": "fab9926fcbf91ffa849d1b25cc66a90a6f102bb0dd781b98ea3e3546d2d11aac"
+    },
+    {
+      "path": "meshes/part_294_solid_294.stl",
+      "sha256": "6ebe3ec4904bea194727d6448b48fc833dba325a6c909bf8f1272aeff22f0aef"
+    },
+    {
+      "path": "meshes/part_364_solid_364.stl",
+      "sha256": "22266e9086b55bb755b06ce007a4f2a732157b79200bad3735e75e1917d5fd2f"
+    },
+    {
+      "path": "meshes/part_421_solid_421.stl",
+      "sha256": "03cd441b3f7400b82eae7d3f3ac1e2fed3f60de43c3b49078cee361477fe668d"
+    },
+    {
+      "path": "meshes/part_418_solid_418.stl",
+      "sha256": "be35783c36de461d39e21ff4a33f16640ec7e91cf0f7556f66ec0a4f240df7f1"
+    },
+    {
+      "path": "meshes/part_130_solid_130.stl",
+      "sha256": "0a1fbd26c354a8a7900330c3f0d60ad3ff6f7af148c4334a7d9111825a900d2f"
+    },
+    {
+      "path": "meshes/part_582_solid_582.stl",
+      "sha256": "bde903fd6f2217dd47f0bdb053d26a5f37306752da1c7e2ee795753a046a1d89"
+    },
+    {
+      "path": "meshes/part_292_solid_292.stl",
+      "sha256": "859e681d7c7d2247cfff81d9dcf4221fcbfecfc693db90f268857f5e9d5cdedc"
+    },
+    {
+      "path": "meshes/part_291_solid_291.stl",
+      "sha256": "8be21929a688049fae9c86df49ade8fefa4a4b3ec0bd7605eacda176c48bb29a"
+    },
+    {
+      "path": "meshes/part_254_solid_254.stl",
+      "sha256": "d5bfa2c7b76ac97a955d71fb691496b0e0c87ee1437642ac7033a96866f6538d"
+    },
+    {
+      "path": "meshes/part_583_solid_583.stl",
+      "sha256": "88e17d41a762b41537bd212d42c0e54b55dc05ce5a4278fcf07aaf175412dbb6"
+    },
+    {
+      "path": "meshes/part_424_solid_424.stl",
+      "sha256": "b2cab7897e16b3cf8496523c0efeb2747edf6b90fcd253caf0216f93c8ff8d50"
+    },
+    {
+      "path": "meshes/part_550_solid_550.stl",
+      "sha256": "b15853a42279273fdcf2bb85ab109cd668f500d9c9d465587707e203e099ef6d"
+    },
+    {
+      "path": "meshes/part_544_solid_544.stl",
+      "sha256": "16832d3f0db18ad703860aa51d17cdbd4d3ca69bafe5f92ee856cbcf755051cb"
+    },
+    {
+      "path": "meshes/part_494_solid_494.stl",
+      "sha256": "be44e133b58df01124430319264e614b0376b365591df34081e5e0652c3a9402"
+    },
+    {
+      "path": "meshes/part_201_solid_201.stl",
+      "sha256": "83e5f4f126d22bf8cf9aca8d48dd021365cce23d1ae13b43ef6d1e3a0685f561"
+    },
+    {
+      "path": "meshes/part_002_solid_002.stl",
+      "sha256": "fcf6ad05fe11774cab0089e325dab29f98e3d48e790fb9c5329b99a3686ebff6"
+    },
+    {
+      "path": "meshes/part_003_solid_003.stl",
+      "sha256": "90bd038301102b7e19390ee056e6a8a018357b6cf22cbaa3f549c19c60b262ac"
+    },
+    {
+      "path": "meshes/part_005_solid_005.stl",
+      "sha256": "a027c8c7bd45e041868a66620438ff85a0eeff78e0bd45c5d230d810f1d1ed80"
+    },
+    {
+      "path": "meshes/part_007_solid_007.stl",
+      "sha256": "a1ea0ffbd3995221a778bc29f8423143d4aae09064379d0a6a55b63bc8e824b2"
+    },
+    {
+      "path": "meshes/part_008_solid_008.stl",
+      "sha256": "b2d14818cc9ee13fb49e7adcaeb242dc73ad7777a7ad60d29127e1d6b5be5d10"
+    },
+    {
+      "path": "meshes/part_009_solid_009.stl",
+      "sha256": "9ec283eb473469a40a6e724c4b4650a9d9898167758695b51828e95d7bc2bdf3"
+    },
+    {
+      "path": "meshes/part_011_solid_011.stl",
+      "sha256": "50f3311e71d20d12958d62ec3216378c77fcf85298265dec918ff99d8cd13974"
+    },
+    {
+      "path": "meshes/part_012_solid_012.stl",
+      "sha256": "52f30d1b0694fcc751ec29029e638353d9446b65087f430c84f53ebe27c522f7"
+    },
+    {
+      "path": "meshes/part_013_solid_013.stl",
+      "sha256": "423d615501a4f6401268e60a73304da73d1179cbb736afaf4dc4461e82decc4c"
+    },
+    {
+      "path": "meshes/part_014_solid_014.stl",
+      "sha256": "b7dd49a2d3d44b8391960e33096f15f18403d2cd33b80419b1deafa2f31814ef"
+    },
+    {
+      "path": "meshes/part_015_solid_015.stl",
+      "sha256": "59a84f5f11441b1554e41eab331bddb14a12fbed1281dd608813a84d674cba5a"
+    },
+    {
+      "path": "meshes/part_016_solid_016.stl",
+      "sha256": "36b281b321de1e016c77772306877f92580c32826c7b24ae2c0e3672e653df95"
+    },
+    {
+      "path": "meshes/part_017_solid_017.stl",
+      "sha256": "d427945dc171e752d33babd20df8aed95d91a0c4768f7e251241bf901be1d1e6"
+    },
+    {
+      "path": "meshes/part_019_solid_019.stl",
+      "sha256": "2c274981983f0ddb17d1790631ef9f39f0f174e81932ce318395ba73f90cf64a"
+    },
+    {
+      "path": "meshes/part_020_solid_020.stl",
+      "sha256": "ce86f3c15ca3bc2479e62f9a3324f40cc193fd8dac5f51ab00323aad70d7964c"
+    },
+    {
+      "path": "meshes/part_021_solid_021.stl",
+      "sha256": "49db68f33b481902fa521780e0a8fdb1bba2ec2eadbd61e4142832d9a692807f"
+    },
+    {
+      "path": "meshes/part_022_solid_022.stl",
+      "sha256": "3975ee478fac235310c9d4b6791539029b97e21258ed1875433ae262ba59a5ed"
+    },
+    {
+      "path": "meshes/part_023_solid_023.stl",
+      "sha256": "8ef1ce2807f899e122a78c911df35cf170b8cbcbb197d5b1edd07a8c00f66fcf"
+    },
+    {
+      "path": "meshes/part_024_solid_024.stl",
+      "sha256": "1002ef2ebc2a8d63257fc3f1969adc21ebb03877f933673d09fe73337dc6a211"
+    },
+    {
+      "path": "meshes/part_025_solid_025.stl",
+      "sha256": "3c1b584d7ceb9abc606418060c402dcc865027a97e34158aab3ba72b696536db"
+    },
+    {
+      "path": "meshes/part_026_solid_026.stl",
+      "sha256": "25fd56343583031505f2dc5fd17aa8ccfdcd76360cfcd7b193398e921d5372b7"
+    },
+    {
+      "path": "meshes/part_027_solid_027.stl",
+      "sha256": "9e2405c7e33486b5495c79eabeac2113aa5e12e67199cd495c0959b8e59819db"
+    },
+    {
+      "path": "meshes/part_028_solid_028.stl",
+      "sha256": "c5e31c5dfa65052f210253eaa61b202bb61681dad675689f35a080797a7d5964"
+    },
+    {
+      "path": "meshes/part_029_solid_029.stl",
+      "sha256": "84c98bd3544a70554a25d2256f6189c856ddaaafe207935b539da7ebc17dc987"
+    },
+    {
+      "path": "meshes/part_030_solid_030.stl",
+      "sha256": "b78266c8fc91dc6341459b6e0c4b3ddd0735da3a0db8ceb24495188e45ce3fad"
+    },
+    {
+      "path": "meshes/part_031_solid_031.stl",
+      "sha256": "64ed3471ea1f10d333c2fde645c94a96c7c357a206ffe66ce81bcfa4f100df28"
+    },
+    {
+      "path": "meshes/part_032_solid_032.stl",
+      "sha256": "0c118bc1a3fb58f1ab786958f409b6f8416679fd001ece929216427a61aab7c1"
+    },
+    {
+      "path": "meshes/part_033_solid_033.stl",
+      "sha256": "e8671382f42d63f0d164513ae47a119dc29b8d2d57b1ba0f415e1a5444864da4"
+    },
+    {
+      "path": "meshes/part_034_solid_034.stl",
+      "sha256": "c4d0574d66dafa00d4e09ef448ac3226d2e3a439989b0095be1308f89e2bff1f"
+    },
+    {
+      "path": "meshes/part_035_solid_035.stl",
+      "sha256": "b4023a207b976a574c6f33d41460646c385e9d02653eb778d52e8f1b7894755c"
+    },
+    {
+      "path": "meshes/part_036_solid_036.stl",
+      "sha256": "ceed592e7e8a9f0b40d58734844752bb0e64579a4d3427b36fd4a41397e48c6b"
+    },
+    {
+      "path": "meshes/part_037_solid_037.stl",
+      "sha256": "d6e118f72a7d8e0ad5d1954ef78abfc5a6613e37585b67e250d875e997a62e2c"
+    },
+    {
+      "path": "meshes/part_038_solid_038.stl",
+      "sha256": "23313ef355d0d7178a72d627602e06d84932c02c8fb4e8e1bbdcbee08a2c6474"
+    },
+    {
+      "path": "meshes/part_039_solid_039.stl",
+      "sha256": "ea5b9bcc04d8f790d2b3d5ed1d2748aa706fcd3d730ac3f813dc5b83bca52abd"
+    },
+    {
+      "path": "meshes/part_040_solid_040.stl",
+      "sha256": "1f2b9b39a55c21d848346df5b9682736127e979aa98fa9f69c7d1a6f91383460"
+    },
+    {
+      "path": "meshes/part_041_solid_041.stl",
+      "sha256": "13b3b1d77d8290b1326a46184175bb2e53248095c384802d10a1eb9e7db48c73"
+    },
+    {
+      "path": "meshes/part_042_solid_042.stl",
+      "sha256": "fce81357d4c17fa3c5b4b5439a179e15831e970084743aed1c0a78dc4add81e6"
+    },
+    {
+      "path": "meshes/part_043_solid_043.stl",
+      "sha256": "822bbb897497d4ecd70d6a7dde36d7810615d436264f5878dc85017f921157ec"
+    },
+    {
+      "path": "meshes/part_044_solid_044.stl",
+      "sha256": "666b62b967e35c297132cdf654077daae2e2d33b0541748286511b60fdabe219"
+    },
+    {
+      "path": "meshes/part_045_solid_045.stl",
+      "sha256": "e630b185f1aab4eca01f2811be901bf7368f0965d848df907abe46a9210052a8"
+    },
+    {
+      "path": "meshes/part_046_solid_046.stl",
+      "sha256": "ad04244805dd0b564d979be4714968172986b19116963b51fc0b348eafcf9f13"
+    },
+    {
+      "path": "meshes/part_047_solid_047.stl",
+      "sha256": "e3520d03705715f042c25c339c5236d1f8ab19ac8737ba097654becebd4745db"
+    },
+    {
+      "path": "meshes/part_048_solid_048.stl",
+      "sha256": "6d7e0c871ca67714a0e1b3593d23871325aa5584b1891fcd08f11a41ae499c06"
+    },
+    {
+      "path": "meshes/part_049_solid_049.stl",
+      "sha256": "8ace81352b3a99c2828575bec163fe6453259ff8345b7fc15215f3af38321b65"
+    },
+    {
+      "path": "meshes/part_050_solid_050.stl",
+      "sha256": "5ea59273808d5ed81e897d3dc438f3b373730c88f1585aa43c8d08f3eb8af4bc"
+    },
+    {
+      "path": "meshes/part_051_solid_051.stl",
+      "sha256": "9c8d92dc453376cd2d9f69d12583d66395ae6eb2ee35d89ff9e7e40ed3b47384"
+    },
+    {
+      "path": "meshes/part_052_solid_052.stl",
+      "sha256": "b17ded0bab16e7179f23d5cfaed251e831eea5dec1a4eb493e1fc4f35576e9f0"
+    },
+    {
+      "path": "meshes/part_053_solid_053.stl",
+      "sha256": "9b57a583ddb3feae2f7b49ef650177bb8da2332d7e42e16e89fd29c52744d845"
+    },
+    {
+      "path": "meshes/part_054_solid_054.stl",
+      "sha256": "3c46c55a2286590081170ea2cc622834bca37276e6933675ba29e377f87b8793"
+    },
+    {
+      "path": "meshes/part_055_solid_055.stl",
+      "sha256": "c06d3ff2cc6e33f29a4bb936dee5df09ef7a8b997f320035dc274b0c9b99dcac"
+    },
+    {
+      "path": "meshes/part_056_solid_056.stl",
+      "sha256": "ce26555a47974ca9d127bfb6d5fd563f44d84b5c252d44bd5968943b04aa9ffe"
+    },
+    {
+      "path": "meshes/part_057_solid_057.stl",
+      "sha256": "8b272af060deed5aeb5dbbb8a2cc3668a03fbc83823e22f667135c53aa3b3d95"
+    },
+    {
+      "path": "meshes/part_058_solid_058.stl",
+      "sha256": "9c1b1076dcaa80a61ddfff0fbc04d85a63cec9b725465a880378fd844f0b82fe"
+    },
+    {
+      "path": "meshes/part_059_solid_059.stl",
+      "sha256": "6d8cbd292086833e3c91b9cade920de07ab8bfecf21ce370ad4856cbdce4f8ce"
+    },
+    {
+      "path": "meshes/part_060_solid_060.stl",
+      "sha256": "f4720f8fcec50388f4fc094fe50d57c8b1db27f175e378159254e4ee3fa0565c"
+    },
+    {
+      "path": "meshes/part_061_solid_061.stl",
+      "sha256": "1477873cf1b6da34b38e20c00bf9a35ddfe27c42a9d68b068d7b335ee3750fb0"
+    },
+    {
+      "path": "meshes/part_062_solid_062.stl",
+      "sha256": "2b2e0ab78c2464da300d9f07d744068d9f4a6de41dbabbcd27c7c960655c40c9"
+    },
+    {
+      "path": "meshes/part_063_solid_063.stl",
+      "sha256": "8d4d3ec01e314074c2ffe3122a8d9fe4bdebf46641a086a3db398ead21eb921d"
+    },
+    {
+      "path": "meshes/part_064_solid_064.stl",
+      "sha256": "5f6c29d8c9bb813d91061591ce405573387f3df0155e1490325df3ff1a4a9d28"
+    },
+    {
+      "path": "meshes/part_065_solid_065.stl",
+      "sha256": "222db22952c745cf9ec4a76df5b9f2fa9eb9e9e1ab4e13234990b0caf8a0eb1b"
+    },
+    {
+      "path": "meshes/part_066_solid_066.stl",
+      "sha256": "02f0c7f089517b93e39f5f5cb8fd704c1ac40b8045f60f484554f4f42becc4f5"
+    },
+    {
+      "path": "meshes/part_067_solid_067.stl",
+      "sha256": "6dfbf76e249ad0e04ce408e457a7d5860150175d5e21d4f484d987485c1486a2"
+    },
+    {
+      "path": "meshes/part_068_solid_068.stl",
+      "sha256": "f22758be96d73b39b5cb8be7213b70a152ab7407800617a8facb4c7bab7abc46"
+    },
+    {
+      "path": "meshes/part_069_solid_069.stl",
+      "sha256": "73dd5722845214d7d217a2b72ff2fc2c1ffa9180d9856145df3595b5e94d13e4"
+    },
+    {
+      "path": "meshes/part_132_solid_132.stl",
+      "sha256": "e5203a1e44889f0f0966f7a9dd6e94c4a15d0860b0b8b3d0b33580c1550197a0"
+    },
+    {
+      "path": "meshes/part_133_solid_133.stl",
+      "sha256": "da62a0b8be08dc5285a5f9067cbc27f2b5b8c00ac88f1701b93acfef40f0e47b"
+    },
+    {
+      "path": "meshes/part_134_solid_134.stl",
+      "sha256": "fad2a91076543bd2cd4ad86ee0ad81a96584ed814d0319537eacaaf8c203fd6a"
+    },
+    {
+      "path": "meshes/part_135_solid_135.stl",
+      "sha256": "2acf3e81fec565d40898a7aba103655871ac13a690b0edfa7d61ded5e84ae818"
+    },
+    {
+      "path": "meshes/part_136_solid_136.stl",
+      "sha256": "65af55c761e6018e020bccb4df421ee18119555c1ad1a29b945498175a30433d"
+    },
+    {
+      "path": "meshes/part_137_solid_137.stl",
+      "sha256": "a677fc51fedd67739e92b42747fb07507249f0701f422bc953dd22b9024520f4"
+    },
+    {
+      "path": "meshes/part_138_solid_138.stl",
+      "sha256": "13dad6384ab9730449629b806df1d5728b50ca1ad59b9870f815534c6b1c4ce2"
+    },
+    {
+      "path": "meshes/part_139_solid_139.stl",
+      "sha256": "63b17e8a0b755b7126136979d4a5cf4a58403290f4a812dd9aae80350b6ba46d"
+    },
+    {
+      "path": "meshes/part_140_solid_140.stl",
+      "sha256": "207e08f56dce87b8ef25b8cd1486e24bebdb88bf2484b848805659833825bcba"
+    },
+    {
+      "path": "meshes/part_141_solid_141.stl",
+      "sha256": "ef14ec3c7346046c80dcb4adaeae80840a4ea969b1525b2f446762e120c2e34e"
+    },
+    {
+      "path": "meshes/part_142_solid_142.stl",
+      "sha256": "1c3e40c83a420e3294f9791c0e971ff3e6ffc4ba24de5afe25772947d5caa9c1"
+    },
+    {
+      "path": "meshes/part_143_solid_143.stl",
+      "sha256": "b6c9bd7058a884d332f75de1042e4bb4357dfa0ae97ef2b7ba04f3efb4f2c61b"
+    },
+    {
+      "path": "meshes/part_144_solid_144.stl",
+      "sha256": "c5a7ec99394d32f5eef525c8e025f6c5a0e029821736503e961f7d588dace39a"
+    },
+    {
+      "path": "meshes/part_145_solid_145.stl",
+      "sha256": "ae2ed8b71d3869251b9607ca7a94aeb9f7e935f0865dc9a3437a555c2232f119"
+    },
+    {
+      "path": "meshes/part_146_solid_146.stl",
+      "sha256": "75dac0ab28c28885f018ee6ffae674a15705343f44fe046a9c5e82d789390e39"
+    },
+    {
+      "path": "meshes/part_147_solid_147.stl",
+      "sha256": "7d9f23951d2fb6669f6d91f9bcdf092e2dd64722e6431a692f4aef24b75e9ad3"
+    },
+    {
+      "path": "meshes/part_148_solid_148.stl",
+      "sha256": "45a50c8459f011e8a0100906d6a7a8db8719c7864cae01469954bac3802e744a"
+    },
+    {
+      "path": "meshes/part_149_solid_149.stl",
+      "sha256": "7e3eabec35c1b625c676a0f9f89f8c49ea033a2f4e2b5f2c0006bb4272048b0e"
+    },
+    {
+      "path": "meshes/part_150_solid_150.stl",
+      "sha256": "7e8e68ecf0aacbaee0fab0c9c5f147b2008148ceac0b3118252d786108b5fbc4"
+    },
+    {
+      "path": "meshes/part_151_solid_151.stl",
+      "sha256": "b339e10944be3d03c972075a504d07e39b4fe2d8c25e4419e87ccb617cab06e2"
+    },
+    {
+      "path": "meshes/part_152_solid_152.stl",
+      "sha256": "35d0a8b629d2aed577817841e2c75787e16e5cf6422530239fe01870df992350"
+    },
+    {
+      "path": "meshes/part_153_solid_153.stl",
+      "sha256": "cfcca4e1bc57295f8399413dab5182536c7a8be5040053bd0cecee6ff5a663d2"
+    },
+    {
+      "path": "meshes/part_154_solid_154.stl",
+      "sha256": "05fa0597ff1cdc90fb022b7992dd2b8bdf65313e524969d96fc795503e965168"
+    },
+    {
+      "path": "meshes/part_155_solid_155.stl",
+      "sha256": "b3ec7a3835e0f650b933357510343812d29b6c247427cf992376f1375e52cad1"
+    },
+    {
+      "path": "meshes/part_156_solid_156.stl",
+      "sha256": "ccd576ef350e39efa330fa58dd19d15e50f9c28aa5e86d5e8cce0c60d5308d3a"
+    },
+    {
+      "path": "meshes/part_157_solid_157.stl",
+      "sha256": "3afd0edec30d40c56a410b3336b8baffabe2efa48f166a92cf61fbef0961a7ed"
+    },
+    {
+      "path": "meshes/part_158_solid_158.stl",
+      "sha256": "7127788e7c0662dad88d03f16725d9ba497e4643a4baa10f4c34f9439a6617a7"
+    },
+    {
+      "path": "meshes/part_159_solid_159.stl",
+      "sha256": "b6b7d3c1ece6388b2666c0809e31c6f1cbee027b6b84675af6713da00db4294c"
+    },
+    {
+      "path": "meshes/part_160_solid_160.stl",
+      "sha256": "1b34a89ddba4d7c92b9d5c9ab7ce900148cbc20c0d8e53f5bec7d793a5e2c6eb"
+    },
+    {
+      "path": "meshes/part_161_solid_161.stl",
+      "sha256": "b117d5d82435b5abff0cde05cdc568add3ebe860ad130f7a2b54a29fb859ad03"
+    },
+    {
+      "path": "meshes/part_162_solid_162.stl",
+      "sha256": "efd4236ff088b91e141725824b73f2ea4d57f57e8595f2e28105da4c3e2fbcf5"
+    },
+    {
+      "path": "meshes/part_163_solid_163.stl",
+      "sha256": "29fcfb4d84cd7820b63175c7d34766db74d10c0d9b3478d80bc39ed02780e157"
+    },
+    {
+      "path": "meshes/part_164_solid_164.stl",
+      "sha256": "1e7679a3436b0af5928388e75da10696678827bb548cdf0346deffce4f8e7d3a"
+    },
+    {
+      "path": "meshes/part_165_solid_165.stl",
+      "sha256": "37f7c51458753958d4b321d6f56cfacc285c168dd88e7021d2a7d2a737b69abc"
+    },
+    {
+      "path": "meshes/part_166_solid_166.stl",
+      "sha256": "aead3ae48e76c59e43bab2ba96af1533ed5f1d0f6c54875870869404a878fb82"
+    },
+    {
+      "path": "meshes/part_167_solid_167.stl",
+      "sha256": "a6452d39cae5b09895e7779d989036d02b5e169e9dc5f0ac0462c425e7a4a8d9"
+    },
+    {
+      "path": "meshes/part_168_solid_168.stl",
+      "sha256": "7752bfb808055e8c67ed5a8648684f27c31f08aa3a36ee2e62ffcc1feb9db1c2"
+    },
+    {
+      "path": "meshes/part_169_solid_169.stl",
+      "sha256": "38908f43ec5be59b8cfdd2aa24c60f16ce98c95e522a5d7a2f8e2a45a23e99f9"
+    },
+    {
+      "path": "meshes/part_170_solid_170.stl",
+      "sha256": "7db5d03750c976fab7042b2b43af24bb09ae4cd3bfe167e8f169c52b10865044"
+    },
+    {
+      "path": "meshes/part_171_solid_171.stl",
+      "sha256": "e28b5c7d570b39d76cb2bd95177631d28dd88ffbc29d534c2051d96d1acad304"
+    },
+    {
+      "path": "meshes/part_172_solid_172.stl",
+      "sha256": "6136ab00c66daf4cff8149ee17110824d9b995288dacf33fe9765480cfbe61fe"
+    },
+    {
+      "path": "meshes/part_173_solid_173.stl",
+      "sha256": "9294fcbf9e7ba9eaa0e86c9eb68bd2fa48c28bdb22acd79e2c0b9d31fb70ad0b"
+    },
+    {
+      "path": "meshes/part_174_solid_174.stl",
+      "sha256": "06f30955003de2852fb7b597b72e79af93c3ebde9cc8ddfdad87e155c82edb8b"
+    },
+    {
+      "path": "meshes/part_175_solid_175.stl",
+      "sha256": "dd9fcb65b699f7b0e9e9e89df804e9cceb317bbe69a3420d21a24b4aa1b1e8f3"
+    },
+    {
+      "path": "meshes/part_176_solid_176.stl",
+      "sha256": "9958f88e9dc2dd2e3c393da7528bee251a18240a2c88860ba77caf4ecf89149d"
+    },
+    {
+      "path": "meshes/part_177_solid_177.stl",
+      "sha256": "699428fde92a3f91663beb6fbca2e5953d9146a9c5ac6e57a5465b8e652b3351"
+    },
+    {
+      "path": "meshes/part_178_solid_178.stl",
+      "sha256": "72e8bfabdd83842f23cf36a1194a4d270b8b5fafbbcebc3bf894b1a2b726137e"
+    },
+    {
+      "path": "meshes/part_179_solid_179.stl",
+      "sha256": "1e4cc50f71fcadcadc034d63dfa803de0360917c1dd1290ade45a801d659a7db"
+    },
+    {
+      "path": "meshes/part_180_solid_180.stl",
+      "sha256": "01639d8535693c5a441915cc8cc43f7605aa26ddea05118f38d8ea06819e1c99"
+    },
+    {
+      "path": "meshes/part_181_solid_181.stl",
+      "sha256": "a421dbbb387954725ee378d09374292fa230af72f40ae8743b05088de27a8fc4"
+    },
+    {
+      "path": "meshes/part_182_solid_182.stl",
+      "sha256": "4a1215adfb5234e36eeff72630e68264509bce4f1bbcd43cb7d0bcf64337f9c5"
+    },
+    {
+      "path": "meshes/part_183_solid_183.stl",
+      "sha256": "5915b3fca8ba3008b4d3a1d6430b3150a7cb254ea1b8a76c2acbd44986baa0fa"
+    },
+    {
+      "path": "meshes/part_184_solid_184.stl",
+      "sha256": "de92fb01e01c59409f420a2bf735fb4f214979f42e0111dafd753b597542b7ba"
+    },
+    {
+      "path": "meshes/part_185_solid_185.stl",
+      "sha256": "3617bf76f22d2dfe95f2562ac5faaeb160b5fc1bfa646f7bdfd3628e8f68195d"
+    },
+    {
+      "path": "meshes/part_186_solid_186.stl",
+      "sha256": "8ba595fb452304d38cbc0aae778e9a52b662e1150de91df6d8adeffcb548338f"
+    },
+    {
+      "path": "meshes/part_187_solid_187.stl",
+      "sha256": "d76468832643b48ebca603f251899cdc2631905a162cf127da97904f0d73e934"
+    },
+    {
+      "path": "meshes/part_188_solid_188.stl",
+      "sha256": "cc9a5d225c4dea8fc61df63f92b383947864b8d427475ea5b666e7187bbaca18"
+    },
+    {
+      "path": "meshes/part_189_solid_189.stl",
+      "sha256": "819575061f97586d96f97fc11f86c8459a2981498ca49be50c88e659709f08ff"
+    },
+    {
+      "path": "meshes/part_190_solid_190.stl",
+      "sha256": "4611a667d4ce7c6653fe6966c2b24acd119464ddc768f25b0dbe6b99557d7ff4"
+    },
+    {
+      "path": "meshes/part_191_solid_191.stl",
+      "sha256": "1acbedccbd579685530c9a99ebf12ac448e9c2ccfb5b2538ac3ff322d46698be"
+    },
+    {
+      "path": "meshes/part_192_solid_192.stl",
+      "sha256": "43dc1a0953883a11a16ec30b236d8b26ba08dedcf738113bcfadcfb229f339ee"
+    },
+    {
+      "path": "meshes/part_193_solid_193.stl",
+      "sha256": "94d9f138f3df7b7f953c8802de8315098f98103ed9c84d0ad45a0465986dbb00"
+    },
+    {
+      "path": "meshes/part_194_solid_194.stl",
+      "sha256": "19ced5a5389993301426ca6067ed88902b2365ce382431bbd0666b40b78573e3"
+    },
+    {
+      "path": "meshes/part_195_solid_195.stl",
+      "sha256": "bbc3d06a03c206799d38aef7d725d1f204a9d58a8370ba5b65bdccd70393d8cf"
+    },
+    {
+      "path": "meshes/part_196_solid_196.stl",
+      "sha256": "d0fa00971d20a3362a2036d72320ead75ea75d7310dd98a6a83e15409e8dbe68"
+    },
+    {
+      "path": "meshes/part_197_solid_197.stl",
+      "sha256": "f9dcd124dee23d8606279af946e3aa380c68907b4cf0171ea0e4a89a5cbd3a1b"
+    },
+    {
+      "path": "meshes/part_198_solid_198.stl",
+      "sha256": "5671bb017c865d4befddf6485c26008367496e56bacfe0a39f375cb492c79b36"
+    },
+    {
+      "path": "meshes/part_199_solid_199.stl",
+      "sha256": "4b245953bb421e45b47652b46b6ae18690e96e2b6ac3738f5a009317a55d3d9f"
+    },
+    {
+      "path": "meshes/part_295_solid_295.stl",
+      "sha256": "34853177e568dbc63b1d4192c0fe0cfe788456bac6c91cc96e6872ede6f16ef9"
+    },
+    {
+      "path": "meshes/part_296_solid_296.stl",
+      "sha256": "3dd1b2b20a509da110dbde4214ced7e3b7d46364ecf41c55b94cddbc2fb2c3e9"
+    },
+    {
+      "path": "meshes/part_297_solid_297.stl",
+      "sha256": "5c50bcaf128c81236fbba8bc00e3b23d12201e0e0be0ceed0e8ea6c902e0d414"
+    },
+    {
+      "path": "meshes/part_298_solid_298.stl",
+      "sha256": "31b27ffd37788911d0d8d8514e6ff0a3c13cf1658a652a3586ee1e04c0255ddb"
+    },
+    {
+      "path": "meshes/part_299_solid_299.stl",
+      "sha256": "47ef5aca11d487186905671fe859d4e0f2585595c10d68e8fadc65964033744c"
+    },
+    {
+      "path": "meshes/part_300_solid_300.stl",
+      "sha256": "7c6108aa2243ec743b880a04d5a0805e75d1b532334f0e5036de30a96f37df42"
+    },
+    {
+      "path": "meshes/part_301_solid_301.stl",
+      "sha256": "251c4615240a8225797c07114638cbe23270ab6195fb66499c263812a0bce9ed"
+    },
+    {
+      "path": "meshes/part_302_solid_302.stl",
+      "sha256": "fd278abc19a5e8a2df4b168cf86ec03d63320c21fc057a7aae81e73025ccbd4b"
+    },
+    {
+      "path": "meshes/part_303_solid_303.stl",
+      "sha256": "a1a423bebc595b047d0d7fe95104c7bbbbd8518ec973b69751b93e3da2693ba7"
+    },
+    {
+      "path": "meshes/part_304_solid_304.stl",
+      "sha256": "64ae1153c6d8e5d38f7fb1f8646fb5f56271e9e36386dad57a6450828714276d"
+    },
+    {
+      "path": "meshes/part_305_solid_305.stl",
+      "sha256": "83956dc68899ded1b557a9064acb4d91f0a8516c0507218787c56750d78241ca"
+    },
+    {
+      "path": "meshes/part_306_solid_306.stl",
+      "sha256": "1946b00709e7810250e368dee47f97ecce18df206e55409390b42f79f7cd95bf"
+    },
+    {
+      "path": "meshes/part_307_solid_307.stl",
+      "sha256": "e553d17beae2ec29f6397dabb6aa4753e0e8e3a5fa3be7b1b70f1ef09138783e"
+    },
+    {
+      "path": "meshes/part_308_solid_308.stl",
+      "sha256": "81392ce1f36ed5a029dc0704eb44fb9da429dac6997ecb897042317af7463ee0"
+    },
+    {
+      "path": "meshes/part_309_solid_309.stl",
+      "sha256": "ad192bcf1dddc159b4af6b16f3674318c93f2e1145c1dedacc63e72c3ad3e249"
+    },
+    {
+      "path": "meshes/part_310_solid_310.stl",
+      "sha256": "81eee00b0c0910a43dc3dd688b7d63bdb44f93648d0a6c2b7ce4f057b9f2a7bb"
+    },
+    {
+      "path": "meshes/part_311_solid_311.stl",
+      "sha256": "fa9c2ab4216c999ea643f8b8760040d005e1133f3855e21c3614b8bc39c379db"
+    },
+    {
+      "path": "meshes/part_312_solid_312.stl",
+      "sha256": "19b9f1168bdadda6c92509c57637f65cc752656e1dfb0aa5035bd51495a9dcec"
+    },
+    {
+      "path": "meshes/part_313_solid_313.stl",
+      "sha256": "e313273195a1ccf7f8bc1f7fe8f154e53fee84f538a5a105c95522d02343ed9f"
+    },
+    {
+      "path": "meshes/part_314_solid_314.stl",
+      "sha256": "ba1d792ae0dc7ca937b6c4aa0d49d0f155a7ac9e136dcb161acb5f5f062e2dc1"
+    },
+    {
+      "path": "meshes/part_315_solid_315.stl",
+      "sha256": "9621d8e74310943f381394f39fa76a39800602d179b258b120b353594ab03afc"
+    },
+    {
+      "path": "meshes/part_316_solid_316.stl",
+      "sha256": "0278d1a3ef792b0ffd3fbad4f5b8ccf25c2e88dbf8b38cab310ab3f97ec1a264"
+    },
+    {
+      "path": "meshes/part_317_solid_317.stl",
+      "sha256": "21b0772ba205e55ac207652760e933f1d1120be5e6ab863a0e9a64460d0eb00e"
+    },
+    {
+      "path": "meshes/part_318_solid_318.stl",
+      "sha256": "f89ad8c693b41fe84fc869888ac15d5d3f60129c2c217f2ffd07ea3595d68f49"
+    },
+    {
+      "path": "meshes/part_319_solid_319.stl",
+      "sha256": "d80f7875ef85f22d1a1e7a0da2424673acdb3b389429ee1b18850692900dae1b"
+    },
+    {
+      "path": "meshes/part_320_solid_320.stl",
+      "sha256": "271c03a4341a6b376b9fad434895144c692194a06046a56d1377cefced6280b5"
+    },
+    {
+      "path": "meshes/part_321_solid_321.stl",
+      "sha256": "ae92a36b6fd07d46cae71cb449e0af3a8a8e5ddf5be8033f634a15ce4b7d77dc"
+    },
+    {
+      "path": "meshes/part_322_solid_322.stl",
+      "sha256": "39b60969a7a507d8b55f6c253a725597b76d362c6c479da9b69d47fa68d738e3"
+    },
+    {
+      "path": "meshes/part_323_solid_323.stl",
+      "sha256": "78e7a90433bff8b88e698d97e3409f428d7483d06d1f92fb525cc4117377b5cd"
+    },
+    {
+      "path": "meshes/part_324_solid_324.stl",
+      "sha256": "10224e6b5194fbf85699fa93ec289ebc7285568312a43212d8b113d99428915e"
+    },
+    {
+      "path": "meshes/part_325_solid_325.stl",
+      "sha256": "8ab5f152ac38287386fff459cc1c73c5af2a540f4ebef7be40ddbd3df647e858"
+    },
+    {
+      "path": "meshes/part_326_solid_326.stl",
+      "sha256": "9059e4718b6cc4481856b7b08c128b27deed01350d39fe84f049b420a1126bfb"
+    },
+    {
+      "path": "meshes/part_327_solid_327.stl",
+      "sha256": "dbec64614d44f061b2ee46066dda5b00aee60907dae0751838df2bf589d2f739"
+    },
+    {
+      "path": "meshes/part_328_solid_328.stl",
+      "sha256": "11fc9295bc820d25df696fecc4057e6e4d7be596eeb4d89bbcd587b783c126e0"
+    },
+    {
+      "path": "meshes/part_329_solid_329.stl",
+      "sha256": "fcb1e8d8325f9714ae61492978c011d76d0aa8ebf0366d67a5d518790dd53e66"
+    },
+    {
+      "path": "meshes/part_330_solid_330.stl",
+      "sha256": "6327c115ae52010414aa1c34ab50fbfbab33062557b98e3a59c342bc6d7ddef0"
+    },
+    {
+      "path": "meshes/part_331_solid_331.stl",
+      "sha256": "c65b6e45fb8e0d135ee3c0d9287ff79556e5ca8656c7a9be686ebacb7ace764c"
+    },
+    {
+      "path": "meshes/part_332_solid_332.stl",
+      "sha256": "fe7db604ca4224100b46b2b8c3ce583028cb06d4a86e9097366d9dcae30ab0c7"
+    },
+    {
+      "path": "meshes/part_333_solid_333.stl",
+      "sha256": "1c1c9da34e6483a2a889ea534504ecb4e07285be3e0bde2722d983084069569f"
+    },
+    {
+      "path": "meshes/part_334_solid_334.stl",
+      "sha256": "46c4e4f2441f8e6be10736ec14ba765edc93ea78d74c0003f380193156ec6b9f"
+    },
+    {
+      "path": "meshes/part_335_solid_335.stl",
+      "sha256": "abdec93c756a382f01cc6dce2ca0cd67ed44c9e001a676496fd4b0a16fc2536a"
+    },
+    {
+      "path": "meshes/part_336_solid_336.stl",
+      "sha256": "eff2ba78e49928491331ce5ad92dcdb347f21de99f942ba249f767cf103807a7"
+    },
+    {
+      "path": "meshes/part_337_solid_337.stl",
+      "sha256": "18704ad1b1f278d6f362f04f3d4a46076227628f21a7d87f2987ab70f6f1da05"
+    },
+    {
+      "path": "meshes/part_338_solid_338.stl",
+      "sha256": "dde24b91b868008f07c9e203cc5b30b65867a8c0f8440274c2c9d6227b693adb"
+    },
+    {
+      "path": "meshes/part_339_solid_339.stl",
+      "sha256": "955ab7fd14ce75e361bea619c07aeec7352b554ef54fc325fe848a674739ee6b"
+    },
+    {
+      "path": "meshes/part_340_solid_340.stl",
+      "sha256": "d6c84d37d9264890b40d839e2d1d82c82a4d65d0c55bf7a4424a454328d06429"
+    },
+    {
+      "path": "meshes/part_341_solid_341.stl",
+      "sha256": "dcb4e677628cd62b093b9a49965dd8f551f3f5cffdbd532b895e9bc6ead62c13"
+    },
+    {
+      "path": "meshes/part_342_solid_342.stl",
+      "sha256": "342efdbe1dcf03451b468e401790ba04e53cd2435e90350a9be6c3608c27ed2a"
+    },
+    {
+      "path": "meshes/part_343_solid_343.stl",
+      "sha256": "a09a5d8a97609da3e3ed896850faabcfaff497c78f0568fd0c32ca4673ada00f"
+    },
+    {
+      "path": "meshes/part_344_solid_344.stl",
+      "sha256": "92ff008e8c5249f0352820435d753941f53e7fcad471f51bbb481fa2028074b3"
+    },
+    {
+      "path": "meshes/part_345_solid_345.stl",
+      "sha256": "d9a6da968fcea8f0789d758779e2ed17d8d5e4de2efd23736de8d43707779f18"
+    },
+    {
+      "path": "meshes/part_346_solid_346.stl",
+      "sha256": "580af8d69faa668d026a537e6309a53d940b77c4f86f586eecb91776d4f346fc"
+    },
+    {
+      "path": "meshes/part_347_solid_347.stl",
+      "sha256": "7bffe76567cc12330684ca269fa422fc9d09ae3c2f1ed180667c76197939cdbb"
+    },
+    {
+      "path": "meshes/part_348_solid_348.stl",
+      "sha256": "74b6819bd9451a294eb1f3d36daf63521ddf18108e7ec6613508d14a9146e412"
+    },
+    {
+      "path": "meshes/part_349_solid_349.stl",
+      "sha256": "f45e6021ac7b1ce60019e4cb129a7086ad71899c97e6f986b50fed31e89b7a40"
+    },
+    {
+      "path": "meshes/part_350_solid_350.stl",
+      "sha256": "475eb430a6a40d2cc003a9549ca2e711f9794aa0064c14cce9b3f70188fe3741"
+    },
+    {
+      "path": "meshes/part_351_solid_351.stl",
+      "sha256": "e44b16653dc3710d50e9faaa2a9d17d093b602ba59a4c4c589ee87b5981f9dd8"
+    },
+    {
+      "path": "meshes/part_352_solid_352.stl",
+      "sha256": "7b91ac87e178b06561c4cac2ea7b8e7f69bb9732f9c9a1cc156a082a4b03b5ce"
+    },
+    {
+      "path": "meshes/part_353_solid_353.stl",
+      "sha256": "8273547fb1bd6c2995b99048b125fa7437cf8643b9a36fb66ff63929f4b350fc"
+    },
+    {
+      "path": "meshes/part_354_solid_354.stl",
+      "sha256": "f2eaf9165e0539dc6f534080660161e1cf0141d99a8de1616696df0f2a7b2803"
+    },
+    {
+      "path": "meshes/part_355_solid_355.stl",
+      "sha256": "163359758f4f321d084759d0431c4724132ab7e112a2d6045c2a1b599a2eab61"
+    },
+    {
+      "path": "meshes/part_356_solid_356.stl",
+      "sha256": "5a0b8250f1202b64037e709dfa755f82ef1f05f8e1e9a196e492871ef927cbb9"
+    },
+    {
+      "path": "meshes/part_357_solid_357.stl",
+      "sha256": "fbd94ccb50722f2622a85b9391135f4750d87a2d74e4f58a33a074e85355beaf"
+    },
+    {
+      "path": "meshes/part_358_solid_358.stl",
+      "sha256": "8e8143ed15fb635d779ad70561547054a49236e2cee40d22f9124af63edab409"
+    },
+    {
+      "path": "meshes/part_359_solid_359.stl",
+      "sha256": "d0c42c71a0b9c3541a94505f675464f1935ba64c6a64c1b0328d10e720e03ef3"
+    },
+    {
+      "path": "meshes/part_360_solid_360.stl",
+      "sha256": "f4d61db90232451762a27a3aa89eb8448a7b7020f05e4920f7e991fa6d162d06"
+    },
+    {
+      "path": "meshes/part_361_solid_361.stl",
+      "sha256": "424aac7781a591bbdb5947af2cb5bc94538b186fb9027836c3c0404f229e687d"
+    },
+    {
+      "path": "meshes/part_362_solid_362.stl",
+      "sha256": "2e63eb4a286a9706e7c0a5f8640db4e7dab040111f361768d79690776ddde243"
+    },
+    {
+      "path": "meshes/part_425_solid_425.stl",
+      "sha256": "1870f7f633cc52937f203f4c02ffa7eb29ee755c7f7048f2901fad9eba2d490c"
+    },
+    {
+      "path": "meshes/part_426_solid_426.stl",
+      "sha256": "819af7e58a6371cf609b3ac1ad2587926aaa0507b314dd441906650fd8fba47b"
+    },
+    {
+      "path": "meshes/part_427_solid_427.stl",
+      "sha256": "21f169a982451553466319287b5fefb20e43b7e11efbb82bdf89c07dc24953ab"
+    },
+    {
+      "path": "meshes/part_428_solid_428.stl",
+      "sha256": "13e2990b7df1106cf76fcf1eb2b9eff8df31925ae1c5e753944fb549af9329a7"
+    },
+    {
+      "path": "meshes/part_429_solid_429.stl",
+      "sha256": "f2534cc494785f6811ab009f1bbb7317c9e956eb6f4223105b12c4602c02cb8a"
+    },
+    {
+      "path": "meshes/part_430_solid_430.stl",
+      "sha256": "b7bfb7f741d7d7af57a2c62fafb34ad8ec1ff84aa1e5d0eec3da9982d9e3750a"
+    },
+    {
+      "path": "meshes/part_431_solid_431.stl",
+      "sha256": "179b3afc5fbacad0cf47a8d79f62ad6653b9ca11fd5fdb03a2c3f17d305701e9"
+    },
+    {
+      "path": "meshes/part_432_solid_432.stl",
+      "sha256": "4e4c4b0a6d0f62db02bf65a327d2b81cb7bdfdd13f50e82cee5d69827be51af6"
+    },
+    {
+      "path": "meshes/part_433_solid_433.stl",
+      "sha256": "c872fbc0d4ad236fcd06e7dbf7497c6a8ca32320b9c5f78cdc2f29af6c112ebb"
+    },
+    {
+      "path": "meshes/part_434_solid_434.stl",
+      "sha256": "b4b754001f91fe6df1430abd37307f2e0f7f72839a45b304bb1cdd4449187bfc"
+    },
+    {
+      "path": "meshes/part_435_solid_435.stl",
+      "sha256": "cf3138d8ab95949d9162fb29b2674f88ed4f6325f9b51dc8f572da6dd3929d97"
+    },
+    {
+      "path": "meshes/part_436_solid_436.stl",
+      "sha256": "35890720a96d3ff3a18680890549f89eb54963e1baf0e6538842f6bfea8d4cf8"
+    },
+    {
+      "path": "meshes/part_437_solid_437.stl",
+      "sha256": "b5dc0166753036515ba0be4daf232e06016a7d71ed5faeb498643f41e2f28b66"
+    },
+    {
+      "path": "meshes/part_438_solid_438.stl",
+      "sha256": "bf4fed5544990a56767d65f21caa175dafb8de9c4cd127078a30a59366bd2768"
+    },
+    {
+      "path": "meshes/part_439_solid_439.stl",
+      "sha256": "677153e145333f9c16d869fdf40993d50013df09cf2651756ec8898d5978c1f4"
+    },
+    {
+      "path": "meshes/part_440_solid_440.stl",
+      "sha256": "b0952cf470cec8924deb914a67f807cc09d78a7ae11afa123f867a1980b730a2"
+    },
+    {
+      "path": "meshes/part_441_solid_441.stl",
+      "sha256": "d0cd043f65c655beff795b7c470c117263596830b5296b547d170da9ff3e98e7"
+    },
+    {
+      "path": "meshes/part_442_solid_442.stl",
+      "sha256": "2e78b065ee4300e31ba210d13e52efe1c98045ac3cae77d31d1208f4f9519c7a"
+    },
+    {
+      "path": "meshes/part_443_solid_443.stl",
+      "sha256": "7771775101249d3c44b97cc8bb18a454db763be947b6c99ca893b51b6aba8613"
+    },
+    {
+      "path": "meshes/part_444_solid_444.stl",
+      "sha256": "062fb028eec75fff104b6dd0d37cafab909e5fbc2c7f26e113a430ae60bbba1a"
+    },
+    {
+      "path": "meshes/part_445_solid_445.stl",
+      "sha256": "977f8ac06e8de663daf17e75e3919c0a0c116d587bf3ced23b0a88cbfda4398d"
+    },
+    {
+      "path": "meshes/part_446_solid_446.stl",
+      "sha256": "8627d7032b6c60bed0af753e2f4262928e9cbe63b4a9c6721f5ddfb40170522a"
+    },
+    {
+      "path": "meshes/part_447_solid_447.stl",
+      "sha256": "9d1de6ad785ddd92cab9ab2c6d16e317198aba8fce2d1df291ecaef62e16d793"
+    },
+    {
+      "path": "meshes/part_448_solid_448.stl",
+      "sha256": "435974c581156daa40580acc5bb87492c4b8063ba1ab99a89a74605713e3960a"
+    },
+    {
+      "path": "meshes/part_449_solid_449.stl",
+      "sha256": "8090ea399c51a33cd044bad85bdfe9ad8b9a4af48f168f44af862be5665484b8"
+    },
+    {
+      "path": "meshes/part_450_solid_450.stl",
+      "sha256": "3448fa5e7fbef7eeee31e0bb882f5c52d121cf91163e4c9ef41aabade8354766"
+    },
+    {
+      "path": "meshes/part_451_solid_451.stl",
+      "sha256": "dad7fa321ab772637c9744380b0eb57390b9d97385c93485fb863f7c64c0896d"
+    },
+    {
+      "path": "meshes/part_452_solid_452.stl",
+      "sha256": "f2a41469eed7d8de58612f7e19acb92ac95e901f17a395b927b007ffeae3ad1a"
+    },
+    {
+      "path": "meshes/part_453_solid_453.stl",
+      "sha256": "df9951fb9f70a6f1dbbe5c5bd73019452b400cacf6bfeb64192823d2ec73a1bb"
+    },
+    {
+      "path": "meshes/part_454_solid_454.stl",
+      "sha256": "ba17d68746b3d53d4de4bcc440916d43814c7aa9deca32e26559e4dc591e6b11"
+    },
+    {
+      "path": "meshes/part_455_solid_455.stl",
+      "sha256": "e165c819ed3ff93dea8a94829f186d6bfb207784aaab0ac08a0b0c98c85c3044"
+    },
+    {
+      "path": "meshes/part_456_solid_456.stl",
+      "sha256": "3ff3cef7cfc31b1b3dc03fddb90fa3a8c7ed8fa87b727f7b4e840a84ba343268"
+    },
+    {
+      "path": "meshes/part_457_solid_457.stl",
+      "sha256": "f09ed73fc4202963ca46ee1bb86979f32b6e06d4e489c1d05df025a14eb17ebf"
+    },
+    {
+      "path": "meshes/part_458_solid_458.stl",
+      "sha256": "21cc5a134bcb3cbf407457fe79ef2bd891bfb618f24bad2f9572042f6efda3c9"
+    },
+    {
+      "path": "meshes/part_459_solid_459.stl",
+      "sha256": "8a9925e332b7e18bc902b2b2f436adf224fe23e3676a27113a73e0992c548f4f"
+    },
+    {
+      "path": "meshes/part_460_solid_460.stl",
+      "sha256": "abf1971e1ac07bab5cb49fc0c911f11c5f394838db518410aeab8d36ddbe7231"
+    },
+    {
+      "path": "meshes/part_461_solid_461.stl",
+      "sha256": "d1da4ef006c6e9652e721cf0f9ae904ba7e16b0a8c87233f455f0554feb8ae3a"
+    },
+    {
+      "path": "meshes/part_462_solid_462.stl",
+      "sha256": "fef0a1eabc08ef2939f4cc2f0f0727e868f28c1c2305e858e0c3d077ff6eccc3"
+    },
+    {
+      "path": "meshes/part_463_solid_463.stl",
+      "sha256": "f821f655d709554e687e86b90b5cd699a8c2678f2ed5158f6c1bd87a5ff67655"
+    },
+    {
+      "path": "meshes/part_464_solid_464.stl",
+      "sha256": "9e1e0d23305e28a6928b6d58cd47492dcc8b8f361f764b805d4b4eb20e9704d1"
+    },
+    {
+      "path": "meshes/part_465_solid_465.stl",
+      "sha256": "f6cea1eb1ff3c9abddfe9f2ea1396f5b6d8dad5081d121abf5bad3ec8e361774"
+    },
+    {
+      "path": "meshes/part_466_solid_466.stl",
+      "sha256": "09327c1a7d5ded58b90c6e3d80231e2dce914d546f7c8280347f2a6a936d989b"
+    },
+    {
+      "path": "meshes/part_467_solid_467.stl",
+      "sha256": "1910c9284416de63522e91b614505ae1750250445bd20dcadfc3ff3e7b9d2b6c"
+    },
+    {
+      "path": "meshes/part_468_solid_468.stl",
+      "sha256": "70a2181bc576bf89ff802523bf411c91250ad6afc0c22892dd55c147fa07ab4e"
+    },
+    {
+      "path": "meshes/part_469_solid_469.stl",
+      "sha256": "c510402eee251a2c6aa0edd6928fe4b35411acf74dee6171688be6141a4f7276"
+    },
+    {
+      "path": "meshes/part_470_solid_470.stl",
+      "sha256": "df9b6ff125b2ab78cfdb27237185703aca86435f9a4361c9909b9514c31c2ae4"
+    },
+    {
+      "path": "meshes/part_471_solid_471.stl",
+      "sha256": "38e0a072a8d8b836e9e0fd1d0d939870e1cb15733c300854670efce492a84254"
+    },
+    {
+      "path": "meshes/part_472_solid_472.stl",
+      "sha256": "f37e617e7a99df6087950fa4330cd1b7817af51b5b286a112d3cd6e82fe7bc88"
+    },
+    {
+      "path": "meshes/part_473_solid_473.stl",
+      "sha256": "84a3b3190658deb7bd4ff53b331bdcba671851a64ba225eefc6baf5c6f6e29ef"
+    },
+    {
+      "path": "meshes/part_474_solid_474.stl",
+      "sha256": "25418a48e2b3ad9b061663d104d41d3000983acf7aaba9204e59a3fe0f9aca7c"
+    },
+    {
+      "path": "meshes/part_475_solid_475.stl",
+      "sha256": "6038caaaa1467687e445e26bd4abe6cdb4d6d543eb453b581050ccb9754e137e"
+    },
+    {
+      "path": "meshes/part_476_solid_476.stl",
+      "sha256": "1a93db1059e9eb990de67a7494dedb7f0d6e8f7d64477a77320e605382ac155c"
+    },
+    {
+      "path": "meshes/part_477_solid_477.stl",
+      "sha256": "181baa3d940ad2310c4daec0ebdb29c11ee1a24a3113cf687ecb14ced94daaf9"
+    },
+    {
+      "path": "meshes/part_478_solid_478.stl",
+      "sha256": "56f8031694eb3ab55f56e1a9dbeb8216d210849decf91450f247dfb0db9470a0"
+    },
+    {
+      "path": "meshes/part_479_solid_479.stl",
+      "sha256": "3f3eb6cea11277cba6c01e0f4faecd9f6ce06f2140209b31fca5a02634cad60d"
+    },
+    {
+      "path": "meshes/part_480_solid_480.stl",
+      "sha256": "d7ff9eedcc8cb16628c54be471c7905a66f272c43d731d7d6d590f38749eb3c3"
+    },
+    {
+      "path": "meshes/part_481_solid_481.stl",
+      "sha256": "64cdd0b9a148cd69703889d4eed15ad2f47d54a3d0767589e70e11127f527194"
+    },
+    {
+      "path": "meshes/part_482_solid_482.stl",
+      "sha256": "84442a2a890564f35c0d80d7daac23bc3c29a8cdd3a60a040c10b5bbf32890d4"
+    },
+    {
+      "path": "meshes/part_483_solid_483.stl",
+      "sha256": "56e07887ff54d4110084cb82980ec342e0d801e82cfa2b4991a7385b26892758"
+    },
+    {
+      "path": "meshes/part_484_solid_484.stl",
+      "sha256": "a21544ece4eb8133bb77114621026c0aae3509a6babb7d64a4d3f319b104c980"
+    },
+    {
+      "path": "meshes/part_485_solid_485.stl",
+      "sha256": "04771f2294e23fb13e99dc2742f54db89fa8336571ee0d9fa443174292bfe74b"
+    },
+    {
+      "path": "meshes/part_486_solid_486.stl",
+      "sha256": "546820cfa9abf6390e8f8461fbbef1c8c4c0a75139f7d750285b23651346be56"
+    },
+    {
+      "path": "meshes/part_487_solid_487.stl",
+      "sha256": "02e11c81d39f411cae353d2e21f3e5e1c2067033318607a7a7927f7c0571fdde"
+    },
+    {
+      "path": "meshes/part_488_solid_488.stl",
+      "sha256": "d9a21462b394621297bf9dfbce27cab3523a928d6068b538c65b7c09d35ef8e1"
+    },
+    {
+      "path": "meshes/part_489_solid_489.stl",
+      "sha256": "f0126e250513be6b7bb41bdb7fa776da7478758c3be479e5dbb3d7dc99a45efa"
+    },
+    {
+      "path": "meshes/part_490_solid_490.stl",
+      "sha256": "4c102daff77542295cdc5f98cc53c73c2e0cbceda71467a1bd06473dd20ad3e6"
+    },
+    {
+      "path": "meshes/part_491_solid_491.stl",
+      "sha256": "ba84535ca36abc7a9ebcb2f4400ab6118e8cf9eee698ee24421ffc11c652f8de"
+    },
+    {
+      "path": "meshes/part_492_solid_492.stl",
+      "sha256": "d491448a22f7967e0956cb07196df764d9d9d112f06af27beb722a916fbd267b"
+    },
+    {
+      "path": "meshes/part_388_solid_388.stl",
+      "sha256": "7b78bd2c36dc1fb339e2596c9fa36eba770c10498992d5fc8818db5861101d64"
+    },
+    {
+      "path": "meshes/part_387_solid_387.stl",
+      "sha256": "135c903f7d268a89c6350cd2dab491b6d827bdee71138ec1fb14bae16cc42b03"
+    },
+    {
+      "path": "meshes/part_389_solid_389.stl",
+      "sha256": "4dbbdb630aedbdbe5dd14ff99627907da2c22edbe37b73ca973db61471c588f0"
+    },
+    {
+      "path": "meshes/part_415_solid_415.stl",
+      "sha256": "c4cbf2c31226c721f6a04ca37a8cde9561e5a9c6b5e7666277b5118c8d6299d6"
+    },
+    {
+      "path": "meshes/part_554_solid_554.stl",
+      "sha256": "ad1e90d609e1dddf1a99580d31c9c732fe6bea12f71d0f0262a20041dfa84dd6"
+    },
+    {
+      "path": "meshes/part_390_solid_390.stl",
+      "sha256": "7298c7f33bad500595082e92083763db62b156d64e65a2d078f42daf3b61e9a7"
+    },
+    {
+      "path": "meshes/part_391_solid_391.stl",
+      "sha256": "56da0aa2db794257e5d2cce09bfa6fa332f0a6529b42ce56e1f1cb679dda6777"
+    },
+    {
+      "path": "meshes/part_392_solid_392.stl",
+      "sha256": "9b49559a1e63214aa8bb8a304c59e395a1a43096d92ebcefea85df5fe8a04b8c"
+    },
+    {
+      "path": "meshes/part_393_solid_393.stl",
+      "sha256": "c23905905e89d6cda470b5b10725635c7a529ba7d4f7457dcb494db8bb327be5"
+    },
+    {
+      "path": "meshes/part_394_solid_394.stl",
+      "sha256": "a9960215086b4d46b5927d2f5edb0406c2e7b1ffa3d460962b070a72d73645a5"
+    },
+    {
+      "path": "meshes/part_395_solid_395.stl",
+      "sha256": "8c9295e563aa3c22560e9d165665782725d66dc4ff9d6eb6dd7d07f4dd4d43b6"
+    },
+    {
+      "path": "meshes/part_396_solid_396.stl",
+      "sha256": "3644d1ef23e03d9d354f9f6057a553a6f4adc9cef3baa4f3e90edefc10fbfb8a"
+    },
+    {
+      "path": "meshes/part_397_solid_397.stl",
+      "sha256": "c788dacba261a6e44f282b5ec5bdc697428898d38d0da9300d7e24f19e45f980"
+    },
+    {
+      "path": "meshes/part_398_solid_398.stl",
+      "sha256": "420638f61715c7ac3395c6c8e2cfe93bb76a5ec2a44a2c5f7cbc239d0a8bc077"
+    },
+    {
+      "path": "meshes/part_399_solid_399.stl",
+      "sha256": "f51f8d37e6a53ae5e95e812e5c2b0a67366a54a336f2fc8810a93333edfea8af"
+    },
+    {
+      "path": "meshes/part_400_solid_400.stl",
+      "sha256": "6383fabb98b769d9311a93a42f3ca20821894508ccc1fa50aa1dd7db730e535c"
+    },
+    {
+      "path": "meshes/part_401_solid_401.stl",
+      "sha256": "5da44f961da40b82bb58fa5974bd732f53e37470f4dd1f77a17cfe35130e4620"
+    },
+    {
+      "path": "meshes/part_402_solid_402.stl",
+      "sha256": "1298a4300182938b0c4f5d755cced306f35611b7905361ddd0d5a1560b56954a"
+    },
+    {
+      "path": "meshes/part_403_solid_403.stl",
+      "sha256": "359941425a59b92518f8a2dbddd5432b33d91b6f741811bb20fa89041b1b7931"
+    },
+    {
+      "path": "meshes/part_404_solid_404.stl",
+      "sha256": "86f91efc029c4d0a6a123af7e68b37a9f2cc0fdf6a1f16c1c684cf969a2a3d1c"
+    },
+    {
+      "path": "meshes/part_405_solid_405.stl",
+      "sha256": "bb79e895a57f2e7a829266f8c97cad3e3d12f41e248159659940f9e5c0f802d9"
+    },
+    {
+      "path": "meshes/part_406_solid_406.stl",
+      "sha256": "ff2de4a78f4821620e678a6af1693babfcacf796f805b33ff03f7c139aa86e2c"
+    },
+    {
+      "path": "meshes/part_407_solid_407.stl",
+      "sha256": "4cf9268efb7f6cb6613a1936f7966560421ecced0ed2bb391bb4d9373e161c96"
+    },
+    {
+      "path": "meshes/part_408_solid_408.stl",
+      "sha256": "93b3864291897ee067e1126eda33b9ddb068359e645f8640d87c7482e62d4ad5"
+    },
+    {
+      "path": "meshes/part_409_solid_409.stl",
+      "sha256": "ecd7e5ae12efbd731f1d1155f5adc2f7508a0539f96c97a5842f2df03ec36110"
+    },
+    {
+      "path": "meshes/part_519_solid_519.stl",
+      "sha256": "d6dd3b936073833a02545a6ede59683ce425c8b54a000cf08272c39919bb0461"
+    },
+    {
+      "path": "meshes/part_517_solid_517.stl",
+      "sha256": "d3f5cfce3204b39e7cbe4d0b22b585dc626f4ba5237cdefa06bba49003824234"
+    },
+    {
+      "path": "meshes/part_518_solid_518.stl",
+      "sha256": "e6d6ee2f837742596f6242a45a134cac63d9e25f57eeaae37d598de972f9fe56"
+    },
+    {
+      "path": "meshes/part_520_solid_520.stl",
+      "sha256": "1d63e034960ec545c7de5252ae1beff35c70303446c7302926175ac5aadeb354"
+    },
+    {
+      "path": "meshes/part_521_solid_521.stl",
+      "sha256": "6a6c606548325dd2a405a6e6015539b21e5babf7b9cb1ed9551ea49a854d4626"
+    },
+    {
+      "path": "meshes/part_522_solid_522.stl",
+      "sha256": "5cfda6da5deecb4a32a0b279af39e6f4f05e118fad55cd1bd94e8b1ea33cc0a4"
+    },
+    {
+      "path": "meshes/part_523_solid_523.stl",
+      "sha256": "ccebd0a18e65b8ab1d4e936d891053e80f144111b233702f0daa9e490302b10a"
+    },
+    {
+      "path": "meshes/part_524_solid_524.stl",
+      "sha256": "ec00dfd0de50ae9a3f32211341d68decacb2cbc63cca072d0ec594532eb8043c"
+    },
+    {
+      "path": "meshes/part_525_solid_525.stl",
+      "sha256": "354dc73e65d7ae4ea130da848fcab9cdcfc9c77c4b317cbfef8ae07cc9a6f552"
+    },
+    {
+      "path": "meshes/part_526_solid_526.stl",
+      "sha256": "4b0aeac67549da9ff69417c96392d905035492620195e0b946888717160db553"
+    },
+    {
+      "path": "meshes/part_527_solid_527.stl",
+      "sha256": "9125e5d25da504b1cba823155f242503fd3b3b2c0ba987abbc784dc2fef8a762"
+    },
+    {
+      "path": "meshes/part_528_solid_528.stl",
+      "sha256": "bd98d5562799fad6aa744839a787194541fe7326bdec04fd9a2198a011e02315"
+    },
+    {
+      "path": "meshes/part_529_solid_529.stl",
+      "sha256": "f8d70dc9ddf646853d1f9034622877b770d4b2cd55116b3615f9009b06869545"
+    },
+    {
+      "path": "meshes/part_530_solid_530.stl",
+      "sha256": "b62eafa483f67dc0f5d86b24378acfe5ce21d5094c6cbdf8822f090059591a52"
+    },
+    {
+      "path": "meshes/part_531_solid_531.stl",
+      "sha256": "bc1951cc345f88528d1496feb198222cb0b09034f390fc422d662bbe8ce535cb"
+    },
+    {
+      "path": "meshes/part_532_solid_532.stl",
+      "sha256": "ed99843ae56a6dac216952d77f1e96e6eda2562c96a87aff86863d5cc0b44b84"
+    },
+    {
+      "path": "meshes/part_533_solid_533.stl",
+      "sha256": "2a1c0cf6135f5b6faed86996ba4f781ace3ce45a1070183e655ab1e47200be61"
+    },
+    {
+      "path": "meshes/part_534_solid_534.stl",
+      "sha256": "c27ed357b18b1c5c4698e80fd9f55091fe524fe0abd85316c4cc1d92b0700ff5"
+    },
+    {
+      "path": "meshes/part_535_solid_535.stl",
+      "sha256": "8c31f34a3606480e9950fe297dd6edf14d8e57018cb305cee02b14a54d8d9f3b"
+    },
+    {
+      "path": "meshes/part_536_solid_536.stl",
+      "sha256": "de578adee36aa121aaaa578a17963c757200c6706adf75648cbcf51106247df2"
+    },
+    {
+      "path": "meshes/part_537_solid_537.stl",
+      "sha256": "7b1f0687aa5c8193dbd4751d3b38a0ad9216931d522d4ec5a2d11e2c9e58ca0e"
+    },
+    {
+      "path": "meshes/part_538_solid_538.stl",
+      "sha256": "c1f70a114122ea80d5400916a802f5b9a3b394551e2fb2add1cdf4bb0245422b"
+    },
+    {
+      "path": "meshes/part_539_solid_539.stl",
+      "sha256": "4c3b3f20aea28b9f5589598dc3eac8cdac16e220cdac6c834bfd298fc2f071ba"
+    },
+    {
+      "path": "meshes/part_552_solid_552.stl",
+      "sha256": "f82c4c08998bf1e2e07a13c4fa9cc867736f64480df3a695e5ee7dd751f6fddf"
+    },
+    {
+      "path": "meshes/part_556_solid_556.stl",
+      "sha256": "fe3786e5e54bc9a3fd75707e885bbd8e708bf26444c112b79f900a406b0f3df0"
+    },
+    {
+      "path": "meshes/part_557_solid_557.stl",
+      "sha256": "040024881d2851afdfd37185e5131c3e3dc669f7683e6cf6050bf7d4d5fee4c1"
+    },
+    {
+      "path": "meshes/part_558_solid_558.stl",
+      "sha256": "495b8395ba2bfaa59c2689189678417ab08bd891b92881b1f51a75192323981e"
+    },
+    {
+      "path": "meshes/part_559_solid_559.stl",
+      "sha256": "a340b9ec68b9089f1f3a765e9edcd94b540d21b1208dca769f22ce2dd0398ddd"
+    },
+    {
+      "path": "meshes/part_560_solid_560.stl",
+      "sha256": "77786a3e83c13feab3935381dc72177797de6fe8f3dc45053d75ef14112b8403"
+    },
+    {
+      "path": "meshes/part_561_solid_561.stl",
+      "sha256": "99c0de1223eb5ae751958b375aaa56c8e9840024ae28d72d7bc8c53816b94df1"
+    },
+    {
+      "path": "meshes/part_562_solid_562.stl",
+      "sha256": "6d95d1d11c54074c1d637c1580f0bc47e120a4e83dc22c5bcccb700cf5361e34"
+    },
+    {
+      "path": "meshes/part_563_solid_563.stl",
+      "sha256": "5cec73c80fad4bed1902d37f88f64bf396bec0c23bd149956ef2951899fe3604"
+    },
+    {
+      "path": "meshes/part_564_solid_564.stl",
+      "sha256": "7a7357f6230d2b2651b66452a39507dfcfd1b0d384a315843b5557c32aa02649"
+    },
+    {
+      "path": "meshes/part_497_solid_497.stl",
+      "sha256": "0b39041bfaf805b8d6b3648f187fbcff729d41faf834ed3529f68e2d79cb41ac"
+    },
+    {
+      "path": "meshes/part_498_solid_498.stl",
+      "sha256": "df44d9e8bfbddc0b396a88eba74328471e3dbe3a46ecbb48b8ba65d1aa069a00"
+    },
+    {
+      "path": "meshes/part_496_solid_496.stl",
+      "sha256": "261a984b0ac421e1b5b2d094076d3a866846441f29b921f0ece6b0e9cecfc904"
+    },
+    {
+      "path": "meshes/part_499_solid_499.stl",
+      "sha256": "6787fb963fcf97964a7a06c5315892a7cf2dbb98421acb67c851d89d13860a89"
+    },
+    {
+      "path": "meshes/part_500_solid_500.stl",
+      "sha256": "f5af7614a339552c872c1b283ec897a8fa084dedb022e11ae5c1dc1ea752bebe"
+    },
+    {
+      "path": "meshes/part_501_solid_501.stl",
+      "sha256": "b504245e36a2984897807ad0166826270e37e30172ea571b4610240005667433"
+    },
+    {
+      "path": "meshes/part_502_solid_502.stl",
+      "sha256": "b00015e5528c13b0fded58efea93943579dbb501b8c8a7aea29491bf5df6fe8e"
+    },
+    {
+      "path": "meshes/part_503_solid_503.stl",
+      "sha256": "d8fb37ee362dbed867a1bb6e2783f488e36692570c8172bec7d8d8b6f35acd82"
+    },
+    {
+      "path": "meshes/part_504_solid_504.stl",
+      "sha256": "173204147eb73d00430e5daa3244786c6343bb54047b21d835bfeaa881507d62"
+    },
+    {
+      "path": "meshes/part_505_solid_505.stl",
+      "sha256": "c117881ecb5a7553c0280174855432a8ebf529539048b71fb6b4b992759d67e6"
+    },
+    {
+      "path": "meshes/part_506_solid_506.stl",
+      "sha256": "3db4555a62d6d6f4ad5eb004747113aac1fce0ed7fcf5a65bb78c2e6014d7140"
+    },
+    {
+      "path": "meshes/part_507_solid_507.stl",
+      "sha256": "e305ca81d3eb85e0302c68d23507a0b25c68433b06e78d5d6083f164d5e58dc9"
+    },
+    {
+      "path": "meshes/part_508_solid_508.stl",
+      "sha256": "f953e955f48270f70db67af6d22f38eebba8815336b69f23919837fd209719a4"
+    },
+    {
+      "path": "meshes/part_509_solid_509.stl",
+      "sha256": "eeebe89117c421ef64c819258cab35d63dd1743e4845e617865524d297468336"
+    },
+    {
+      "path": "meshes/part_510_solid_510.stl",
+      "sha256": "52dd25c31f26e6c3588c236e668c2c968b6282d9ec9a11009dfed37e491ac772"
+    },
+    {
+      "path": "meshes/part_511_solid_511.stl",
+      "sha256": "d8c85662b6569861c6877ed8130f6ab40e4f0cd634b87af5abd6ed7bdaa1dacc"
+    },
+    {
+      "path": "meshes/part_512_solid_512.stl",
+      "sha256": "31868579007343f9056c84865387b40091288c568d7cb602938940e90c3873a0"
+    },
+    {
+      "path": "meshes/part_513_solid_513.stl",
+      "sha256": "b5d66c602cd92b690f3c4c685e73877800a8e40288db1256e5756a3dfd30c664"
+    },
+    {
+      "path": "meshes/part_514_solid_514.stl",
+      "sha256": "580536d0c21aa9709afbae8c9c246d285e746f32d75421ef3fd2f9458c1e5dcd"
+    },
+    {
+      "path": "meshes/part_515_solid_515.stl",
+      "sha256": "de93dd414663e31fe32547c596d079684456fcf1bee4a72acf59ba96e01d488d"
+    },
+    {
+      "path": "meshes/part_516_solid_516.stl",
+      "sha256": "3adc34aab324dbf15835d06d8c44fd96362b47bd891b994b870744e172703ef8"
+    },
+    {
+      "path": "meshes/part_540_solid_540.stl",
+      "sha256": "0ad8110fe5709ed27b16b4de97449af75887ec3f532c4c7326f18d0f2936d25d"
+    },
+    {
+      "path": "meshes/part_541_solid_541.stl",
+      "sha256": "fd55a88495292e323608e04e4e18e6996804f9d50bbc3a0a52822a31c1ea9f1c"
+    },
+    {
+      "path": "meshes/part_555_solid_555.stl",
+      "sha256": "110d187b580e6cd313d598aa3aad0f3942a83ebc50bdfdb04f3fc754193e344d"
+    },
+    {
+      "path": "meshes/part_573_solid_573.stl",
+      "sha256": "63a3e2768f12338793612bc9c20f515bd3a61ad5c35b387cabfde148e9f889a5"
+    },
+    {
+      "path": "meshes/part_367_solid_367.stl",
+      "sha256": "6837583ba67ca606d1ab4fe0755fdc079ac86d98a01d2e8fea8b61578a6b61f9"
+    },
+    {
+      "path": "meshes/part_368_solid_368.stl",
+      "sha256": "465fe1ef95149d3adc293ed8091efc3aa3e3b51f39571fd232d8a92966aa955c"
+    },
+    {
+      "path": "meshes/part_366_solid_366.stl",
+      "sha256": "8278a6e2d35ba67fff05c458d10b40f2b8062ec012c0742f87878c97f9a43d2c"
+    },
+    {
+      "path": "meshes/part_369_solid_369.stl",
+      "sha256": "019148b86284007a20be9fc78f072cb399bf5b4cdd8c19ffe8bbc60eaf65a75d"
+    },
+    {
+      "path": "meshes/part_370_solid_370.stl",
+      "sha256": "6ac974df22839c9e331961f355ebaec11d0a49e0766c78b2b7651fcde491a496"
+    },
+    {
+      "path": "meshes/part_371_solid_371.stl",
+      "sha256": "22e8f3c72c6561019e43358f31f58ac327b3bda3326071ce0461f1939c84d883"
+    },
+    {
+      "path": "meshes/part_372_solid_372.stl",
+      "sha256": "9262682fbcb2c0ffbb16aebc83937a6f487e4a77df9d9f5d5991b3e75f77256b"
+    },
+    {
+      "path": "meshes/part_373_solid_373.stl",
+      "sha256": "8b890357384785f0bc61c4b2dd0bcc562ffe39b9b9d087de957490bd51cd10be"
+    },
+    {
+      "path": "meshes/part_374_solid_374.stl",
+      "sha256": "73e68ee26f12b7e494d1c6a8c0ea2fd4677a9ad30b4326dcddc9b12e16e5832f"
+    },
+    {
+      "path": "meshes/part_375_solid_375.stl",
+      "sha256": "61c073bfe6eaf23054e8a78b4d6131f75909a717517a86e05f46e9bee4aa0db1"
+    },
+    {
+      "path": "meshes/part_376_solid_376.stl",
+      "sha256": "59f6afe81ff800c42b408c6f40c0f9f45e14e31a2b1896f0c1a3028851391f24"
+    },
+    {
+      "path": "meshes/part_377_solid_377.stl",
+      "sha256": "296e2e457ef3de531c595743184697aebc6ad0cdea46a8883a9378a704de2cd2"
+    },
+    {
+      "path": "meshes/part_378_solid_378.stl",
+      "sha256": "a6b113f041e3b00bdadee19f965defe44bd2e2a106132b4555ffaae8092d086c"
+    },
+    {
+      "path": "meshes/part_379_solid_379.stl",
+      "sha256": "73bc2b04c689ea17e7155e2ce60d0d6b0f5c384673a5c512a9f77ff51bd14ad7"
+    },
+    {
+      "path": "meshes/part_380_solid_380.stl",
+      "sha256": "ac8ce95ebd0622162a7b02d78139282ec6d6ab8d2f9d192d267c8a5433ad55e2"
+    },
+    {
+      "path": "meshes/part_381_solid_381.stl",
+      "sha256": "38a1e9858afbe346de09b3f5112b336eebcac2ef84a99afa74ebf3fb799330cd"
+    },
+    {
+      "path": "meshes/part_382_solid_382.stl",
+      "sha256": "6df78c45685929cba811158081921e595aeec308f0d063fe109830c7015a1995"
+    },
+    {
+      "path": "meshes/part_383_solid_383.stl",
+      "sha256": "c51be6474f529c6bf437544b6e855173ff9c8d847ed3560106c3e9a9299385e3"
+    },
+    {
+      "path": "meshes/part_384_solid_384.stl",
+      "sha256": "5cc0358495af2cf515ae86cd137d7bab2377a709257e90e4d59cb9a9dd9ac270"
+    },
+    {
+      "path": "meshes/part_385_solid_385.stl",
+      "sha256": "ee68bfaadbdcc55c7670cf866527693dd31acd0d302dea95c88ee97b98a84ae6"
+    },
+    {
+      "path": "meshes/part_386_solid_386.stl",
+      "sha256": "9dc2bc0b2f9061da9194505237aaa81e36388bed40a1f84def09f885aed8647b"
+    },
+    {
+      "path": "meshes/part_410_solid_410.stl",
+      "sha256": "c00cefbe81ec6688218517d22751e57314c467f325feef15f59653192fa6c6a2"
+    },
+    {
+      "path": "meshes/part_411_solid_411.stl",
+      "sha256": "27d0c17768dc17c2d7f6457cf2b1abe3187345fef45539b65b673853dc3f73d2"
+    },
+    {
+      "path": "meshes/part_414_solid_414.stl",
+      "sha256": "3b24e72f7c0beb11d02ea6685e7b2497b007c8c2a24873394d3de327890cbfa4"
+    },
+    {
+      "path": "meshes/part_553_solid_553.stl",
+      "sha256": "7b1c7a79d86e8e5bc46f0fa4b5af0301de0119734792cb214a7f000b1ec56193"
+    },
+    {
+      "path": "meshes/part_565_solid_565.stl",
+      "sha256": "3dc3bcf404232abdc7dc9a181a6776899e309f9f93afcca878fdb23f85380d27"
+    },
+    {
+      "path": "meshes/part_566_solid_566.stl",
+      "sha256": "df7ff738c431743d6a7f9cfee02e1f7b5a2fdfd90ab575f77a62f2f25aa8bb43"
+    },
+    {
+      "path": "meshes/part_567_solid_567.stl",
+      "sha256": "fb612f45a070602823b40340002dc70265fa2c00db83b6570a71a5df07df79ed"
+    },
+    {
+      "path": "meshes/part_568_solid_568.stl",
+      "sha256": "2b2479f6ab4f0e5cdb3eb513f929c9a2894a2190142976a60e1e2a87244711f7"
+    },
+    {
+      "path": "meshes/part_569_solid_569.stl",
+      "sha256": "de8ffeec54a4b28ec382b86d739193214a9687a81da4f55c7a3225673243a9de"
+    },
+    {
+      "path": "meshes/part_570_solid_570.stl",
+      "sha256": "3210783a5f375ad4f4bdcc009013733e7ef22668fdc88ee6d0a626742c786ca0"
+    },
+    {
+      "path": "meshes/part_571_solid_571.stl",
+      "sha256": "d3c15b738067acf0ffc9885f7c07c8e26fc7a9dffc3dbe0a60e5c71b9e37ad9a"
+    },
+    {
+      "path": "meshes/part_572_solid_572.stl",
+      "sha256": "c4700d48e7353ac3eabd7abcf5e7fddd5f364bbd25e1af8e98f5586b75f46bfe"
+    },
+    {
+      "path": "meshes/part_094_solid_094.stl",
+      "sha256": "df0ee0f2ddbc12b4f2e08dd0260aa79d45d1d3765d7ceac8992e1d63960beb5a"
+    },
+    {
+      "path": "meshes/part_096_solid_096.stl",
+      "sha256": "412991d741e4fd491dc59f75ec8a708ac8991bd4e6e626b52b9dbdff367650bb"
+    },
+    {
+      "path": "meshes/part_095_solid_095.stl",
+      "sha256": "b06c5faf220e7ab049d32efccdc5d62cbf30d3101be70750775d5a0c0a4f7c85"
+    },
+    {
+      "path": "meshes/part_097_solid_097.stl",
+      "sha256": "2293d264f78389212d3cca838b910daa7b942dd30985ebbfaea280cd7cf7d13a"
+    },
+    {
+      "path": "meshes/part_098_solid_098.stl",
+      "sha256": "a35ea914d33b727b3d725036a5e0b0917a7cfefec896d88dfe68082954a9cb6b"
+    },
+    {
+      "path": "meshes/part_099_solid_099.stl",
+      "sha256": "d475de9e57067cafe7a4ddab9e3a7430096c703ae5a69c5dddfd69ca0617daf9"
+    },
+    {
+      "path": "meshes/part_100_solid_100.stl",
+      "sha256": "542dfd58e4d2b148d4b68411484a853b53d392bc0002c58f28b63ef90194dfe8"
+    },
+    {
+      "path": "meshes/part_101_solid_101.stl",
+      "sha256": "f4734f19f35fa978c89921d882c8c048bf2f42d631ca56a006cf34d93ac23ce9"
+    },
+    {
+      "path": "meshes/part_102_solid_102.stl",
+      "sha256": "2250cb11c1d5f282a94a913ef0def3600ff3a8c685a6fc7cfa3f45626a1d2c10"
+    },
+    {
+      "path": "meshes/part_103_solid_103.stl",
+      "sha256": "f3fd34eccebf75c8724c06d057f5157d948f5a70532b9c2875d0774c758e8a85"
+    },
+    {
+      "path": "meshes/part_104_solid_104.stl",
+      "sha256": "0ff6df1acefb4703c7391230511fd31562e0e9f7804c78318f10e43368f77c48"
+    },
+    {
+      "path": "meshes/part_105_solid_105.stl",
+      "sha256": "ea94c2956f04f8743e82a793f637bad16a98c1490d75fcce99d166a1dead186d"
+    },
+    {
+      "path": "meshes/part_106_solid_106.stl",
+      "sha256": "6962f2d7e20d3bef0092bfce758d87a0eb3c21a4426290f151cec132016d1a54"
+    },
+    {
+      "path": "meshes/part_107_solid_107.stl",
+      "sha256": "727935978bc157b0f6d73f976807b691cf97d652bcf7258af874a508745cbbf7"
+    },
+    {
+      "path": "meshes/part_108_solid_108.stl",
+      "sha256": "a3a14d3d8eedb59a32a1715babbfc8ffbde8461416c380852f2b6659a80d3084"
+    },
+    {
+      "path": "meshes/part_109_solid_109.stl",
+      "sha256": "d70ed671f83d87b6a5c6854586b2015bc3e2bd6efeae9aeac7a5af38355c45b2"
+    },
+    {
+      "path": "meshes/part_110_solid_110.stl",
+      "sha256": "f6053473e4e98eb19becc648f9db6ac6aa3eb7c7a5d6d97b21c3f81350fac025"
+    },
+    {
+      "path": "meshes/part_111_solid_111.stl",
+      "sha256": "91102579e374f103ed4e5edb9f3648480299dcb5ea82122fe4fd45a779875dd2"
+    },
+    {
+      "path": "meshes/part_112_solid_112.stl",
+      "sha256": "ea426f7891ebdb05bd498e08f3d67e91a87612ae17bc1b8c5e6819021da0df3a"
+    },
+    {
+      "path": "meshes/part_113_solid_113.stl",
+      "sha256": "a7dea8771d44f80c83982b56134cae797924e66f3860372d3ba847746fefc021"
+    },
+    {
+      "path": "meshes/part_114_solid_114.stl",
+      "sha256": "fcc9f385d62aeca225e1830239486bf7a266387c407ebe9d0a634cbf352535eb"
+    },
+    {
+      "path": "meshes/part_115_solid_115.stl",
+      "sha256": "c8ee1729e5b59a7f1bebd212e54380d0f70eb6a65dd7e17f29b22ce3a05fc86d"
+    },
+    {
+      "path": "meshes/part_116_solid_116.stl",
+      "sha256": "68505eb00365ab2dcb9c0222e84e6908c822de4d6c5e2ef8b485b3a3ef0a9f62"
+    },
+    {
+      "path": "meshes/part_122_solid_122.stl",
+      "sha256": "35f5c931f3efd65354b2bf9ef210d21f482f050a102743fd3390f176a3d20ef6"
+    },
+    {
+      "path": "meshes/part_261_solid_261.stl",
+      "sha256": "ee8165993681f3e11a82258a92380e9825bff345152f36c4af9ffe4603856096"
+    },
+    {
+      "path": "meshes/part_226_solid_226.stl",
+      "sha256": "59d9f32cef63b5acc38a41eb058dd4ae0cbef253e65d1f58fa5d4f4c402425d9"
+    },
+    {
+      "path": "meshes/part_225_solid_225.stl",
+      "sha256": "a72646ca9d8df78a15df884691eedd5a82a8a3e02beedf2215cd622bedd64e74"
+    },
+    {
+      "path": "meshes/part_224_solid_224.stl",
+      "sha256": "0da8d7962ffc8a3ee78e6f93284a9653469c3ebb59e1b461419ede2888bdd9d6"
+    },
+    {
+      "path": "meshes/part_227_solid_227.stl",
+      "sha256": "cc4bb48ce95f407becd52da06a9c0879765418b318a4bfbff59e4f7fe1f810dd"
+    },
+    {
+      "path": "meshes/part_228_solid_228.stl",
+      "sha256": "7b185f768443d2014268f0d09293aa8a4b5dacb77ccf5a1537c737923eae39f6"
+    },
+    {
+      "path": "meshes/part_229_solid_229.stl",
+      "sha256": "7dad4d53a433a66e97bb9b9af4bcde5625059c09f1044a05bd504176eee1f684"
+    },
+    {
+      "path": "meshes/part_230_solid_230.stl",
+      "sha256": "a058cceca823413ca847dcaa8821ab97ca2adcc4184f79cec82bb251044a321f"
+    },
+    {
+      "path": "meshes/part_231_solid_231.stl",
+      "sha256": "e978830dd6e16337a53d525de5ff32621ebd7949e224598c96887dd835f151d6"
+    },
+    {
+      "path": "meshes/part_232_solid_232.stl",
+      "sha256": "3c086e1f587fe48af1b7a018a733dbdf61994d6ce06e139b3b663a73cd6c67ab"
+    },
+    {
+      "path": "meshes/part_233_solid_233.stl",
+      "sha256": "a7f78dc021a0cbc20e452024024c48b73ea61a5f50d2c6490a353ad2fe865017"
+    },
+    {
+      "path": "meshes/part_234_solid_234.stl",
+      "sha256": "d6483a699c086f3eef5665ea35f1e0e93b350bfa412d0c72b3714f621ed6537c"
+    },
+    {
+      "path": "meshes/part_235_solid_235.stl",
+      "sha256": "6732e30a27531f2343e2731c6ab95629a10ef8e6789cccd3ae8af70864720902"
+    },
+    {
+      "path": "meshes/part_236_solid_236.stl",
+      "sha256": "85919bd41bbc69a3327654438b458e7581e946f1adcb5fd858d353babf1ace76"
+    },
+    {
+      "path": "meshes/part_237_solid_237.stl",
+      "sha256": "10fc016bbc74425611388b9b33bb45f4c1be32d8d4c5f955a03ecf62f84acbe4"
+    },
+    {
+      "path": "meshes/part_238_solid_238.stl",
+      "sha256": "f8663be92621902aea6d8b7f9792a47d0cd8c2631468b70a52835e30f8acadc5"
+    },
+    {
+      "path": "meshes/part_239_solid_239.stl",
+      "sha256": "59daece072cb97a7f7c65f5c21902ffc7b7ccfe9da291c15cb19a0ade3d02891"
+    },
+    {
+      "path": "meshes/part_240_solid_240.stl",
+      "sha256": "297fa63e26e6071cdf466b3809582e4a8968a56f5d604154f3a3b3ea99c1b08e"
+    },
+    {
+      "path": "meshes/part_241_solid_241.stl",
+      "sha256": "9a4b7d21339b51d625bbc33bd712ae51dd2ae788cf881764b5f8babfa903c15f"
+    },
+    {
+      "path": "meshes/part_242_solid_242.stl",
+      "sha256": "f103c2f3efe1c1ba8a7b0ecda75d2fce139f028d6b2ea070af5b7dd877acdbbd"
+    },
+    {
+      "path": "meshes/part_243_solid_243.stl",
+      "sha256": "77683353fd7bbcbb2fe5f310449b00cad7b81c42e9f59862221589c46a2b63e5"
+    },
+    {
+      "path": "meshes/part_244_solid_244.stl",
+      "sha256": "814c780365c6874099d925d865522bd90a328693c72d776328b2ecdafcd5c31e"
+    },
+    {
+      "path": "meshes/part_245_solid_245.stl",
+      "sha256": "cfbf801ca902faecb87ff511c74128266085e3777811dd6ac688e5ba9dc6eaff"
+    },
+    {
+      "path": "meshes/part_246_solid_246.stl",
+      "sha256": "eaf255214f15fe2a4b29b39e93e4913af69d6852f39941c4950347f5bd4a24d7"
+    },
+    {
+      "path": "meshes/part_259_solid_259.stl",
+      "sha256": "a31a29bf9b654cda3ce363247fb9844679cbcd0fece66ee848f1d4ce0595aef7"
+    },
+    {
+      "path": "meshes/part_263_solid_263.stl",
+      "sha256": "469e9cb8e1c16b61f6a707dc807f8d1478bb7c8caf4d3cd9f4ed82c45b2335ce"
+    },
+    {
+      "path": "meshes/part_264_solid_264.stl",
+      "sha256": "0879465ac67516065123911411f7390a2be2b85610603518e97b9a3ec844195b"
+    },
+    {
+      "path": "meshes/part_265_solid_265.stl",
+      "sha256": "1a05e4bf801c96949d7a81ba362d97da922f9e678203efeed712fd0e7e184f46"
+    },
+    {
+      "path": "meshes/part_266_solid_266.stl",
+      "sha256": "61bde7ae9d773fce25e4c4bf7d383f6fd2dfce7780a6a0923e6f06f9fa775bb6"
+    },
+    {
+      "path": "meshes/part_267_solid_267.stl",
+      "sha256": "972d8778ca8f2cb817ad483f8e5da3bb6b4a6cd4f5aa12628c18ebf14e29c5c8"
+    },
+    {
+      "path": "meshes/part_268_solid_268.stl",
+      "sha256": "e65437e2120e97eb1cd382c1b4d95dc2314c9715ca510ae91eeaac8fcacc8aea"
+    },
+    {
+      "path": "meshes/part_269_solid_269.stl",
+      "sha256": "99f9af72a29d1cc6c0831a027bd6bffae67897482d5bdf05c8ccf22b060c0f04"
+    },
+    {
+      "path": "meshes/part_270_solid_270.stl",
+      "sha256": "7e49cc0a004246386ff3837b218dc4e5d1d372c51c885f696112832f28ced7d8"
+    },
+    {
+      "path": "meshes/part_271_solid_271.stl",
+      "sha256": "f88e02b2a0b710ba6db31df923ef6cca63b3f374dd002b7dc2cc6670bf8614ce"
+    },
+    {
+      "path": "meshes/part_203_solid_203.stl",
+      "sha256": "72b03f7f719fd37753a50c2bd9c327d2e16c13d686fe09e3d21a3e9c6f2ec8f1"
+    },
+    {
+      "path": "meshes/part_204_solid_204.stl",
+      "sha256": "dd08d9a33f36efedc8f1fb01370933d3dad7f773271a5f40298ae2fd672e9a57"
+    },
+    {
+      "path": "meshes/part_205_solid_205.stl",
+      "sha256": "6b6a66c67a58236ca3f4ee5ae1b4206c27331532e9307a902c9d580fb0e254a5"
+    },
+    {
+      "path": "meshes/part_206_solid_206.stl",
+      "sha256": "32fbc5ef98d85e8b731789d16e438b287477cd411c45e7b7136d9634c4ea302e"
+    },
+    {
+      "path": "meshes/part_207_solid_207.stl",
+      "sha256": "ec841337917466b85ca8cb5be9994e6d3bb6e00b3bacb8ec0057efa59f994993"
+    },
+    {
+      "path": "meshes/part_208_solid_208.stl",
+      "sha256": "2e61db5242d4b712daebd09923a18f00b025717707236ea595eaa255dbe49b7e"
+    },
+    {
+      "path": "meshes/part_209_solid_209.stl",
+      "sha256": "db5d2705d36b151de0d237ff7602a0ea5edfa449d669752644f3b2adfe37950f"
+    },
+    {
+      "path": "meshes/part_210_solid_210.stl",
+      "sha256": "885f736e5ba41a0e3b8ec96b9d4689e3e279a835d5996d6951c74d8b3a556325"
+    },
+    {
+      "path": "meshes/part_211_solid_211.stl",
+      "sha256": "562fa33e8ce9dd49389c3039d57bebc17f37cc2f884f78bec523febdaaf670f0"
+    },
+    {
+      "path": "meshes/part_212_solid_212.stl",
+      "sha256": "066c7e6eda4596df70b2d3f8e145e411e409fda58ac247437344b2aa2dcb5d85"
+    },
+    {
+      "path": "meshes/part_213_solid_213.stl",
+      "sha256": "cf941c3394e6af2425fa991f731d7f65f6b8b12616966b0f8dadc801ed693aec"
+    },
+    {
+      "path": "meshes/part_214_solid_214.stl",
+      "sha256": "729928fd2983620a0f8467cd63b7064ecf8b84400678bfcfe7eaa8436db69c6e"
+    },
+    {
+      "path": "meshes/part_215_solid_215.stl",
+      "sha256": "4c73108e131f619d4a88ea1bb7c826f1766204abefdd3491fef86b809de9297d"
+    },
+    {
+      "path": "meshes/part_216_solid_216.stl",
+      "sha256": "3ef16c2d445b5b76c9e841865f07e0328e05152fd525d07dba9c0e66bfaacbb5"
+    },
+    {
+      "path": "meshes/part_217_solid_217.stl",
+      "sha256": "c974d925f5da5a0f41cfdd3834b91608e4d7c164337c2335f4e8e62ea0692068"
+    },
+    {
+      "path": "meshes/part_218_solid_218.stl",
+      "sha256": "6da9397013530d4b092907d05880614111d7c68e996458d30e27f4c527328113"
+    },
+    {
+      "path": "meshes/part_219_solid_219.stl",
+      "sha256": "c7025c9166132b7b7a362593c39300a8c94e7f7cc27bb5d3d76b4c1bbd3dc29a"
+    },
+    {
+      "path": "meshes/part_220_solid_220.stl",
+      "sha256": "d73575788364af4227e948b82ce98d8598d8afee565054637e885752739b7a03"
+    },
+    {
+      "path": "meshes/part_221_solid_221.stl",
+      "sha256": "80400789e370e17ef50132a74a4e219fef3d641006aba64710f530513ad3f52c"
+    },
+    {
+      "path": "meshes/part_222_solid_222.stl",
+      "sha256": "19419e8042adfd16f4f25f2c7938879c724b57a3b00736b6a969ae2f16e965c9"
+    },
+    {
+      "path": "meshes/part_223_solid_223.stl",
+      "sha256": "39f6ca03d7616487793a03cb2753f00b3865a32452f598f66275d86412100f11"
+    },
+    {
+      "path": "meshes/part_247_solid_247.stl",
+      "sha256": "3d7ec41a08edce0c84141889aac69e839bf4ead4fe600acc62b898eb5df2f424"
+    },
+    {
+      "path": "meshes/part_248_solid_248.stl",
+      "sha256": "635a08cb4a46699b52cb0c4e1cd22d9eb30d0d1110025dd2e2022ca0479782ce"
+    },
+    {
+      "path": "meshes/part_262_solid_262.stl",
+      "sha256": "4f18739334dc0e9013a7808c93d21c11ecc3a1c5203a807c188a3a8239b75197"
+    },
+    {
+      "path": "meshes/part_272_solid_272.stl",
+      "sha256": "e26037d2f6455147911790d557fe3e0196797567f3393fff025f0a98cfd70193"
+    },
+    {
+      "path": "meshes/part_273_solid_273.stl",
+      "sha256": "691a641754928b5a3a9c616b3e90587caf8eb3a5ee80f1b4ea32a743ca34804c"
+    },
+    {
+      "path": "meshes/part_274_solid_274.stl",
+      "sha256": "0c7076acf5b755c97067ee490d2a15dfe7d22842371cffd8cc6b48db2cdfdd48"
+    },
+    {
+      "path": "meshes/part_275_solid_275.stl",
+      "sha256": "2a9067cc56d1c340a3212d4940656b209c15c0efa09a7798cb07d5639634e494"
+    },
+    {
+      "path": "meshes/part_276_solid_276.stl",
+      "sha256": "77431f4e4e1d6008f67622e574fa8e09da6a414fd5371f1772878a398daf4006"
+    },
+    {
+      "path": "meshes/part_277_solid_277.stl",
+      "sha256": "2ffee22ade3f11907012207ff8cb080b3b32ffe18ca7dac9ac86315b29d55a19"
+    },
+    {
+      "path": "meshes/part_278_solid_278.stl",
+      "sha256": "b93ff4450719596dcda9d9e68db042de09fa525de0cd3eb6a692002789ff9d51"
+    },
+    {
+      "path": "meshes/part_279_solid_279.stl",
+      "sha256": "9ca0ea466b79a173a41f63787e5ebc2fc30c2d526419dce157a54b9271941a7f"
+    },
+    {
+      "path": "meshes/part_280_solid_280.stl",
+      "sha256": "6e3e6a59e39fcd92711b0592744d266e65defb3ccc37abf453d6c61770b7435f"
+    },
+    {
+      "path": "meshes/part_074_solid_074.stl",
+      "sha256": "523031dda7e37495cc2a8143ef399a7dc71553de2e0a611f9080cf553baf6039"
+    },
+    {
+      "path": "meshes/part_075_solid_075.stl",
+      "sha256": "42452993cdaaf3fb8455b8c2b2d1839ade3ac8a00fbc046b1cff4186bff2196f"
+    },
+    {
+      "path": "meshes/part_073_solid_073.stl",
+      "sha256": "b691353bbccec4288e0f0b19dad7f29bb35cc8b80e9704c9b2d94171695deb2d"
+    },
+    {
+      "path": "meshes/part_260_solid_260.stl",
+      "sha256": "066273b638dd6974747f157d94cb2f36cb045d1705d22e96efd2af60df869810"
+    },
+    {
+      "path": "meshes/part_121_solid_121.stl",
+      "sha256": "dbfbe070f6b1becd6a525fadd0bf0f080d3f3b1727821c8726ff26a2baf1ddd0"
+    },
+    {
+      "path": "robot.xml",
+      "sha256": "46607eb90778bf3840304fd4929690d81cfeb88aee271113417f115c67127ec8"
+    }
+  ],
+  "topology": "closed_chain",
+  "motion_type": "unknown",
+  "base": "free",
+  "bodies": [
+    {
+      "id": "link_001",
+      "name": "base_link",
+      "mass": {
+        "value": 6.8,
+        "unit": "kg",
+        "source": "unknown",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_002",
+      "name": "RR_thigh_rear",
+      "mass": {
+        "value": 0.09199999999999521,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_003",
+      "name": "RR_calf_rear",
+      "mass": {
+        "value": 0.09199999999999649,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_004",
+      "name": "RR_thigh_front",
+      "mass": {
+        "value": 0.09199999999999381,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_005",
+      "name": "RR_calf_front",
+      "mass": {
+        "value": 0.05100000000000175,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_006",
+      "name": "FR_thigh_front",
+      "mass": {
+        "value": 0.09200000000000941,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_007",
+      "name": "FR_calf_front",
+      "mass": {
+        "value": 0.05100000000000826,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_008",
+      "name": "FR_thigh_rear",
+      "mass": {
+        "value": 0.09199999999998175,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_009",
+      "name": "FR_calf_rear",
+      "mass": {
+        "value": 0.09200000000000831,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_010",
+      "name": "FL_thigh_rear",
+      "mass": {
+        "value": 0.09199999999999395,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_011",
+      "name": "FL_calf_rear",
+      "mass": {
+        "value": 0.09199999999999556,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_012",
+      "name": "FL_thigh_front",
+      "mass": {
+        "value": 0.09199999999997832,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_013",
+      "name": "FL_calf_front",
+      "mass": {
+        "value": 0.050999999999995806,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_014",
+      "name": "RL_thigh_front",
+      "mass": {
+        "value": 0.09199999999999386,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_015",
+      "name": "RL_calf_front",
+      "mass": {
+        "value": 0.0510000000000016,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_016",
+      "name": "RL_thigh_rear",
+      "mass": {
+        "value": 0.0920000000000053,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    },
+    {
+      "id": "link_017",
+      "name": "RL_calf_rear",
+      "mass": {
+        "value": 0.09200000000000057,
+        "unit": "kg",
+        "source": "cad_estimated",
+        "note": "来源未单独确认的质量不能视为实测"
+      }
+    }
+  ],
+  "joints": [
+    {
+      "id": "RR_thigh_rear_joint",
+      "name": "RR_thigh_rear_joint",
+      "role": "active",
+      "mode": "position",
+      "initial_position": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "feedback": "unknown"
+    },
+    {
+      "id": "RR_calf_rear_joint",
+      "name": "RR_calf_rear_joint",
+      "role": "unknown",
+      "mode": "unknown",
+      "initial_position": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "feedback": "unknown"
+    },
+    {
+      "id": "RR_thigh_front_joint",
+      "name": "RR_thigh_front_joint",
+      "role": "unknown",
+      "mode": "unknown",
+      "initial_position": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "feedback": "unknown"
+    },
+    {
+      "id": "RR_calf_front_joint",
+      "name": "RR_calf_front_joint",
+      "role": "unknown",
+      "mode": "unknown",
+      "initial_position": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "feedback": "unknown"
+    },
+    {
+      "id": "FR_thigh_front_joint",
+      "name": "FR_thigh_front_joint",
+      "role": "unknown",
+      "mode": "unknown",
+      "initial_position": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "feedback": "unknown"
+    },
+    {
+      "id": "FR_calf_front_joint",
+      "name": "FR_calf_front_joint",
+      "role": "unknown",
+      "mode": "unknown",
+      "initial_position": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "feedback": "unknown"
+    },
+    {
+      "id": "FR_thigh_rear_joint",
+      "name": "FR_thigh_rear_joint",
+      "role": "unknown",
+      "mode": "unknown",
+      "initial_position": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "feedback": "unknown"
+    },
+    {
+      "id": "FR_calf_rear_joint",
+      "name": "FR_calf_rear_joint",
+      "role": "unknown",
+      "mode": "unknown",
+      "initial_position": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "feedback": "unknown"
+    },
+    {
+      "id": "FL_thigh_rear_joint",
+      "name": "FL_thigh_rear_joint",
+      "role": "unknown",
+      "mode": "unknown",
+      "initial_position": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "feedback": "unknown"
+    },
+    {
+      "id": "FL_calf_rear_joint",
+      "name": "FL_calf_rear_joint",
+      "role": "unknown",
+      "mode": "unknown",
+      "initial_position": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "feedback": "unknown"
+    },
+    {
+      "id": "FL_thigh_front_joint",
+      "name": "FL_thigh_front_joint",
+      "role": "unknown",
+      "mode": "unknown",
+      "initial_position": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "feedback": "unknown"
+    },
+    {
+      "id": "FL_calf_front_joint",
+      "name": "FL_calf_front_joint",
+      "role": "unknown",
+      "mode": "unknown",
+      "initial_position": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "feedback": "unknown"
+    },
+    {
+      "id": "RL_thigh_front_joint",
+      "name": "RL_thigh_front_joint",
+      "role": "unknown",
+      "mode": "unknown",
+      "initial_position": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "feedback": "unknown"
+    },
+    {
+      "id": "RL_calf_front_joint",
+      "name": "RL_calf_front_joint",
+      "role": "unknown",
+      "mode": "unknown",
+      "initial_position": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "feedback": "unknown"
+    },
+    {
+      "id": "RL_thigh_rear_joint",
+      "name": "RL_thigh_rear_joint",
+      "role": "unknown",
+      "mode": "unknown",
+      "initial_position": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "feedback": "unknown"
+    },
+    {
+      "id": "RL_calf_rear_joint",
+      "name": "RL_calf_rear_joint",
+      "role": "unknown",
+      "mode": "unknown",
+      "initial_position": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "direction": {
+        "value": null,
+        "unit": "sign",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "physical_limits": {
+        "value": [
+          -1.57,
+          1.57
+        ],
+        "unit": "rad",
+        "source": "cad_estimated",
+        "note": ""
+      },
+      "command_limits": {
+        "value": null,
+        "unit": "rad",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "force_limits": {
+        "value": null,
+        "unit": "N*m",
+        "source": "unknown",
+        "note": "待确认"
+      },
+      "feedback": "unknown"
+    }
+  ],
+  "drive_groups": [],
+  "roles": [],
+  "sensors": [],
+  "frames": {
+    "up": "Z",
+    "forward": "unknown",
+    "wheel_axis": "unknown",
+    "handedness": "right"
+  },
+  "constraints": [
+    {
+      "id": "closure_003",
+      "name": "closure_002",
+      "type": "connect",
+      "passive_joint_ids": []
+    },
+    {
+      "id": "closure_002",
+      "name": "closure_001",
+      "type": "connect",
+      "passive_joint_ids": []
+    },
+    {
+      "id": "closure_003_003",
+      "name": "closure_003",
+      "type": "connect",
+      "passive_joint_ids": []
+    },
+    {
+      "id": "closure_004",
+      "name": "closure_004",
+      "type": "connect",
+      "passive_joint_ids": []
+    }
+  ],
+  "initial_pose": {
+    "source": "cad_estimated",
+    "keyframe": "home",
+    "closure_error": {
+      "value": null,
+      "unit": "solver residual",
+      "source": "unknown",
+      "note": "未计算；应由 SimReady 在开始训练前于客户端本机检查最终模型。"
+    }
+  },
+  "pending": [
+    "SimReady 尚未接入此 manifest；JSON 不会自动应用训练设置。",
+    "动力学校验未执行：需由 SimReady 在开始训练前于客户端本机完成。"
+  ]
+}

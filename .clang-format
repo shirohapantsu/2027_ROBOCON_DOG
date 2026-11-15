@@ -1,0 +1,37 @@
+# Match the handwritten code in realistic/movement, especially leg.cpp/leg.hpp.
+# BreakBeforeCloseBracketBracedList requires clang-format 22 or newer.
+BasedOnStyle: Google
+IndentWidth: 4
+ContinuationIndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 0
+
+NamespaceIndentation: None
+AccessModifierOffset: -4
+IndentCaseLabels: true
+
+BreakBeforeBraces: Custom
+BraceWrapping:
+  BeforeElse: true
+SpaceBeforeParens: Never
+
+DerivePointerAlignment: false
+PointerAlignment: Right
+ReferenceAlignment: Right
+
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: WithoutElse
+AllowShortLoopsOnASingleLine: false
+AllowShortBlocksOnASingleLine: Never
+AllowShortEnumsOnASingleLine: false
+BreakBeforeCloseBracketBracedList: true
+
+SortIncludes: Never
+IncludeBlocks: Preserve
+FixNamespaceComments: false
+ReflowComments: Never
+AlignTrailingComments:
+  Kind: Leave
+SpacesBeforeTrailingComments: 2
+MaxEmptyLinesToKeep: 1

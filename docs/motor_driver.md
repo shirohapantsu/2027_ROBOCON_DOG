@@ -2,7 +2,7 @@
 
 本文对应 [`realistic/movement/include/motor.hpp`](../realistic/movement/include/motor.hpp) 的当前实现，代码示例使用 C++17。
 
-坐标系、安装方向、零偏标定与上电圈数问题详见 [`motor_coordinates.md`](motor_coordinates.md)。
+统一采用右手机体系：$+x$ 向右、$+y$ 向前、$+z$ 向上，连杆角从 $+y$ 朝 $+z$ 为正（绕 $+x$）。坐标系、安装方向、零偏标定与上电圈数问题详见 [`motor_coordinates.md`](motor_coordinates.md)。
 
 `motor::Motor` 封装宇树 GO-M8010-6 电机 SDK。每个对象管理一台电机，负责该电机的命令缓存、收发、反馈检查和单位换算。八台电机共用串口时，创建八个 `Motor` 对象，并共享同一个 `SerialPort`。
 
@@ -36,7 +36,7 @@ Motor(std::shared_ptr<SerialPort> serial, int id, float offset, bool direction);
 |---|---|
 | `serial` | 已经创建的非空 `std::shared_ptr<SerialPort>` |
 | `id` | 当前实例管理的实际电机 ID，必须在 `0～14` 内 |
-| `offset` | 从 $+x$ 到选定编码器零位对应连杆方向的有向角，按电机原生方向计正，输出轴侧 rad |
+| `offset` | 从 $+y$ 到选定编码器零位对应连杆方向的有向角，按电机原生方向计正，输出轴侧 rad |
 | `direction` | 输出侧朝右传 `true`，朝左传 `false`；不传数值 `-1` |
 
 同一串口上的多台电机，应共享同一个串口对象：
@@ -80,7 +80,7 @@ struct MotorCtrl {
 | 字段 | 含义 | 单位 |
 |---|---|---|
 | `mode` | 控制目标的组合方式 | `CtrlMode` |
-| `q` | 统一腿部方向下，相对 $+x$ 的连杆目标角度 | rad |
+| `q` | 统一腿部方向下，相对 $+y$ 的连杆目标角度 | rad |
 | `dq` | 统一腿部方向下的目标角速度 | rad/s |
 | `kp` | 位置增益 | N·m/rad |
 | `kd` | 速度增益 | N·m·s/rad |
@@ -158,7 +158,7 @@ struct MotorState {
 
 | 字段 | 含义 |
 |---|---|
-| `q` | 统一腿部方向下，相对 $+x$ 的连杆角度，rad，已换算安装方向与零偏 |
+| `q` | 统一腿部方向下，相对 $+y$ 的连杆角度，rad，已换算安装方向与零偏 |
 | `dq` | 统一腿部方向下的输出轴角速度，rad/s |
 | `tau` | 根据减速比换算的输出轴力矩估计，N·m，未计传动损耗 |
 | `temp` | 电机温度，摄氏度 |

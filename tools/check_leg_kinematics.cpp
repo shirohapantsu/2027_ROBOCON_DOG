@@ -11,7 +11,7 @@
 #include <string>
 
 namespace {
-using V2 = Eigen::Vector2d;
+using V2 = Eigen::Vector2d;  // 平面向量顺序为 [u（向前）, v（向下）]。
 using V3 = Eigen::Vector3d;
 using V4 = Eigen::Vector4d;
 using M2 = Eigen::Matrix2d;
@@ -27,19 +27,24 @@ int id(const mjModel* m, mjtObj type, const std::string& name) {
     return result;
 }
 
+// 原始模型 M（前、左、上）到项目机体系 B（右、前、上）。
+V3 modelToRobot(const V3& modelPosition) {
+    return {-modelPosition.y(), modelPosition.x(), modelPosition.z()};
+}
+
 V2 unit(double angle) { return {std::cos(angle), std::sin(angle)}; }
-V2 perpendicular(const V2& value) { return {-value.y(), value.x()}; }
+V2 perpendicular(const V2& value) { return {-value[1], value[0]}; }
 double wrap(double angle) { return std::atan2(std::sin(angle), std::cos(angle)); }
 
 struct Branch {
     int active, passive, site;
     double l1, l2, alpha, beta;
-    V3 hip;
+    V3 hipRobot;
 };
 
 struct Leg {
     std::array<Branch, 2> branches;  // 顺序固定为前支链、后支链。
-    double direction, closureY, footY, assembly;
+    double direction, closureX, footX, assembly;
     int footGeom;
 };
 
@@ -60,7 +65,9 @@ Leg readLeg(const mjModel* m, const std::string& name) {
             if (m->site_bodyid[site] == calfBody) branch.site = site;
         }
         require(branch.site >= 0, "Missing closure site");
-        branch.hip = Eigen::Map<const V3>(m->body_pos + 3 * thighBody);
+        const V3 hipModel = Eigen::Map<const V3>(m->body_pos + 3 * thighBody);
+        branch.hipRobot = modelToRobot(hipModel);
+        // a、b 是所属 CAD 刚体局部向量，保持局部轴约定。
         const V3 a = Eigen::Map<const V3>(m->body_pos + 3 * calfBody);
         const V3 b = Eigen::Map<const V3>(m->site_pos + 3 * branch.site);
         branch.l1 = a.head<2>().norm();
@@ -68,10 +75,10 @@ Leg readLeg(const mjModel* m, const std::string& name) {
         branch.alpha = std::atan2(leg.direction * a.y(), a.x());
         branch.beta = std::atan2(leg.direction * b.y(), b.x());
         if (i == 1) {
-            leg.closureY = branch.hip.y() + leg.direction * (a.z() + b.z());
+            leg.closureX = branch.hipRobot.x() - leg.direction * (a.z() + b.z());
             leg.footGeom = id(m, mjOBJ_GEOM, calf + "_mesh_2");
             const V3 center = Eigen::Map<const V3>(m->geom_pos + 3 * leg.footGeom);
-            leg.footY = branch.hip.y() + leg.direction * (a.z() + center.z());
+            leg.footX = branch.hipRobot.x() - leg.direction * (a.z() + center.z());
         }
     }
     const auto& f = leg.branches[0];
@@ -109,7 +116,7 @@ V4 inverse(const mjModel* m, const Leg& leg, const V2& target) {
         cosine = std::clamp(cosine, -1.0, 1.0);
         const double delta0 = wrap(branch.beta - branch.alpha);
         const double delta = std::copysign(std::acos(cosine), delta0);
-        const double theta = std::atan2(target.y(), target.x()) -
+        const double theta = std::atan2(target[1], target[0]) -
             std::atan2(branch.l2 * std::sin(delta), branch.l1 + branch.l2 * std::cos(delta));
         result[i] = wrap(leg.direction * (theta - branch.alpha));
         result[i + 2] = wrap(leg.direction * (delta - delta0));
@@ -153,6 +160,11 @@ int main(int argc, char** argv) {
         int count = 0;
         for (const std::string name : {"RR", "FR", "FL", "RL"}) {
             const auto leg = readLeg(m.get(), name);
+            require((name.back() == 'R' ? leg.footX > 0 : leg.footX < 0),
+                    "Robot-frame X must be positive on right legs");
+            require((name.front() == 'F' ? leg.branches[0].hipRobot.y() > 0 :
+                                         leg.branches[0].hipRobot.y() < 0),
+                    "Robot-frame Y must be positive on front legs");
             for (int i = -2; i <= 2; ++i) for (int j = -2; j <= 2; ++j) {
                 const V2 active(i * 0.04, j * 0.04);
                 const V2 c = forward(leg, active);
@@ -164,15 +176,16 @@ int main(int argc, char** argv) {
                     d->qpos[m->jnt_qposadr[leg.branches[branch].passive]] = q[branch + 2];
                 }
                 mj_forward(m.get(), d.get());
-                const V3 expected(leg.branches[0].hip.x() + c.x(), leg.closureY, -c.y());
+                const V3 expectedRobot(leg.closureX, leg.branches[0].hipRobot.y() + c[0], -c[1]);
                 for (const auto& branch : leg.branches) {
-                    const V3 actual = Eigen::Map<const V3>(d->site_xpos + 3 * branch.site);
-                    closureError = std::max(closureError, (expected - actual).norm());
+                    const V3 actualRobot = modelToRobot(Eigen::Map<const V3>(d->site_xpos + 3 * branch.site));
+                    closureError = std::max(closureError, (expectedRobot - actualRobot).norm());
                 }
-                V3 expectedCenter = expected;
-                expectedCenter.y() = leg.footY;
-                const V3 actualCenter = Eigen::Map<const V3>(d->geom_xpos + 3 * leg.footGeom);
-                centerError = std::max(centerError, (expectedCenter - actualCenter).norm());
+                V3 expectedCenterRobot = expectedRobot;
+                expectedCenterRobot.x() = leg.footX;
+                const V3 actualCenterModel = Eigen::Map<const V3>(d->geom_xpos + 3 * leg.footGeom);
+                const V3 actualCenterRobot = modelToRobot(actualCenterModel);
+                centerError = std::max(centerError, (expectedCenterRobot - actualCenterRobot).norm());
                 const M2 analytic = jacobian(leg, active);
                 for (int column = 0; column < 2; ++column) {
                     V2 plus = active, minus = active;
@@ -188,9 +201,9 @@ int main(int argc, char** argv) {
                 for (int vertex = 0; vertex < m->mesh_vertnum[mesh]; ++vertex) {
                     const auto* raw = m->mesh_vert + 3 * (m->mesh_vertadr[mesh] + vertex);
                     const V3 local(raw[0], raw[1], raw[2]);
-                    minimumZ = std::min(minimumZ, (actualCenter + rotation * local).z());
+                    minimumZ = std::min(minimumZ, (actualCenterModel + rotation * local).z());
                 }
-                const double contactError = minimumZ - (actualCenter.z() - 0.031);
+                const double contactError = minimumZ - (actualCenterModel.z() - 0.031);
                 require(contactError >= -1e-7 && contactError < 0.000227, "Foot cylinder support approximation mismatch");
                 meshContactError = std::max(meshContactError, contactError);
                 ++count;

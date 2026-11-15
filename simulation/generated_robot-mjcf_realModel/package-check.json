@@ -1,0 +1,18 @@
+{
+  "schema": "stackforce.mjcf-package-check.v1",
+  "status": "structure_checked",
+  "execution": "browser",
+  "checks": [
+    "archive_paths_and_size",
+    "xml_and_resources",
+    "joint_actuator_references",
+    "finite_values"
+  ],
+  "physics_validation": {
+    "status": "not_run",
+    "owner": "simready",
+    "execution": "client",
+    "stage": "before_training",
+    "integration_status": "pending_simready_integration"
+  }
+}

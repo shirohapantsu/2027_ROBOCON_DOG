@@ -20,7 +20,7 @@ enum class CtrlMode {
 
 struct MotorCtrl {
     CtrlMode mode = CtrlMode::DamMode;
-    float q = 0.0f;    // rad
+    float q = 0.0f;    // 连杆相对 +y 的角度，绕 +x 为正，rad
     float dq = 0.0f;   // rad/s
     float kp = 0.0f;   // N*m/rad
     float kd = 0.0f;   // N*m*s/rad
@@ -28,7 +28,7 @@ struct MotorCtrl {
 };
 
 struct MotorState {
-    float q = 0.0f;    // 输出轴位置，rad
+    float q = 0.0f;    // 连杆相对 +y 的输出轴角度，绕 +x 为正，rad
     float dq = 0.0f;   // 输出轴速度，rad/s
     float tau = 0.0f;  // 输出轴力矩估计，N*m，未计传动损耗
     int temp = 0;     // 摄氏度
@@ -41,7 +41,7 @@ private:
     MotorCmd cmd_;
     std::shared_ptr<SerialPort> serial_;
     MotorData data_;
-    float offset_;  // 相对于零位的误差 offset = (编码器零位 - x轴)
+    float offset_;  // 标定零偏 offset = (编码器零位 - +y轴)，按电机原生方向计正
     bool direction_;   // 方向系数,1为正0为负
 
 public:
@@ -180,6 +180,20 @@ public:
             true
         };
     }
-};
+
+    // 析构函数
+    ~Motor() {
+        MotorCtrl cmd = {
+            CtrlMode::DamMode,
+            0.0f,
+            0.0f, 
+            0.0f,
+            0.1f,
+            0.0f
+        };
+        editCmd(cmd);
+        sendCmd();
+    }
+};  
 
 } // namespace motor
